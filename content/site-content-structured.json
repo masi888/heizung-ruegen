@@ -1,0 +1,211 @@
+{
+  "brand": {
+    "name": "Bertig Sanitär- und Heizungstechnik",
+    "location": "Breege auf Ruegen",
+    "serviceArea": ["Ruegen", "Wittow", "Jasmund", "Moenchgut", "Stralsund"],
+    "trustSignals": [
+      "Familienbetrieb seit 1990",
+      "24h-Notdienst",
+      "Bosch Premium Partner",
+      "persoenliche Erreichbarkeit",
+      "kurze Wege auf Ruegen"
+    ]
+  },
+  "routes": [
+    {
+      "slug": "/",
+      "title": "Bertig Sanitär- und Heizungstechnik auf Ruegen | Heizung, Wartung, Bad & Notdienst",
+      "description": "Familienbetrieb seit 1990 in Breege. Heizung, Waermepumpen, Wartung, Badmodernisierung und 24h-Notdienst auf Ruegen bis Stralsund.",
+      "hero": {
+        "eyebrow": "Bertig Sanitär- und Heizungstechnik · Breege auf Ruegen",
+        "headline": "Moderne Heiztechnik und verlässlicher Service auf Ruegen.",
+        "lead": "Ob Heizungsmodernisierung, Waermepumpe, Wartung oder Badprojekt – wir begleiten Sie persoenlich, schnell erreichbar und mit kurzen Wegen auf der Insel.",
+        "primaryCtas": ["Jetzt anrufen", "Wartung anfragen", "Projekt anfragen"],
+        "emergencyNote": "24h-Notdienst fuer dringende Stoerungen"
+      },
+      "sections": [
+        {
+          "type": "services",
+          "items": [
+            "Heizungsinstallation",
+            "Waermepumpen",
+            "Wartung & Service",
+            "Badsanierung",
+            "Klimaanlagen"
+          ]
+        },
+        {
+          "type": "why-bertig",
+          "items": [
+            "Wir arbeiten persoenlich statt ueber Hotline-Strukturen.",
+            "Wir kennen die Anforderungen von Wohnhaeusern und Ferienimmobilien auf Ruegen.",
+            "Wir verbinden Beratung, Umsetzung, Wartung und Erreichbarkeit."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "/heizung-ruegen",
+      "title": "Heizungsinstallation und Heizung erneuern auf Ruegen | Bertig",
+      "description": "Heizung modernisieren auf Ruegen: persoenliche Beratung, saubere Umsetzung und moderne Systeme fuer Einfamilienhaus, Ferienhaus und Bestand.",
+      "headline": "Heizungen modernisieren – passend zu Haus, Nutzung und Zukunftsplan",
+      "lead": "Eine neue Heizung muss nicht nur heute funktionieren, sondern auch in einigen Jahren noch wirtschaftlich und sinnvoll sein.",
+      "bullets": [
+        "Austausch alter Oel- und Gasheizungen",
+        "Heizungsmodernisierung im Bestand",
+        "Einbindung moderner Regelungstechnik",
+        "Kombination mit erneuerbaren Systemen, wenn technisch sinnvoll"
+      ],
+      "cta": "Beratung anfragen"
+    },
+    {
+      "slug": "/waermepumpen-ruegen",
+      "title": "Waermepumpen auf Ruegen | Beratung, Planung und Umsetzung durch Bertig",
+      "description": "Waermepumpe im Bestand oder Neubau auf Ruegen: ehrliche Machbarkeitspruefung, persoenliche Begleitung und moderne Systemplanung.",
+      "headline": "Waermepumpen auf Ruegen – ehrlich geprueft, sauber geplant",
+      "lead": "Nicht jedes Gebaeude braucht die gleiche Loesung. Deshalb starten wir mit einer belastbaren Einschaetzung statt mit Schnellverkauf.",
+      "bullets": [
+        "Bewertung von Bestand, Heizlast und Vorlauftemperaturen",
+        "Warmwasserbedarf und Nutzung realistisch einordnen",
+        "Robuste, wartbare Systeme priorisieren",
+        "Regionaler Ansprechpartner auch nach der Inbetriebnahme"
+      ],
+      "cta": "Machbarkeit vor Ort besprechen"
+    },
+    {
+      "slug": "/wartung-service",
+      "title": "Heizungswartung und Service auf Ruegen | Bertig",
+      "description": "Heizungswartung mit drei klaren Optionen, persoenlicher Rueckmeldung und Datei-Upload fuer Typenschild oder Anlagendaten.",
+      "headline": "Wartung und Service mit klarem Ablauf statt endlosem Hin und Her",
+      "lead": "Regelmaessige Wartung schuetzt vor Ausfaellen, verlaengert die Lebensdauer Ihrer Anlage und schafft planbare Sicherheit.",
+      "benefits": [
+        "weniger Rueckfragen durch strukturierte Datenerfassung",
+        "bessere Einsatzvorbereitung mit Typenschildfoto",
+        "klare Pakete statt unklarer Wartungsbegriffe"
+      ],
+      "cta": "Wartung anfragen"
+    },
+    {
+      "slug": "/badsanierung-ruegen",
+      "title": "Badsanierung auf Ruegen | Funktionale und hochwertige Badmodernisierung",
+      "description": "Badsanierung und Badmodernisierung auf Ruegen – persoenlich geplant, sauber koordiniert und passend zu Alltag, Alter und Immobilie.",
+      "headline": "Baeder modernisieren, die im Alltag wirklich besser funktionieren",
+      "lead": "Ein gutes Bad sieht nicht nur besser aus – es nutzt sich taeglich angenehmer, pflegeleichter und sicherer.",
+      "bullets": [
+        "Teilmodernisierung oder Komplettumbau",
+        "Duschumbau und alltagstaugliche Loesungen",
+        "Modernisierung fuer Ferienimmobilien und private Wohnhaeuser",
+        "Abstimmung von Sanitär, Heizung und Komfortdetails"
+      ],
+      "cta": "Badprojekt anfragen"
+    },
+    {
+      "slug": "/klimaanlagen-ruegen",
+      "title": "Klimaanlagen auf Ruegen | Planung und Einbau durch Bertig",
+      "description": "Klimaanlagen fuer Wohnhaeuser, Ferienimmobilien und kleine Gewerbeobjekte auf Ruegen – sauber geplant und fachgerecht umgesetzt.",
+      "headline": "Klimaanlagen fuer mehr Komfort in Wohnhaus und Ferienimmobilie",
+      "lead": "Gerade auf Ruegen werden Obergeschosse, Ferienwohnungen und gut gedaemmte Raeume im Sommer schnell warm.",
+      "bullets": [
+        "Kuehlung und Entfeuchtung sinnvoll kombinieren",
+        "fuer Wohnhaus, Ferienobjekt und kleines Gewerbe",
+        "Auslegung passend zu Nutzung und Raumstruktur"
+      ],
+      "cta": "Klimaanlage anfragen"
+    },
+    {
+      "slug": "/notdienst",
+      "title": "24h-Heizungsnotdienst auf Ruegen | Bertig",
+      "description": "Schnelle Hilfe bei Stoerungen und Heizungsausfall auf Ruegen. 24h-Notdienst von Bertig Sanitär- und Heizungstechnik.",
+      "headline": "Wenn die Heizung ausfaellt, brauchen Sie keinen Umweg – sondern direkte Erreichbarkeit.",
+      "lead": "Bei akuten Stoerungen zaehlt vor allem eins: schnell jemanden erreichen, der sich auskennt.",
+      "checklist": [
+        "Hersteller bereithalten",
+        "Geraetetyp oder Stoerungsbild nennen",
+        "wenn moeglich Foto vom Display oder Typenschild senden"
+      ],
+      "cta": "Notdienst anrufen"
+    },
+    {
+      "slug": "/ueber-uns",
+      "title": "Ueber Bertig Sanitär- und Heizungstechnik | Familienbetrieb seit 1990",
+      "description": "Familienbetrieb aus Breege auf Ruegen. Seit 1990 persoenlich erreichbar fuer Heizung, Sanitär, Wartung und moderne Technik.",
+      "headline": "Familienbetrieb seit 1990 – mit Blick nach vorn",
+      "lead": "Bertig steht fuer handwerkliche Kontinuitaet, persoenliche Erreichbarkeit und moderne technische Weiterentwicklung.",
+      "portraitPlaceholders": ["Inhaber / Vater", "Naechste Generation / Sohn"],
+      "cta": "Kontakt aufnehmen"
+    },
+    {
+      "slug": "/kontakt",
+      "title": "Kontakt zu Bertig auf Ruegen | Heizung, Wartung, Bad und Klima",
+      "description": "Kontakt zu Bertig Sanitär- und Heizungstechnik in Breege auf Ruegen. Fuer Wartung, Projektanfragen und Notfaelle.",
+      "headline": "Kontakt zu Bertig – schnell, persoenlich, regional",
+      "lead": "Wir sortieren Ihre Anfrage und melden uns persoenlich zurueck.",
+      "facts": [
+        "Standort: Breege auf Ruegen",
+        "Einsatzgebiet: Ruegen bis Stralsund",
+        "Schwerpunkt: Heizung, Waermepumpen, Wartung, Bad, Klima"
+      ],
+      "cta": "Anfrage senden"
+    }
+  ],
+  "faq": [
+    {
+      "question": "In welchem Gebiet sind Sie im Einsatz?",
+      "answer": "Unser Schwerpunkt liegt auf Ruegen – insbesondere rund um Breege, Wittow, Jasmund, Bergen, Binz und die umliegenden Orte. Je nach Projekt sind wir auch bis Stralsund im Einsatz."
+    },
+    {
+      "question": "Bieten Sie einen Notdienst an?",
+      "answer": "Ja. Fuer akute Stoerungen bieten wir einen 24h-Notdienst. Bei nicht dringenden Anliegen ist der normale Anfrageweg sinnvoller, damit wir Termine sauber planen koennen."
+    },
+    {
+      "question": "Koennen Sie auch Wartungen fuer bestehende Anlagen uebernehmen?",
+      "answer": "Ja, grundsaetzlich schon. Damit wir die Anlage richtig einschaetzen koennen, fragen wir im Wartungsformular einige technische Daten ab. Ein Foto vom Typenschild hilft besonders."
+    },
+    {
+      "question": "Warum fragen Sie bei der Wartung so viele Daten ab?",
+      "answer": "Weil wir damit Rueckfragen vermeiden und besser vorbereitet zum Einsatz kommen. Gerade auf Ruegen spart das Zeit und hilft bei der Einsatzplanung."
+    },
+    {
+      "question": "Installieren Sie auch Waermepumpen im Bestand?",
+      "answer": "Ja – aber nicht nach Schema F. Wir pruefen zuerst, ob das Gebaeude, die Heizflaechen und die geplante Nutzung zur Technik passen. So vermeiden wir Loesungen, die auf dem Papier gut aussehen, im Alltag aber Probleme machen."
+    }
+  ],
+  "knowledge": [
+    {
+      "slug": "/ratgeber/waermepumpe-im-bestand-ruegen",
+      "title": "Waermepumpe im Bestandshaus auf Ruegen: Wann sie sinnvoll ist – und wann man genauer hinschauen muss",
+      "intro": "Waermepumpen sind fuer viele Bestandsgebaeude interessant. Aber entscheidend ist nicht nur die Technik selbst, sondern ob Haus, Heizflaechen und Nutzungsverhalten dazu passen.",
+      "points": [
+        "Vorlauftemperaturen und Heizflaechen sauber betrachten",
+        "Warmwasserbedarf nicht vergessen",
+        "Ferienimmobilien und selten genutzte Gebaeude gesondert bewerten",
+        "Nicht jede Anlage ist mit denselben Standardaussagen sinnvoll planbar"
+      ],
+      "cta": "Waermepumpe vor Ort pruefen lassen"
+    },
+    {
+      "slug": "/ratgeber/heizungswartung-was-wirklich-gemacht-wird",
+      "title": "Heizungswartung: Was bei einer guten Wartung wirklich geprueft wird",
+      "intro": "Wartung ist mehr als ein kurzer Blick auf die Anlage. Sie sorgt dafuer, dass Verschleiss frueh erkannt, sicherheitsrelevante Punkte geprueft und vermeidbare Stoerungen reduziert werden.",
+      "points": [
+        "Funktions- und Sichtpruefung gehoeren immer dazu",
+        "Reinigung und typische Kontrollpunkte haengen von der Anlage ab",
+        "Gute Wartung reduziert nicht jedes Risiko, aber viele vermeidbare Ausfaelle",
+        "Vollstaendige Anlagendaten verbessern die Vorbereitung deutlich"
+      ],
+      "cta": "Wartung mit Typenschildfoto anfragen"
+    },
+    {
+      "slug": "/ratgeber/bad-modernisieren-ohne-komplettumbau",
+      "title": "Bad modernisieren ohne Komplettumbau: Welche Schritte oft schon viel verbessern",
+      "intro": "Nicht jedes Bad braucht sofort eine Totalsanierung. Oft lassen sich Nutzung, Pflegekomfort und Raumwirkung schon mit einer gut geplanten Teilmodernisierung deutlich verbessern.",
+      "points": [
+        "Dusche statt Wanne als haeufiger Hebel",
+        "Armaturen, Fliesenbereiche und Stauraum gezielt neu denken",
+        "Technik und Alltagstauglichkeit zusammen betrachten",
+        "Gerade in bewohnten Immobilien ist ein gestufter Ansatz oft sinnvoll"
+      ],
+      "cta": "Badprojekt besprechen"
+    }
+  ]
+}
