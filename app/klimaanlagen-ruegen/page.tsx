@@ -63,7 +63,7 @@ export default function KlimaanlagenRuegenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-surface">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <Kicker className="mb-6">Klimaanlagen auf Rügen</Kicker>
@@ -104,7 +104,7 @@ export default function KlimaanlagenRuegenPage() {
 
       {/* Leistungsübersicht */}
       <Section tone="surface-low">
-        <div className="grid grid-cols-12 items-center gap-12">
+        <div className="grid grid-cols-12 items-center gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-5">
             <Kicker className="mb-4">Leistungsumfang</Kicker>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-primary mb-6 leading-tight">
