@@ -45,11 +45,11 @@ export default async function RatgeberArticlePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-0 bg-surface">
+      <section className="pt-24 sm:pt-32 pb-0 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-3xl mb-10">
             <Kicker className="mb-6">Ratgeber</Kicker>
-            <h1 className="text-4xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.1]">
               {entry.title}
             </h1>
           </div>
@@ -111,13 +111,13 @@ export default async function RatgeberArticlePage({ params }: Props) {
             <div className="flex flex-wrap gap-4 pt-2">
               <a
                 href="/kontakt"
-                className="bg-accent text-on-accent px-8 py-4 rounded-lg font-bold hover:brightness-95 transition-all active:scale-[0.98]"
+                className="bg-accent text-on-accent px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold hover:brightness-95 transition-all active:scale-[0.98]"
               >
                 Anfrage stellen
               </a>
               <a
                 href={company.phones.mobileHref}
-                className="border-2 border-on-primary/30 text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-on-primary/10 transition-all"
+                className="border-2 border-on-primary/30 text-on-primary px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold hover:bg-on-primary/10 transition-all"
               >
                 {company.phones.mobile}
               </a>
