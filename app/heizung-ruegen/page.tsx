@@ -36,11 +36,11 @@ const steps = [
 export default function HeizungPage() {
   return (
     <>
-      <section className="pt-32 pb-20 bg-surface">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 items-center">
           <div className="col-span-12 lg:col-span-7">
             <Kicker className="mb-6">Heizung · Rügen</Kicker>
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05] mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05] mb-8">
               {route.headline}
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed mb-10">
@@ -70,7 +70,7 @@ export default function HeizungPage() {
       </section>
 
       <Section tone="surface-low">
-        <div className="grid grid-cols-12 gap-12">
+        <div className="grid grid-cols-12 gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-5">
             <Kicker className="mb-4">Wobei wir helfen</Kicker>
             <h2 className="text-4xl font-extrabold text-primary leading-tight">
