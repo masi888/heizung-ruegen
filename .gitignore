@@ -38,6 +38,7 @@ yarn-error.log*
 
 # local agent/runtime state
 .omx/
+.omc/
 
 # typescript
 *.tsbuildinfo
