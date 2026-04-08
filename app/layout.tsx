@@ -4,24 +4,29 @@ import { Manrope } from "next/font/google";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { buildLocalBusinessJsonLd, buildCanonical, company, metadataDefaults, siteUrl } from "@/lib/site-data";
+import {
+  buildCanonical,
+  buildLocalBusinessJsonLd,
+  company,
+  metadataDefaults,
+  siteUrl,
+} from "@/lib/site-data";
 
 import "./globals.css";
 
-const body = Manrope({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const bodyText = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: metadataDefaults.title,
+  title: {
+    default: metadataDefaults.title,
+    template: `%s | ${company.name}`,
+  },
   description: metadataDefaults.description,
   alternates: {
     canonical: buildCanonical("/"),
@@ -33,28 +38,25 @@ export const metadata: Metadata = {
     siteName: company.name,
     locale: "de_DE",
     type: "website",
-    images: [
-      {
-        url: "/site/wasserheizer-service.jpg",
-        width: 1548,
-        height: 1161,
-        alt: `${company.name} bei der Arbeit`,
-      },
-    ],
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de">
-      <body className={`${body.variable} ${bodyText.variable}`}>
+    <html lang="de" className={manrope.variable}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+      </head>
+      <body className="bg-surface text-on-surface font-display antialiased">
         <JsonLd data={buildLocalBusinessJsonLd()} />
-        <div className="page-background" />
-        <div className="site-shell">
-          <SiteHeader />
-          <main>{children}</main>
-          <SiteFooter />
-        </div>
+        <SiteHeader />
+        <main id="main">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
