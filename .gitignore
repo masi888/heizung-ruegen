@@ -39,6 +39,10 @@ yarn-error.log*
 # local agent/runtime state
 .omx/
 .omc/
+.agents/
+.claude/
+.factory/
+skills-lock.json
 
 # typescript
 *.tsbuildinfo

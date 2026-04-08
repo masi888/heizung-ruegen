@@ -43,6 +43,24 @@ const arbeitsweise = [
   },
 ];
 
+const relatedLinks = [
+  {
+    href: "/ratgeber/bad-modernisieren-ohne-komplettumbau",
+    title: "Ratgeber: Bad modernisieren ohne Komplettumbau",
+    copy: "Die Vertiefung zu Teilmodernisierung, Dusche statt Wanne und gestuftem Umbau.",
+  },
+  {
+    href: "/ratgeber/barrierearmes-bad-foerderung-ruegen-2026",
+    title: "Ratgeber: Barrierearmes Bad mit KfW-Förderung 2026",
+    copy: "Die aktuelle Einordnung zur wieder gestarteten KfW-Förderung 455-B.",
+  },
+  {
+    href: "/kontakt",
+    title: "Badprojekt anfragen",
+    copy: "Wenn Sie Ihr Bad direkt mit uns vor Ort durchsprechen möchten.",
+  },
+];
+
 export default function BadsanierungRuegenPage() {
   const headline =
     route?.headline ?? "Bäder modernisieren, die im Alltag wirklich besser funktionieren";
@@ -166,6 +184,33 @@ export default function BadsanierungRuegenPage() {
               </div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section tone="surface-low">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <Kicker className="mb-4">Weiterführende Inhalte</Kicker>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-primary">
+              Die passenden nächsten Seiten zum Badprojekt
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {relatedLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/10 hover:border-accent/30 transition-colors"
+              >
+                <h3 className="text-lg font-bold text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-on-surface-variant leading-relaxed">
+                  {item.copy}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </Section>
 

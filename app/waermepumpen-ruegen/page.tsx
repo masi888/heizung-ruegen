@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ClosingBand } from "@/components/ui/closing-band";
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,24 @@ const steps = [
     icon: "handyman",
     title: "Installation & Monitoring",
     copy: "Saubere Inbetriebnahme und regionaler Ansprechpartner auch danach.",
+  },
+];
+
+const relatedLinks = [
+  {
+    href: "/ratgeber/waermepumpe-im-bestand-ruegen",
+    title: "Ratgeber: Wärmepumpe im Bestand",
+    copy: "Die inhaltliche Vertiefung zu Heizflächen, Warmwasser und Nutzung auf Rügen.",
+  },
+  {
+    href: "/ratgeber/heizungsfoerderung-2026-ruegen",
+    title: "Ratgeber: Heizungsförderung 2026 auf Rügen",
+    copy: "Welche KfW-Bausteine beim Systemwechsel aktuell wirklich zählen.",
+  },
+  {
+    href: "/ratgeber/heizungsgesetz-waermeplanung-ruegen-2026",
+    title: "Ratgeber: Heizungsgesetz und Wärmeplanung 2026",
+    copy: "Die aktuelle Einordnung für Eigentümer auf Rügen und in kleineren Gemeinden.",
   },
 ];
 
@@ -108,6 +127,33 @@ export default function WaermepumpenPage() {
               <p className="text-on-surface-variant">{s.copy}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section tone="surface-low">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <Kicker className="mb-4">Weiterführende Inhalte</Kicker>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-primary">
+              Die passenden nächsten Seiten zur Wärmepumpe
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {relatedLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/10 hover:border-accent/30 transition-colors"
+              >
+                <h3 className="text-lg font-bold text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-on-surface-variant leading-relaxed">
+                  {item.copy}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </Section>
 

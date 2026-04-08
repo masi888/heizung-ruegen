@@ -9,7 +9,7 @@ import { buildPageMetadata, company, knowledgeEntries } from "@/lib/site-data";
 export const metadata = buildPageMetadata({
   title: "Ratgeber — Bertig Sanitär- und Heizungstechnik",
   description:
-    "Wissenswertes zu Wärmepumpe, Heizungswartung und Badsanierung auf Rügen — verständlich erklärt vom Fachbetrieb.",
+    "Wissenswertes zu Wärmepumpe, Heizungsförderung, Wärmeplanung, Wartung und Badsanierung auf Rügen — verständlich erklärt vom Fachbetrieb.",
   path: "/ratgeber",
   imagePath: "/images/ratgeber/waermepumpe.jpg",
 });
@@ -18,7 +18,33 @@ const ratgeberImages: Record<string, string> = {
   "/ratgeber/waermepumpe-im-bestand-ruegen": "/images/ratgeber/waermepumpe.jpg",
   "/ratgeber/heizungswartung-was-wirklich-gemacht-wird": "/images/ratgeber/wartung.jpg",
   "/ratgeber/bad-modernisieren-ohne-komplettumbau": "/images/ratgeber/bad.jpg",
+  "/ratgeber/heizungsfoerderung-2026-ruegen": "/images/ratgeber/wartung.jpg",
+  "/ratgeber/heizungsgesetz-waermeplanung-ruegen-2026": "/images/ratgeber/waermepumpe.jpg",
+  "/ratgeber/barrierearmes-bad-foerderung-ruegen-2026": "/images/ratgeber/bad.jpg",
 };
+
+const topicHubs = [
+  {
+    href: "/waermepumpen-ruegen",
+    title: "Wärmepumpen auf Rügen",
+    copy: "Von der ersten Machbarkeitsfrage direkt zur passenden Leistungsseite.",
+  },
+  {
+    href: "/wartung-service",
+    title: "Wartung & Service",
+    copy: "Praktisch weiter zu Wartungspaketen, Anfrageformular und Serviceablauf.",
+  },
+  {
+    href: "/badsanierung-ruegen",
+    title: "Badsanierung auf Rügen",
+    copy: "Wenn aus einem Ratgeberthema ein konkretes Badprojekt werden soll.",
+  },
+  {
+    href: "/faq",
+    title: "Häufige Fragen",
+    copy: "Für kurze Antworten und weitere interne Einstiegspunkte.",
+  },
+];
 
 export default function RatgeberPage() {
   return (
@@ -34,9 +60,9 @@ export default function RatgeberPage() {
           </div>
           <div className="col-span-12 lg:col-span-6">
             <p className="text-lg text-on-surface-variant leading-relaxed">
-              Heizung, Wärmepumpe, Wartung, Bad — wir erklären, was wirklich
-              dahintersteckt. Damit Sie als Eigentümer oder Verwalter fundiert
-              entscheiden können.
+              Heizung, Förderung, Wärmeplanung, Wartung, Bad — wir erklären,
+              was auf Rügen gerade wirklich relevant ist. Damit Sie als
+              Eigentümer oder Verwalter fundiert entscheiden können.
             </p>
           </div>
         </div>
@@ -78,6 +104,33 @@ export default function RatgeberPage() {
               </Link>
             );
           })}
+        </div>
+      </Section>
+
+      <Section tone="surface">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <Kicker className="mb-4">Themen vertiefen</Kicker>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-primary">
+              Vom Wissen direkt zur passenden Leistungsseite
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {topicHubs.map((hub) => (
+              <Link
+                key={hub.href}
+                href={hub.href}
+                className="group bg-surface-container-low rounded-xl p-8 border border-outline-variant/10 hover:border-accent/30 transition-colors"
+              >
+                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">
+                  {hub.title}
+                </h3>
+                <p className="text-on-surface-variant leading-relaxed">
+                  {hub.copy}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </Section>
 

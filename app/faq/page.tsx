@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 import { JsonLd } from "@/components/json-ld";
+import { Card } from "@/components/ui/card";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import { buildFaqJsonLd, buildPageMetadata, faqEntries } from "@/lib/site-data";
@@ -9,6 +12,29 @@ export const metadata = buildPageMetadata({
     "Antworten auf häufige Fragen zu Heizung, Wärmepumpe, Wartung und Badsanierung auf Rügen.",
   path: "/faq",
 });
+
+const directLinks = [
+  {
+    href: "/waermepumpen-ruegen",
+    title: "Wärmepumpen auf Rügen",
+    copy: "Wenn es um Machbarkeit, Bestand und ehrliche Systemplanung geht.",
+  },
+  {
+    href: "/wartung-service",
+    title: "Wartung & Service",
+    copy: "Für regelmäßige Wartung, strukturierte Datenerfassung und klare Pakete.",
+  },
+  {
+    href: "/badsanierung-ruegen",
+    title: "Badsanierung auf Rügen",
+    copy: "Wenn Sie vom FAQ direkt ins konkrete Badprojekt springen möchten.",
+  },
+  {
+    href: "/ratgeber",
+    title: "Ratgeber lesen",
+    copy: "Für vertiefende Antworten zu Wärmepumpe, Wartung und Badmodernisierung.",
+  },
+];
 
 export default function FaqPage() {
   return (
@@ -55,8 +81,33 @@ export default function FaqPage() {
         </div>
       </Section>
 
-      {/* CTA */}
       <Section tone="surface">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <Kicker className="mb-4">Direkt weiter</Kicker>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-primary">
+              Die passenden nächsten Seiten zum Thema
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {directLinks.map((link) => (
+              <Card key={link.href}>
+                <Link href={link.href} className="block group">
+                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">
+                    {link.title}
+                  </h3>
+                  <p className="text-on-surface-variant leading-relaxed">
+                    {link.copy}
+                  </p>
+                </Link>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section tone="surface-low">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <Kicker className="mb-2">Noch Fragen?</Kicker>
           <h2 className="text-3xl font-extrabold text-primary leading-tight">

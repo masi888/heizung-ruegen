@@ -26,6 +26,24 @@ export const metadata = buildPageMetadata({
   imagePath: "/images/services/wartung-inspektion.jpg",
 });
 
+const relatedLinks = [
+  {
+    href: "/ratgeber/heizungswartung-was-wirklich-gemacht-wird",
+    title: "Ratgeber: Was bei einer guten Wartung geprüft wird",
+    copy: "Die inhaltliche Vertiefung zu Sichtprüfung, Reinigung und typischen Wartungspunkten.",
+  },
+  {
+    href: "/faq",
+    title: "Häufige Fragen",
+    copy: "Schnelle Antworten zu Wartung, Einsatzgebiet und bestehenden Anlagen.",
+  },
+  {
+    href: "/notdienst",
+    title: "24h-Notdienst",
+    copy: "Wenn aus einer Auffälligkeit eine akute Störung geworden ist.",
+  },
+];
+
 export default function WartungServicePage() {
   const headline = route?.headline ?? "Wartung und Service mit klarem Ablauf statt endlosem Hin und Her";
   const lead =
@@ -155,6 +173,33 @@ export default function WartungServicePage() {
           </div>
           <div className="bg-surface-container-highest rounded-2xl border-b-2 border-accent p-8 shadow-sm">
             <RequestForms initialMode="maintenance" />
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="surface">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <Kicker className="mb-4">Weiterführende Inhalte</Kicker>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-primary">
+              Mehr Orientierung rund um Wartung und Service
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {relatedLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 hover:border-accent/30 transition-colors"
+              >
+                <h3 className="text-lg font-bold text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-on-surface-variant leading-relaxed">
+                  {item.copy}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </Section>

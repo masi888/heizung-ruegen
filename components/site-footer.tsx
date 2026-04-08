@@ -9,10 +9,17 @@ const legalLinks = [
   { href: "/datenschutz", label: "Datenschutz" },
 ];
 
+const resourceLinks = [
+  { href: "/ratgeber", label: "Ratgeber" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-on-primary">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-4">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-5">
         <div className="md:col-span-2 space-y-6">
           <Image
             src="/brand/logo/bertig-logo-light.png"
@@ -56,6 +63,18 @@ export function SiteFooter() {
           </h4>
           <nav className="flex flex-col gap-2 text-on-primary/80">
             {legalLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-accent">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        <div>
+          <h4 className="text-sm uppercase tracking-widest text-accent font-bold mb-4">
+            Wissen & Hilfe
+          </h4>
+          <nav className="flex flex-col gap-2 text-on-primary/80">
+            {resourceLinks.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-accent">
                 {item.label}
               </Link>

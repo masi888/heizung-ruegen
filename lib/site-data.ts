@@ -240,3 +240,48 @@ export function buildFaqJsonLd(items: FaqEntry[]) {
     })),
   };
 }
+
+type ArticleJsonLdOptions = {
+  title: string;
+  description: string;
+  path: string;
+  imagePath?: string;
+  datePublished?: string;
+  dateModified?: string;
+};
+
+export function buildArticleJsonLd({
+  title,
+  description,
+  path,
+  imagePath = defaultSocialImagePath,
+  datePublished,
+  dateModified,
+}: ArticleJsonLdOptions) {
+  const articleUrl = buildCanonical(path);
+  const imageUrl = buildCanonical(imagePath);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    mainEntityOfPage: articleUrl,
+    url: articleUrl,
+    image: [imageUrl],
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
+    author: {
+      "@type": "Organization",
+      name: company.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: company.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/brand/bertig-logo.jpg`,
+      },
+    },
+  };
+}

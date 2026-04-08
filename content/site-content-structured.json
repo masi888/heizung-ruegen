@@ -187,38 +187,573 @@
     {
       "slug": "/ratgeber/waermepumpe-im-bestand-ruegen",
       "title": "Wärmepumpe im Bestandshaus auf Rügen: Wann sie sinnvoll ist – und wann man genauer hinschauen muss",
+      "description": "Wann ist eine Wärmepumpe im Bestand auf Rügen sinnvoll? Die wichtigsten Prüfpunkte zu Vorlauftemperatur, Heizflächen, Warmwasser und Nutzung verständlich erklärt.",
+      "answer": "Ja, viele Bestandsgebäude auf Rügen können sinnvoll mit einer Wärmepumpe betrieben werden. Entscheidend sind aber nicht Schlagworte, sondern vier Prüfpunkte: Vorlauftemperatur, vorhandene Heizflächen, Warmwasserbedarf und das echte Nutzungsprofil der Immobilie.",
       "intro": "Wärmepumpen sind für viele Bestandsgebäude interessant. Aber entscheidend ist nicht nur die Technik selbst, sondern ob Haus, Heizflächen und Nutzungsverhalten dazu passen.",
+      "publishedAt": "2026-04-08",
+      "updatedAt": "2026-04-08",
       "points": [
         "Vorlauftemperaturen und Heizflächen sauber betrachten",
         "Warmwasserbedarf nicht vergessen",
         "Ferienimmobilien und selten genutzte Gebäude gesondert bewerten",
         "Nicht jede Anlage ist mit denselben Standardaussagen sinnvoll planbar"
       ],
+      "sections": [
+        {
+          "title": "Wann eine Wärmepumpe im Bestand grundsätzlich gut passt",
+          "paragraphs": [
+            "Nach Einschätzung der Verbraucherzentrale und des Umweltbundesamts sind Wärmepumpen längst kein reines Neubau-Thema mehr. Viele Bestandsgebäude lassen sich wirtschaftlich betreiben, wenn das System sauber auf das Haus abgestimmt wird.",
+            "Wichtig ist vor allem, welche Vorlauftemperatur das Gebäude im Winter wirklich braucht. Je niedriger diese Temperatur ausfällt, desto effizienter arbeitet die Wärmepumpe im Alltag. Deshalb schauen wir nicht zuerst auf Werbeversprechen, sondern auf Heizflächen, Regelung und Wärmeverteilung."
+          ],
+          "bullets": [
+            "niedrigere Vorlauftemperaturen verbessern die Effizienz deutlich",
+            "große oder nachgerüstete Heizflächen helfen im Bestand oft mehr als pauschale Aussagen",
+            "auch ein gut abgestimmtes Hybrid- oder Stufenkonzept kann sinnvoll sein"
+          ]
+        },
+        {
+          "title": "Welche Punkte vor der Entscheidung geprüft werden sollten",
+          "paragraphs": [
+            "Ein sinnvoller Check beginnt mit dem Ist-Zustand: Wie wird das Haus genutzt, wie hoch ist der Warmwasserbedarf, welche Räume werden tatsächlich dauerhaft beheizt und wie reagiert das Gebäude an kalten Tagen? Gerade auf Rügen ist das bei Dauerwohnsitz, Ferienhaus und saisonaler Vermietung oft sehr unterschiedlich.",
+            "Hinzu kommt die Technikseite: Heizkörpergröße, Hydraulik, Regelung und vorhandene Dämmmaßnahmen beeinflussen, ob eine Wärmepumpe ruhig, effizient und ohne unnötigen Heizstabeinsatz läuft. Eine gute Planung erkennt diese Punkte vor der Beauftragung und nicht erst nach der Inbetriebnahme."
+          ],
+          "bullets": [
+            "Heizlast und Raumtemperaturen ehrlich statt optimistisch ansetzen",
+            "Warmwasserbedarf separat betrachten, besonders bei mehreren Bädern oder Ferienbelegung",
+            "Taktverhalten und Regelung mitdenken, nicht nur die Nennleistung der Anlage"
+          ]
+        },
+        {
+          "title": "Worauf Eigentümer auf Rügen besonders achten sollten",
+          "paragraphs": [
+            "Auf der Insel sehen wir oft eine Mischung aus Altbau, modernisiertem Bestand und Ferienimmobilie. Genau deshalb ist Standardberatung selten belastbar. Ein Haus, das nur an Wochenenden genutzt wird, braucht eine andere Betrachtung als ein dauerhaft bewohntes Einfamilienhaus.",
+            "Für Eigentümer ist deshalb weniger wichtig, ob eine Wärmepumpe theoretisch möglich ist, sondern ob das Gesamtsystem im Alltag stabil und wirtschaftlich läuft. Wenn die Planung darauf ausgerichtet ist, entstehen weniger Überraschungen bei Lautstärke, Stromverbrauch und Komfort."
+          ],
+          "bullets": [
+            "Ferienimmobilien brauchen ein anderes Betriebs- und Warmwasserkonzept als Dauerwohnsitze",
+            "bestehende Heizkörper sind kein Ausschlusskriterium, aber sie müssen realistisch bewertet werden",
+            "eine Vor-Ort-Prüfung spart meist mehr Geld als eine vorschnelle Systementscheidung"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Braucht ein Altbau immer eine Fußbodenheizung für eine Wärmepumpe?",
+          "answer": "Nein. Entscheidend ist nicht das Etikett Altbau, sondern welche Vorlauftemperaturen das Gebäude tatsächlich benötigt. Auch mit Heizkörpern kann eine Wärmepumpe funktionieren, wenn Auslegung, Hydraulik und Regelung passen."
+        },
+        {
+          "question": "Ist eine Wärmepumpe in einer Ferienimmobilie auf Rügen sinnvoll?",
+          "answer": "Das kann sinnvoll sein, muss aber anders geplant werden als bei einem dauerhaft bewohnten Haus. Belegung, Warmwasserbedarf, Aufheizverhalten und Frostschutz sollten separat betrachtet werden."
+        },
+        {
+          "question": "Woran erkennt man eine zu grobe Beratung?",
+          "answer": "Wenn weder Heizflächen noch Nutzung noch Warmwasserbedarf sauber besprochen werden, ist Vorsicht angebracht. Gute Planung beginnt mit Fragen zum Gebäude und endet nicht beim Prospekt."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Verbraucherzentrale: Wärmepumpe – klimafreundlich, wenn die Bedingungen stimmen",
+          "url": "https://www.verbraucherzentrale.de/wissen/energie/heizen-und-warmwasser/heizen-mit-waermepumpe-ist-klimafreundlich-wenn-die-bedingungen-stimmen-5439"
+        },
+        {
+          "label": "Umweltbundesamt: Wärmepumpensysteme und Chancen im Gebäudebestand",
+          "url": "https://www.umweltbundesamt.de/sites/default/files/medien/11850/publikationen/11_2024_cc_waermepumpensysteme.pdf"
+        }
+      ],
+      "relatedLinks": [
+        {
+          "href": "/waermepumpen-ruegen",
+          "label": "Wärmepumpen auf Rügen",
+          "description": "Unsere Leistungsseite zur Machbarkeitsprüfung, Planung und Umsetzung."
+        },
+        {
+          "href": "/kontakt",
+          "label": "Vor-Ort-Termin anfragen",
+          "description": "Wenn Sie ein konkretes Gebäude prüfen lassen möchten."
+        }
+      ],
       "cta": "Wärmepumpe vor Ort prüfen lassen"
     },
     {
       "slug": "/ratgeber/heizungswartung-was-wirklich-gemacht-wird",
       "title": "Heizungswartung: Was bei einer guten Wartung wirklich geprüft wird",
+      "description": "Was gehört zu einer guten Heizungswartung? Ein verständlicher Überblick über Sichtprüfung, Reinigung, sicherheitsrelevante Checks und gute Vorbereitung.",
+      "answer": "Eine gute Heizungswartung ist mehr als ein kurzer Blick auf das Gerät. Sie kombiniert Sicht- und Funktionsprüfung, Reinigung im üblichen Wartungsumfang, Kontrolle sicherheitsrelevanter Punkte und eine saubere Einordnung, was beobachtet werden sollte und was direkt Handlungsbedarf hat.",
       "intro": "Wartung ist mehr als ein kurzer Blick auf die Anlage. Sie sorgt dafür, dass Verschleiss früh erkannt, sicherheitsrelevante Punkte geprüft und vermeidbare Störungen reduziert werden.",
+      "publishedAt": "2026-04-08",
+      "updatedAt": "2026-04-08",
       "points": [
         "Funktions- und Sichtprüfung gehören immer dazu",
         "Reinigung und typische Kontrollpunkte hängen von der Anlage ab",
         "Gute Wartung reduziert nicht jedes Risiko, aber viele vermeidbare Ausfälle",
         "Vollständige Anlagendaten verbessern die Vorbereitung deutlich"
       ],
+      "sections": [
+        {
+          "title": "Was bei einer guten Wartung tatsächlich dazugehört",
+          "paragraphs": [
+            "Im Kern geht es immer darum, die Anlage in ihrem realen Betriebszustand zu prüfen. Dazu gehören Sichtkontrolle, Funktionsprüfung, typische Reinigungsarbeiten im vorgesehenen Wartungsumfang und die Frage, ob Druck, Temperaturen, Regelung und erkennbare Verschleißspuren unauffällig sind.",
+            "Welche Details geprüft werden, hängt vom System ab. Ein Gasgerät, eine Wärmepumpe oder eine ältere Bestandsanlage haben nicht dieselben Wartungspunkte. Genau deshalb ist eine gute Wartung kein starres Häkchen-Programm, sondern technisch saubere Routinearbeit mit Erfahrung."
+          ],
+          "bullets": [
+            "Sicht- und Funktionsprüfung der wichtigsten Komponenten",
+            "Reinigung und Kontrolle typischer Verschleiß- und Schmutzpunkte",
+            "Einordnung auffälliger Werte oder Betriebsgeräusche"
+          ]
+        },
+        {
+          "title": "Was Wartung leisten kann – und was nicht",
+          "paragraphs": [
+            "Eine Wartung verhindert nicht jede Störung. Sie senkt aber das Risiko für vermeidbare Ausfälle deutlich, weil kleine Auffälligkeiten früher erkannt werden. Gerade bei stark genutzten Anlagen ist das der Unterschied zwischen geplanter Instandhaltung und hektischem Notdienst.",
+            "Aus unserer Sicht ist die Rückmeldung nach der Wartung fast genauso wichtig wie die eigentliche Arbeit. Eigentümer sollten wissen, ob die Anlage unauffällig läuft, ob Verschleiß sichtbar wird und ob sich ein Folgetermin abzeichnet."
+          ],
+          "bullets": [
+            "Wartung ersetzt keine Reparatur, kann aber Reparaturen besser planbar machen",
+            "eine kurze technische Rückmeldung schafft Klarheit statt Unsicherheit",
+            "regelmäßige Wartung ist besonders bei älteren Anlagen und Ferienobjekten sinnvoll"
+          ]
+        },
+        {
+          "title": "Warum vollständige Anlagendaten die Wartung besser machen",
+          "paragraphs": [
+            "Wenn Hersteller, Gerätetyp und Typenschildfoto vorab vorliegen, ist der Einsatz deutlich besser vorbereitet. Das spart Rückfragen, hilft bei der Einordnung typischer Schwachstellen und reduziert unnötige Nachfahrten.",
+            "Gerade auf Rügen ist das praktisch relevant: kurze Wege helfen nur dann wirklich, wenn der Termin technisch vorbereitet ist. Deshalb fragen wir bei Wartungen bewusst strukturiert ab."
+          ],
+          "bullets": [
+            "Typenschildfoto und Gerätedaten verkürzen die Vorbereitung",
+            "vorhandene Wartungsunterlagen helfen bei der Einordnung früherer Auffälligkeiten",
+            "eine strukturierte Anfrage spart Zeit auf beiden Seiten"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Wie oft sollte eine Heizung gewartet werden?",
+          "answer": "Das hängt vom System und vom Hersteller ab. Für viele Anlagen ist ein regelmäßiger Rhythmus sinnvoll, damit Verschleiß, Einstellungen und sicherheitsrelevante Punkte nicht erst bei einer Störung auffallen."
+        },
+        {
+          "question": "Ist Wartung nur bei älteren Anlagen wichtig?",
+          "answer": "Nein. Auch modernere Anlagen profitieren von regelmäßiger Kontrolle, weil Regelung, Betriebsweise und Verschmutzung Einfluss auf Effizienz und Betriebssicherheit haben."
+        },
+        {
+          "question": "Warum soll ich ein Typenschildfoto mitschicken?",
+          "answer": "Weil es die Vorbereitung deutlich verbessert. Mit Hersteller, Gerätedaten und Seriennummer lässt sich der Termin oft genauer einordnen und effizienter planen."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Umweltbundesamt: Umwelttipps zum Heizen und zur richtigen Einstellung der Anlage",
+          "url": "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur"
+        },
+        {
+          "label": "Verbraucherzentrale: Energieberatung und Heizungsoptimierung",
+          "url": "https://www.verbraucherzentrale.de/wissen/energie/heizen-und-warmwasser"
+        }
+      ],
+      "relatedLinks": [
+        {
+          "href": "/wartung-service",
+          "label": "Wartung & Service",
+          "description": "Unsere Wartungspakete und der strukturierte Anfrageweg."
+        },
+        {
+          "href": "/notdienst",
+          "label": "24h-Notdienst",
+          "description": "Wenn aus einer Störung keine planbare Wartung mehr wird."
+        }
+      ],
       "cta": "Wartung mit Typenschildfoto anfragen"
     },
     {
       "slug": "/ratgeber/bad-modernisieren-ohne-komplettumbau",
       "title": "Bad modernisieren ohne Komplettumbau: Welche Schritte oft schon viel verbessern",
+      "description": "Bad modernisieren ohne Komplettumbau: Welche Maßnahmen oft den größten Effekt haben und wann ein gestufter Umbau sinnvoller ist als die Totalsanierung.",
+      "answer": "Ja, viele Badezimmer lassen sich spürbar verbessern, ohne sofort komplett entkernt zu werden. Besonders viel Wirkung bringen häufig der Umbau von Wanne zu Dusche, besserer Stauraum, gut platzierte Armaturen und eine Planung, die Nutzung, Reinigung und Bewegungsfläche zusammen betrachtet.",
       "intro": "Nicht jedes Bad braucht sofort eine Totalsanierung. Oft lassen sich Nutzung, Pflegekomfort und Raumwirkung schon mit einer gut geplanten Teilmodernisierung deutlich verbessern.",
+      "publishedAt": "2026-04-08",
+      "updatedAt": "2026-04-08",
       "points": [
         "Dusche statt Wanne als häufiger Hebel",
         "Armaturen, Fliesenbereiche und Stauraum gezielt neu denken",
         "Technik und Alltagstauglichkeit zusammen betrachten",
         "Gerade in bewohnten Immobilien ist ein gestufter Ansatz oft sinnvoll"
       ],
+      "sections": [
+        {
+          "title": "Welche Maßnahmen oft den größten Unterschied machen",
+          "paragraphs": [
+            "In vielen Bestandsbädern bringt nicht die maximale Baustelle den größten Nutzen, sondern die richtige Reihenfolge. Ein bodennaher Duschbereich, besserer Stauraum, stimmige Armaturen und sinnvolle Lichtzonen verändern den Alltag häufig stärker als eine rein optische Rundumerneuerung.",
+            "Auch aus funktionaler Sicht lohnt sich dieser Blick: Bewegungsflächen, Einstiegshöhen, Reinigung und Erreichbarkeit entscheiden darüber, ob ein Bad im Alltag angenehm bleibt. Genau deshalb ist Teilmodernisierung kein Kompromiss zweiter Klasse, sondern oft die vernünftigere erste Stufe."
+          ],
+          "bullets": [
+            "Dusche statt Wanne ist oft der stärkste einzelne Hebel",
+            "Stauraum und Armaturen sollten mit der täglichen Nutzung geplant werden",
+            "Licht, Zugänglichkeit und Pflegekomfort gehören zur Funktion, nicht nur zur Optik"
+          ]
+        },
+        {
+          "title": "Wann ein gestufter Umbau sinnvoller ist als die Totalsanierung",
+          "paragraphs": [
+            "Gerade in bewohnten Häusern oder Ferienimmobilien ist ein gestufter Ansatz oft praktischer. Wenn Anschlüsse, Raumaufteilung und Grundsubstanz noch tragfähig sind, lassen sich einzelne Bereiche modernisieren, ohne das komplette Bad sofort stillzulegen.",
+            "Das gilt besonders dann, wenn Eigentümer erst den Alltag verbessern und größere Grundsatzentscheidungen später treffen möchten. So entsteht ein Bad, das schneller nutzbar wird und trotzdem eine saubere Perspektive für spätere Ausbauschritte behält."
+          ],
+          "bullets": [
+            "Teilmodernisierung spart oft Bauzeit und Abstimmungsaufwand",
+            "bestehende Leitungsführung oder Raumstruktur kann sinnvoll weitergenutzt werden",
+            "ein Stufenplan hilft, Budget und Alltag besser miteinander zu verbinden"
+          ]
+        },
+        {
+          "title": "Warum barriereärmere Lösungen früh mitgedacht werden sollten",
+          "paragraphs": [
+            "Viele Maßnahmen, die heute den Komfort erhöhen, helfen später auch bei Beweglichkeit und Sicherheit. Dazu gehören rutschärmere Zugänge, großzügigere Bewegungsflächen, gut erreichbare Ablagen und ein Duschbereich, der ohne hohe Schwelle auskommt.",
+            "Die KfW fördert Barrierereduzierung in Wohn- und Sanitärräumen wieder, wenn die Voraussetzungen passen und der Antrag rechtzeitig gestellt wird. Auch deshalb lohnt es sich, Komfort, Alltag und spätere Nutzbarkeit schon bei kleineren Modernisierungsschritten zusammen zu denken."
+          ],
+          "bullets": [
+            "barriereärmere Lösungen sind oft auch im normalen Alltag komfortabler",
+            "Bewegungsfläche und Erreichbarkeit sollten früh in die Planung",
+            "Fördermöglichkeiten müssen vor Maßnahmenbeginn geprüft werden"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Muss ein Bad für eine spürbare Verbesserung komplett neu gemacht werden?",
+          "answer": "Nein. In vielen Fällen reichen gezielte Maßnahmen, um Komfort, Nutzung und Pflege deutlich zu verbessern. Entscheidend ist, an welchen Punkten das Bad heute im Alltag stört."
+        },
+        {
+          "question": "Was bringt meistens am meisten Wirkung?",
+          "answer": "Sehr häufig ist der Wechsel von Wanne zu Dusche der größte einzelne Hebel. Dazu kommen gut geplanter Stauraum, durchdachte Armaturen und ein ruhiger, pflegeleichter Gesamteindruck."
+        },
+        {
+          "question": "Kann ein gestufter Umbau auch in bewohnten Immobilien sinnvoll sein?",
+          "answer": "Ja. Gerade wenn das Haus bewohnt bleibt oder eine Ferienimmobilie nur kurz verfügbar ist, ist ein gut geplanter Stufenansatz oft praktikabler als eine sofortige Totalsanierung."
+        }
+      ],
+      "sources": [
+        {
+          "label": "KfW: Barrierereduzierung – Investitionszuschuss (455-B)",
+          "url": "https://www.kfw.de/%C3%9Cber-die-KfW/Newsroom/Aktuelles/News-Details_889024.html"
+        },
+        {
+          "label": "Verbraucherzentrale: Badezimmer – Platz gewinnen und Barrieren abbauen",
+          "url": "https://www.verbraucherzentrale.de/wissen/energie/energetische-sanierung/badezimmer-platz-gewinnen-und-barrieren-abbauen-54769"
+        }
+      ],
+      "relatedLinks": [
+        {
+          "href": "/badsanierung-ruegen",
+          "label": "Badsanierung auf Rügen",
+          "description": "Unsere Leistungsseite für Teilmodernisierung und Komplettumbau."
+        },
+        {
+          "href": "/kontakt",
+          "label": "Badprojekt anfragen",
+          "description": "Wenn Sie Ihr Bad vor Ort besprechen möchten."
+        }
+      ],
       "cta": "Badprojekt besprechen"
+    },
+    {
+      "slug": "/ratgeber/heizungsfoerderung-2026-ruegen",
+      "title": "Heizungsförderung 2026 auf Rügen: Welche KfW-Bausteine beim Heizungstausch jetzt zählen",
+      "description": "Heizungsförderung 2026 auf Rügen: Was KfW-Zuschuss 458 und Ergänzungskredit 358/359 aktuell leisten, worauf Eigentümer achten müssen und wann der Antrag gestellt sein muss.",
+      "answer": "Für viele Eigentümer auf Rügen ist 2026 der KfW-Zuschuss 458 der wichtigste Förderbaustein beim Heizungstausch. Reicht die Finanzierung danach noch nicht, kann der Ergänzungskredit 358/359 sinnvoll werden. Entscheidend ist die Reihenfolge: Förderung zuerst klären, Auftrag erst danach auslösen.",
+      "intro": "Wer 2026 auf Rügen die Heizung modernisieren will, sollte die Förderung nicht erst am Ende prüfen. Zwischen Zuschuss, Bonuslogik und möglichem Ergänzungskredit entsteht schnell Halbwissen. Die gute Nachricht: Das System ist komplex, aber gut planbar, wenn der Ablauf von Anfang an sauber steht.",
+      "publishedAt": "2026-04-08",
+      "updatedAt": "2026-04-08",
+      "points": [
+        "KfW-Zuschuss 458 bleibt der zentrale Einstieg in die Heizungsförderung",
+        "Bis zu 70 Prozent Zuschuss sind nur mit passender Bonuskombination möglich",
+        "Der Ergänzungskredit 358/359 schließt Finanzierungslücken, ersetzt aber keinen Zuschuss",
+        "Der Förderweg muss vor Auftragsvergabe geklärt sein"
+      ],
+      "sections": [
+        {
+          "title": "Was beim KfW-Zuschuss 458 aktuell wirklich zählt",
+          "paragraphs": [
+            "Die KfW fördert 2026 weiterhin den Einbau klimafreundlicher Heizungen im Bestand. Auf der Produktseite 458 nennt sie bis zu 70 Prozent Zuschuss auf die förderfähigen Kosten, wobei die konkrete Höhe von Grundförderung und möglichen Bonusbausteinen abhängt.",
+            "Für Eigentümer auf Rügen ist vor allem wichtig, nicht nur den Maximalwert zu hören, sondern den realistischen Förderfall zu prüfen. Wer eine Bestandsheizung ersetzt, sollte deshalb früh klären, welche Technik überhaupt förderfähig ist und welche Kosten tatsächlich in den Antrag gehören."
+          ],
+          "bullets": [
+            "für die erste Wohneinheit gelten eigene Förderobergrenzen",
+            "die Zuschusshöhe ergibt sich aus Grundförderung plus möglichen Boni",
+            "Haushaltsmittel bleiben ein praktischer Rahmen, deshalb nicht auf den letzten Schritt warten"
+          ]
+        },
+        {
+          "title": "Wann der Ergänzungskredit 358/359 sinnvoll wird",
+          "paragraphs": [
+            "Der Ergänzungskredit ist kein zweites Zuschussprogramm, sondern eine Finanzierungsergänzung. Er wird interessant, wenn nach dem Zuschuss ein relevanter Eigenanteil bleibt und die Modernisierung trotzdem zügig umgesetzt werden soll.",
+            "Gerade bei größeren Vorhaben auf Rügen, etwa im bewohnten Einfamilienhaus oder bei komplexeren Bestandsanlagen, hilft diese Trennung: erst den Zuschuss sauber sichern, dann die Restfinanzierung passend strukturieren. Für bestimmte selbstnutzende Eigentümer mit geringerem zu versteuerndem Haushaltseinkommen kann der Kredit zusätzlich zinsverbilligt sein."
+          ],
+          "bullets": [
+            "der Kredit ergänzt die Förderung, ersetzt sie aber nicht",
+            "Förderzusage und Finanzierungsweg sollten technisch zusammen gedacht werden",
+            "gerade bei engerem Zeitfenster vermeidet das spätere Umplanungen"
+          ]
+        },
+        {
+          "title": "Was Eigentümer auf Rügen jetzt praktisch tun sollten",
+          "paragraphs": [
+            "Auf der Insel kommt neben der Fördersystematik noch der regionale Ablauf hinzu: Vor-Ort-Termine, abgestimmte Gewerke und eine belastbare Einschätzung des Bestands entscheiden darüber, ob aus einer Förderung ein gutes Projekt oder nur ein Aktenordner wird.",
+            "Am sinnvollsten ist deshalb ein klarer Dreischritt: erst Anlage und Gebäude einordnen, dann die förderfähige Lösung festlegen und erst danach Angebote final beauftragen. Wer diese Reihenfolge einhält, vermeidet den häufigsten Fehler beim Heizungstausch 2026."
+          ],
+          "bullets": [
+            "Bestand und Nutzungsprofil zuerst prüfen, nicht nur das Förderplakat",
+            "Förderweg und Technik zusammen planen, nicht nacheinander improvisieren",
+            "auf Rügen helfen saubere Vorbereitung und kurze Wege mehr als hektische Schnellentscheidungen"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Bekomme ich automatisch 70 Prozent Zuschuss?",
+          "answer": "Nein. Die 70 Prozent sind der maximale Förderdeckel. Ob dieser Wert überhaupt erreicht wird, hängt von Ihrem konkreten Vorhaben und den passenden Bonusbausteinen ab."
+        },
+        {
+          "question": "Kann ich den Ergänzungskredit auch ohne Zuschuss nutzen?",
+          "answer": "Er ist als Ergänzung zu einer förderfähigen Einzelmaßnahme gedacht. In der Praxis sollte zuerst geklärt werden, wie Ihr Zuschussfall aussieht und ob der Kredit die verbleibende Finanzierungslücke sinnvoll abdeckt."
+        },
+        {
+          "question": "Wann muss der Antrag gestellt werden?",
+          "answer": "Die Förderung sollte vor Beginn des Vorhabens und damit vor verbindlicher Beauftragung sauber geklärt sein. Wer erst nach Vertragsabschluss anfängt, riskiert unnötige Probleme im Förderablauf."
+        }
+      ],
+      "sources": [
+        {
+          "label": "KfW: Heizungsförderung im Überblick",
+          "url": "https://www.kfw.de/inlandsfoerderung/Heizungsf%C3%B6rderung/"
+        },
+        {
+          "label": "KfW: Heizungsförderung für Privatpersonen – Wohngebäude (458)",
+          "url": "https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Heizungsf%C3%B6rderung-f%C3%BCr-Privatpersonen-Wohngeb%C3%A4ude-%28458%29/"
+        },
+        {
+          "label": "KfW: Einzelmaßnahmen Ergänzungskredit – Wohngebäude (358/359)",
+          "url": "https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Einzelma%C3%9Fnahmen-Erg%C3%A4nzungskredit-Wohngeb%C3%A4ude-%28358-359%29/"
+        },
+        {
+          "label": "Verbraucherzentrale: Heizung tauschen – so geht's Schritt für Schritt",
+          "url": "https://www.verbraucherzentrale.de/wissen/energie/heizen-und-warmwasser/heizung-tauschen-so-gehts-schritt-fuer-schritt-30045"
+        }
+      ],
+      "relatedLinks": [
+        {
+          "href": "/heizung-ruegen",
+          "label": "Heizung modernisieren",
+          "description": "Unsere Leistungsseite zur Heizungsmodernisierung auf Rügen."
+        },
+        {
+          "href": "/waermepumpen-ruegen",
+          "label": "Wärmepumpen auf Rügen",
+          "description": "Wenn statt eines klassischen Tauschs ein anderes System geprüft werden soll."
+        },
+        {
+          "href": "/kontakt",
+          "label": "Förderfähiges Projekt besprechen",
+          "description": "Wenn Sie Technik, Förderung und Ablauf gemeinsam einordnen möchten."
+        }
+      ],
+      "cta": "Heizungstausch mit Förderung planen"
+    },
+    {
+      "slug": "/ratgeber/heizungsgesetz-waermeplanung-ruegen-2026",
+      "title": "Heizungsgesetz und Wärmeplanung 2026 auf Rügen: Was Eigentümer jetzt wirklich wissen müssen",
+      "description": "Heizungsgesetz und Wärmeplanung 2026 auf Rügen: Welche GEG-Regeln aktuell gelten, warum kleine Gemeinden anders ticken und was Eigentümer jetzt schon sauber einordnen sollten.",
+      "answer": "Stand April 2026 gilt das aktuelle Gebäudeenergiegesetz weiter. Für viele Eigentümer auf Rügen ist vor allem wichtig: Nicht jede Entscheidung hängt sofort an einem kommunalen Wärmeplan, aber neue Heizungen und größere Modernisierungen sollten schon heute so geplant werden, dass sie zur künftigen Wärmeplanung und zum geltenden Rechtsrahmen passen.",
+      "intro": "Rund um das Heizungsgesetz kursieren 2026 weiter viele Halbsätze. Auf Rügen kommt noch hinzu, dass kleine Gemeinden, Ämter und dünne Besiedlung andere Voraussetzungen haben als Großstädte mit dichter Fernwärmestruktur. Genau deshalb lohnt sich ein nüchterner Blick auf das, was aktuell gilt.",
+      "publishedAt": "2026-04-08",
+      "updatedAt": "2026-04-08",
+      "points": [
+        "Für Eigentümer zählt aktuell das geltende GEG, nicht jede Schlagzeile zur nächsten Reform",
+        "Kommunale Wärmeplanung ist wichtig, ersetzt aber keine saubere Einzelfallprüfung",
+        "Kleine Gemeinden auf Rügen haben andere Voraussetzungen als dichte Fernwärmegebiete",
+        "Wer heute modernisiert, sollte Rechtslage, Versorgungspfad und Gebäudebestand zusammen betrachten"
+      ],
+      "sections": [
+        {
+          "title": "Was Stand April 2026 tatsächlich gilt",
+          "paragraphs": [
+            "Die Verbraucherzentrale weist aktuell darauf hin, dass beim Heizungstausch im Moment vor allem für neue Öl- und Gasheizungen konkrete Vorgaben gelten, während weitere Regelungen je nach Größe der Kommune erst später greifen. Für Eigentümer heißt das: Nicht alles ändert sich gleichzeitig, aber die Richtung ist klar.",
+            "Deshalb ist 2026 kein Jahr für pauschale Antworten. Wer auf Rügen modernisieren will, sollte weder auf reine Panik noch auf falsche Entwarnung setzen, sondern die geltende Situation sauber prüfen: Welche Heizung ist vorhanden, wie dringend ist der Austausch und welcher Pfad bleibt auch mittelfristig sinnvoll?"
+          ],
+          "bullets": [
+            "aktuelles Recht ist die verbindliche Grundlage, nicht Gerüchte zur nächsten Novelle",
+            "bei neuen fossilen Lösungen sind die Rahmenbedingungen besonders sensibel",
+            "die richtige Entscheidung entsteht aus Bestand, Zeitdruck und Zukunftspfad zusammen"
+          ]
+        },
+        {
+          "title": "Warum Wärmeplanung in Mecklenburg-Vorpommern anders wirkt als in Großstädten",
+          "paragraphs": [
+            "Das Innenministerium Mecklenburg-Vorpommern hat die Wärmeplanung im Land ausdrücklich auf kleine und kleinste Gemeinden ausgerichtet. In der offiziellen Kommunikation wird betont, dass für dünn besiedelte Regionen Vereinfachungen nötig sind und Fernwärme nicht überall wirtschaftlich gedacht werden kann.",
+            "Für Rügen ist genau das der praktische Punkt. Viele Orte auf der Insel und im Umland haben keine Großstadtstruktur. Wer hier über Heizung und Versorgung nachdenkt, muss deshalb eher über dezentrale Lösungen, reale Netznähe und langfristige Wartbarkeit sprechen als über städtische Standardmodelle."
+          ],
+          "bullets": [
+            "kleine Gemeinden und Ämter spielen in MV eine größere Rolle als in Ballungsräumen",
+            "dünne Besiedlung verändert die Wirtschaftlichkeit von Fernwärme",
+            "dezentrale Lösungen bleiben auf Rügen in vielen Fällen der realistischere Ausgangspunkt"
+          ]
+        },
+        {
+          "title": "Was Eigentümer auf Rügen jetzt sinnvoll vorbereiten sollten",
+          "paragraphs": [
+            "Wenn eine Bestandsheizung noch läuft, ist 2026 ein gutes Jahr für Vorbereitung statt Schnellschuss. Dazu gehören belastbare Daten zur bestehenden Anlage, ein ehrlicher Blick auf den Verbrauch und die Frage, ob eher Wärmepumpe, klassischer Heizungsersatz oder ein gestufter Umbau zur Immobilie passt.",
+            "Wenn die Entscheidung dagegen akut wird, etwa wegen Alter oder Störung, hilft eine regionale Einordnung besonders: Wie schnell ist Hilfe vor Ort möglich, wie passen Förderung und Technik zusammen und wie bleibt das System auch in einigen Jahren noch plausibel? Genau dort trennt sich Theorie von guter Planung."
+          ],
+          "bullets": [
+            "nicht nur nach Gesetzesbegriff, sondern nach realem Gebäudezustand entscheiden",
+            "Wärmeplanung als Orientierung nutzen, aber nicht als Ausrede für Untätigkeit",
+            "regionale Erreichbarkeit und spätere Betreuung in die Systemwahl einbeziehen"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Muss ich auf Rügen erst den kommunalen Wärmeplan abwarten?",
+          "answer": "Nicht pauschal. Die Wärmeplanung ist wichtig, aber sie ersetzt keine Einzelfallprüfung. Wenn eine Anlage altersbedingt oder technisch an ihre Grenzen kommt, sollte die Entscheidung trotzdem jetzt fachlich vorbereitet werden."
+        },
+        {
+          "question": "Gilt auf Rügen 2026 dasselbe wie in einer Großstadt?",
+          "answer": "Das Gesetz gilt bundesweit, die praktische Bedeutung von Wärmeplanung und Netzausbau ist in kleineren Gemeinden aber oft anders. Genau deshalb sind lokale Voraussetzungen auf Rügen so wichtig."
+        },
+        {
+          "question": "Heißt Wärmeplanung automatisch Fernwärme?",
+          "answer": "Nein. Gerade in dünner besiedelten Regionen kann ein Fernwärmenetz wirtschaftlich weniger naheliegend sein. Welche Lösung tragfähig ist, muss vor Ort bewertet werden."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Verbraucherzentrale: GEG – Was steht im Gebäude-Energie-Gesetz?",
+          "url": "https://www.verbraucherzentrale.de/wissen/energie/energetische-sanierung/geg-was-steht-im-gebaeudeenergiegesetz-13886"
+        },
+        {
+          "label": "Innenministerium Mecklenburg-Vorpommern: Weichenstellung für die Kommunale Wärmeplanung in MV gestartet",
+          "url": "https://www.regierung-mv.de/serviceassistent/_php/download.php?datei_id=1674351"
+        },
+        {
+          "label": "KfW: Heizungsförderung im Überblick",
+          "url": "https://www.kfw.de/inlandsfoerderung/Heizungsf%C3%B6rderung/"
+        }
+      ],
+      "relatedLinks": [
+        {
+          "href": "/heizung-ruegen",
+          "label": "Heizung modernisieren",
+          "description": "Unsere Leistungsseite für Bestandsanlagen, Austausch und Modernisierung."
+        },
+        {
+          "href": "/waermepumpen-ruegen",
+          "label": "Wärmepumpen auf Rügen",
+          "description": "Wenn die Wärmeplanung eher in Richtung dezentraler Lösung weist."
+        },
+        {
+          "href": "/kontakt",
+          "label": "Situation vor Ort einordnen",
+          "description": "Wenn Sie Ihre Immobilie nicht nach Schlagzeilen, sondern sauber prüfen lassen möchten."
+        }
+      ],
+      "cta": "Heizungsentscheidung sauber einordnen"
+    },
+    {
+      "slug": "/ratgeber/barrierearmes-bad-foerderung-ruegen-2026",
+      "title": "Barrierearmes Bad auf Rügen 2026: Wie die KfW-Förderung 455-B wieder hilft",
+      "description": "Barrierearmes Bad auf Rügen 2026: Seit dem 8. April ist die KfW-Förderung 455-B wieder da. Was im Bad gefördert wird, wie der Antrag läuft und welche Maßnahmen sich wirklich lohnen.",
+      "answer": "Seit dem 8. April 2026 können Zuschüsse aus dem KfW-Programm 455-B für Barrierereduzierung wieder beantragt werden. Für Eigentümer auf Rügen ist das besonders interessant, wenn aus einer Badmodernisierung zugleich ein alltagstauglicherer, sicherer Dusch- und Bewegungsbereich werden soll.",
+      "intro": "Ein Bad muss nicht erst im Akutfall umgebaut werden, damit Barrierereduzierung sinnvoll wird. Gerade auf Rügen, wo viele Häuser lange selbst genutzt oder über Generationen weitergegeben werden, ist ein gut geplanter, barriereärmerer Umbau oft einfach die vernünftigere Modernisierung.",
+      "publishedAt": "2026-04-08",
+      "updatedAt": "2026-04-08",
+      "points": [
+        "Die KfW hat die Zuschussförderung 455-B zum 8. April 2026 wieder geöffnet",
+        "Gefördert werden Maßnahmen zur Barrierereduzierung auch in Wohn- und Sanitärräumen",
+        "Der Antrag muss vor Beginn der Maßnahme gestellt werden",
+        "Gerade beim Badumbau lassen sich Komfort, Sicherheit und Alltagstauglichkeit sinnvoll verbinden"
+      ],
+      "sections": [
+        {
+          "title": "Was das KfW-Programm 455-B aktuell fördert",
+          "paragraphs": [
+            "Die KfW fördert mit 455-B wieder barrierereduzierende Maßnahmen in Wohnungen und Häusern. Laut aktueller Mitteilung vom 7. April 2026 startet die Antragstellung ab dem 8. April 2026 erneut. Gefördert werden unter anderem Maßnahmen in Wohn- und Sanitärräumen, Bewegungsflächen und bestimmte Unterstützungs- oder Assistenzsysteme.",
+            "Für Eigentümer auf Rügen ist dabei nicht nur die Rückkehr des Programms wichtig, sondern auch der konkrete Rahmen: Einzelmaßnahmen werden prozentual bezuschusst, größere Standards erhalten einen höheren Satz. Wer ohnehin modernisieren wollte, sollte das jetzt sauber mitdenken."
+          ],
+          "bullets": [
+            "10 Prozent Zuschuss für Einzelmaßnahmen bei förderfähigen Kosten bis 25.000 Euro je Wohneinheit",
+            "12,5 Prozent beim Standard „Altersgerechtes Haus“ bei höheren förderfähigen Kosten",
+            "die Förderung steht unter Haushaltsvorbehalt und muss vor Maßnahmenbeginn beantragt werden"
+          ]
+        },
+        {
+          "title": "Welche Badmaßnahmen im Alltag besonders viel bringen",
+          "paragraphs": [
+            "Nicht jede gute Maßnahme ist spektakulär. Oft machen gerade bodennahe Duschlösungen, mehr Bewegungsfläche, besser erreichbare Armaturen und ein klarer, sicherer Zugang den größten Unterschied. Die Verbraucherzentrale empfiehlt genau diese alltagstaugliche Sicht auf das Bad statt reiner Optikplanung.",
+            "Auf Rügen spielt außerdem der bewohnte Bestand eine große Rolle. Viele Umbauten müssen funktionieren, ohne das gesamte Haus sofort zur Großbaustelle zu machen. Deshalb ist ein badbezogener Stufenplan häufig sinnvoller als die Maximalmaßnahme auf einmal."
+          ],
+          "bullets": [
+            "Dusche statt Wanne ist oft der wichtigste Hebel für Komfort und Sicherheit",
+            "Bewegungsflächen und Erreichbarkeit müssen mitgeplant werden, nicht nachträglich",
+            "ein barriereärmeres Bad ist oft auch ohne Pflegefall einfach das angenehmere Bad"
+          ]
+        },
+        {
+          "title": "Worauf Eigentümer bei Antrag und Planung achten sollten",
+          "paragraphs": [
+            "Der wichtigste Förderfehler ist auch hier die falsche Reihenfolge. Die KfW verlangt ausdrücklich, dass der Antrag vor Beginn der Maßnahme gestellt wird. Wer zuerst beauftragt und danach an Förderung denkt, nimmt sich unnötig Spielraum.",
+            "Sinnvoll ist deshalb, den Umbau nicht nur gestalterisch, sondern auch förderlogisch vorzubereiten: Welche Maßnahmen sind wirklich geplant, reichen Einzelmaßnahmen aus oder lohnt sich ein größerer Standard, und wie bleibt das Bad auf Jahre hinaus praktisch?"
+          ],
+          "bullets": [
+            "Antrag vor Vertragsabschluss stellen",
+            "Maßnahmenpaket früh sauber abgrenzen",
+            "Komfort, Reinigung, Bewegungsfläche und spätere Nutzbarkeit gemeinsam bewerten"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Seit wann ist die KfW-Förderung 455-B wieder verfügbar?",
+          "answer": "Die KfW hat am 7. April 2026 die Wiederaufnahme angekündigt. Anträge können seit dem 8. April 2026 wieder gestellt werden."
+        },
+        {
+          "question": "Wird nur ein komplett barrierefreies Bad gefördert?",
+          "answer": "Nein. Auch einzelne barrierereduzierende Maßnahmen können förderfähig sein, wenn sie die Anforderungen des Programms erfüllen."
+        },
+        {
+          "question": "Kann ich erst beauftragen und dann den Zuschuss beantragen?",
+          "answer": "Nein, genau das sollte vermieden werden. Der Antrag muss vor Beginn der Maßnahme gestellt werden."
+        }
+      ],
+      "sources": [
+        {
+          "label": "KfW: Investitionszuschuss Barrierereduzierung – Wiederaufnahme ab 8. April 2026",
+          "url": "https://www.kfw.de/%C3%9Cber-die-KfW/Newsroom/Aktuelles/News-Details_889024.html"
+        },
+        {
+          "label": "KfW: Barrierereduzierung – Investitionszuschuss (455-B)",
+          "url": "https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestandsimmobilie/F%C3%B6rderprodukte/Altersgerecht-Umbauen-Investitionszuschuss-%28455%29/"
+        },
+        {
+          "label": "Verbraucherzentrale: Badezimmer – Platz gewinnen und Barrieren abbauen",
+          "url": "https://www.verbraucherzentrale.de/wissen/energie/energetische-sanierung/badezimmer-platz-gewinnen-und-barrieren-abbauen-54769"
+        }
+      ],
+      "relatedLinks": [
+        {
+          "href": "/badsanierung-ruegen",
+          "label": "Badsanierung auf Rügen",
+          "description": "Unsere Leistungsseite für Badumbau, Dusche statt Wanne und Teilmodernisierung."
+        },
+        {
+          "href": "/ratgeber/bad-modernisieren-ohne-komplettumbau",
+          "label": "Bad modernisieren ohne Komplettumbau",
+          "description": "Die passende Vertiefung für gestufte Umbauten und alltagstaugliche Planung."
+        },
+        {
+          "href": "/kontakt",
+          "label": "Barriereärmeres Bad besprechen",
+          "description": "Wenn Sie Förderung und konkrete Maßnahmen gemeinsam prüfen möchten."
+        }
+      ],
+      "cta": "Badumbau mit Förderung besprechen"
     }
   ]
 }
