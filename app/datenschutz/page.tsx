@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 export default function DatenschutzPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-surface">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Kicker className="mb-6">Rechtliches</Kicker>
-          <h1 className="text-5xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
             Datenschutz&shy;erklärung
           </h1>
         </div>
       </section>
 
       <Section tone="surface-low">
-        <div className="max-w-2xl space-y-10 text-sm text-on-surface-variant leading-relaxed">
+        <div className="max-w-2xl space-y-10 text-sm text-on-surface-variant leading-relaxed break-words">
           {/* Hinweis für juristische Review */}
           <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 text-on-surface">
             <p className="font-bold text-primary mb-1">Hinweis (intern)</p>
