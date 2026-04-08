@@ -33,7 +33,7 @@ export default function NotdienstPage() {
   return (
     <>
       {/* Hero — roter Akzent */}
-      <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-error/5">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-error/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <div className="inline-flex items-center gap-2 bg-error/10 text-error px-4 py-2 rounded-full mb-6">
@@ -81,7 +81,7 @@ export default function NotdienstPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-error/30 to-transparent" />
             </div>
             {/* Notdienst-Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-error text-white p-5 rounded-xl shadow-xl">
+            <div className="hidden sm:block absolute -bottom-6 -left-6 bg-error text-white p-5 rounded-xl shadow-xl">
               <div className="text-3xl font-black">24/7</div>
               <div className="text-xs font-bold uppercase tracking-wider opacity-80">Erreichbar</div>
             </div>
@@ -119,7 +119,7 @@ export default function NotdienstPage() {
 
       {/* Erreichbarkeit */}
       <Section tone="surface" id="kontakt">
-        <div className="grid grid-cols-12 items-center gap-12">
+        <div className="grid grid-cols-12 items-center gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-6">
             <Kicker className="mb-4">Erreichbarkeit</Kicker>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-primary mb-6 leading-tight">
