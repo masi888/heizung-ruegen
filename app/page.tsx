@@ -60,11 +60,11 @@ export default function HomePage() {
   return (
     <>
       {/* Task 4.1 — Hero */}
-      <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-surface">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 editorial-grid items-center">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <Kicker className="mb-6">{homeHero.eyebrow}</Kicker>
-            <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold tracking-[-0.02em] text-primary leading-[1.05] mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold tracking-[-0.02em] text-primary leading-[1.05] mb-8">
               Wärme für Generationen.
               <br />
               <span className="text-accent">Vater &amp; Sohn.</span>
@@ -106,7 +106,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-[260px]">
+            <div className="hidden sm:block absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-[260px]">
               <div className="flex items-center gap-2 mb-2">
                 <Icon name="verified" className="text-accent" fill />
                 <span className="font-bold text-primary">Insel-Expertise</span>
@@ -162,7 +162,7 @@ export default function HomePage() {
 
       {/* Task 4.3 — Story Section */}
       <Section tone="surface" id="ueber-uns">
-        <div className="editorial-grid items-center gap-12">
+        <div className="editorial-grid items-center gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
             <div className="relative">
               <Image
@@ -172,7 +172,7 @@ export default function HomePage() {
                 height={1200}
                 className="w-full rounded-2xl shadow-2xl"
               />
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full flex items-center justify-center text-center border-8 border-surface transform rotate-[8deg]">
+              <div className="hidden sm:flex absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full items-center justify-center text-center border-8 border-surface transform rotate-[8deg]">
                 <span className="text-primary font-black text-lg leading-tight">
                   Seit 1990 auf Rügen
                 </span>
@@ -219,7 +219,7 @@ export default function HomePage() {
 
       {/* Task 4.4 — Vorher/Nachher Showcase */}
       <Section tone="surface-container" id="vorher-nachher">
-        <div className="editorial-grid items-center gap-12">
+        <div className="editorial-grid items-center gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-5">
             <Kicker className="mb-4">Vorher / Nachher</Kicker>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-primary mb-6 leading-tight">
@@ -301,7 +301,7 @@ export default function HomePage() {
 
       {/* Task 4.5 — FAQ Teaser */}
       <Section tone="surface-low" id="faq-teaser">
-        <div className="editorial-grid gap-12">
+        <div className="editorial-grid gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-4">
             <Kicker className="mb-4">Häufige Fragen</Kicker>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-primary leading-tight">
