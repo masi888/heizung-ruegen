@@ -62,7 +62,13 @@
 @utility editorial-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .editorial-grid {
+    gap: 2rem;
+  }
 }
 
 @utility glass-effect {
