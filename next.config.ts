@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         pathname: "/site/**",
         search: "",
       },
+      {
+        pathname: "/images/**",
+        search: "",
+      },
     ],
   },
 };
