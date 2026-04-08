@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-surface">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Kicker className="mb-6">Rechtliches</Kicker>
-          <h1 className="text-5xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
             Impressum
           </h1>
         </div>
       </section>
 
       <Section tone="surface-low">
-        <div className="max-w-2xl space-y-10">
+        <div className="max-w-2xl space-y-10 break-words">
           <div className="space-y-2">
             <h2 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
               Angaben gemäß § 5 TMG
