@@ -34,7 +34,7 @@ export default function WartungServicePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-surface">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <Kicker className="mb-6">Wartung &amp; Service</Kicker>

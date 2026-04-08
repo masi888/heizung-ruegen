@@ -17,11 +17,11 @@ export default function FaqPage() {
       <JsonLd data={buildFaqJsonLd(faqEntries)} />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-8 items-end">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-surface">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-end">
           <div className="col-span-12 lg:col-span-6">
             <Kicker className="mb-6">Häufige Fragen</Kicker>
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
               Was Kunden uns fragen.
             </h1>
           </div>
@@ -42,13 +42,13 @@ export default function FaqPage() {
               key={entry.question}
               className="group bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden"
             >
-              <summary className="flex items-center justify-between gap-4 cursor-pointer p-6 font-bold text-primary list-none">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer p-5 sm:p-6 font-bold text-primary list-none">
                 <span>{entry.question}</span>
                 <span className="material-symbols-outlined text-accent flex-shrink-0 transition-transform group-open:rotate-180">
                   expand_more
                 </span>
               </summary>
-              <p className="px-6 pb-6 text-on-surface-variant leading-relaxed">
+              <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-on-surface-variant leading-relaxed">
                 {entry.answer}
               </p>
             </details>
@@ -69,7 +69,7 @@ export default function FaqPage() {
           </p>
           <a
             href="/kontakt"
-            className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-colors"
+            className="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold hover:bg-primary-container transition-colors"
           >
             Frage stellen
           </a>
