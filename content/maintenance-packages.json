@@ -1,34 +1,34 @@
 {
   "status": "draft-for-implementation",
-  "note": "Paketnamen und Copy freigegeben fuer Implementierung. Oeffentliche ab-Preise vor Livegang kaufmaennisch bestaetigen.",
+  "note": "Paketnamen und Copy freigegeben für Implementierung. Öffentliche ab-Preise vor Livegang kaufmännisch bestätigen.",
   "packages": [
     {
       "slug": "basis-wartung",
       "name": "Basis-Wartung",
-      "priceLabel": "ab Preis nach Bestaetigung",
+      "priceLabel": "ab Preis nach Bestätigung",
       "approvalRequired": true,
-      "audience": "fuer klassische Einzelgeraete und planbare Standardwartungen",
-      "summary": "Der klare Einstieg fuer Anlagen, die regelmaessig fachgerecht gewartet werden sollen.",
+      "audience": "für klassische Einzelgeräte und planbare Standardwartungen",
+      "summary": "Der klare Einstieg für Anlagen, die regelmäßig fachgerecht gewartet werden sollen.",
       "includes": [
-        "Sicht- und Funktionspruefung der Anlage",
-        "Reinigung und Kontrolle im ueblichen Wartungsumfang",
-        "Pruefung sicherheitsrelevanter Grundfunktionen",
-        "Kurze Wartungsrueckmeldung mit Hinweisen"
+        "Sicht- und Funktionsprüfung der Anlage",
+        "Reinigung und Kontrolle im üblichen Wartungsumfang",
+        "Prüfung sicherheitsrelevanter Grundfunktionen",
+        "Kurze Wartungsrückmeldung mit Hinweisen"
       ],
       "cta": "Basis-Wartung anfragen"
     },
     {
       "slug": "komfort-wartung",
       "name": "Komfort-Wartung",
-      "priceLabel": "ab Preis nach Bestaetigung",
+      "priceLabel": "ab Preis nach Bestätigung",
       "approvalRequired": true,
-      "audience": "fuer Betreiber, die mehr Transparenz und eine regelmaessige Betreuung wollen",
-      "summary": "Mehr Einordnung, mehr Rueckmeldung und sinnvoll fuer Anlagen, die dauerhaft zuverlaessig laufen sollen.",
+      "audience": "für Betreiber, die mehr Transparenz und eine regelmäßige Betreuung wollen",
+      "summary": "Mehr Einordnung, mehr Rückmeldung und sinnvoll für Anlagen, die dauerhaft zuverlässig laufen sollen.",
       "includes": [
         "Alle Leistungen der Basis-Wartung",
-        "ausfuehrlichere Prüfung relevanter Anlagenkomponenten",
+        "ausführlichere Prüfung relevanter Anlagenkomponenten",
         "Hinweise auf erkennbare Verschleiss- oder Optimierungspunkte",
-        "bessere Vorqualifizierung fuer Folgeeinsaetze"
+        "bessere Vorqualifizierung für Folgeeinsätze"
       ],
       "cta": "Komfort-Wartung anfragen",
       "recommended": true
@@ -36,15 +36,15 @@
     {
       "slug": "system-wartung",
       "name": "System-Wartung",
-      "priceLabel": "ab Preis nach Bestaetigung",
+      "priceLabel": "ab Preis nach Bestätigung",
       "approvalRequired": true,
-      "audience": "fuer komplexere Anlagen, Kombinationen oder hoehere technische Anforderungen",
+      "audience": "für komplexere Anlagen, Kombinationen oder höhere technische Anforderungen",
       "summary": "Die passende Option, wenn mehrere Komponenten zusammenspielen oder die Anlage mehr Aufmerksamkeit braucht.",
       "includes": [
         "Alle Leistungen der Komfort-Wartung",
-        "geeignet fuer komplexere Systemkonstellationen",
-        "mehr Kontext fuer vorbereitete Serviceeinsaetze",
-        "saubere Grundlage fuer weiterfuehrende Empfehlungen"
+        "geeignet für komplexere Systemkonstellationen",
+        "mehr Kontext für vorbereitete Serviceeinsätze",
+        "saubere Grundlage für weiterführende Empfehlungen"
       ],
       "cta": "System-Wartung anfragen"
     }
