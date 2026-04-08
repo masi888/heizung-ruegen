@@ -12,11 +12,34 @@ Die Website soll als moderner, hochwertiger und lokaler Autoritätsauftritt fuer
 
 ## Aktueller Stack
 
-- Next.js App Router
+- Next.js 16 App Router (Turbopack build)
+- React 19
 - TypeScript
+- Tailwind CSS v4 (CSS-First `@theme` Tokens in `app/globals.css`)
+- Manrope Variable Font + Material Symbols Outlined
 - ESLint
 - Vercel-kompatibles Deployment
 - serverseitiger Anfrage-Endpoint unter `app/api/inquiry/route.ts`
+
+## Design-System
+
+Die Seite lebt auf einem editorialen Grundlayout (vgl. `Design Muster/DESIGN.md`) mit
+den echten Logo-Farben:
+
+- Primary Navy `#001e40`
+- Accent Orange `#ea7a1e` (aeusserer Logo-Ring)
+- Accent Warm `#f4b324` (innerer Logo-Ring)
+- Surface Linen `#fef8f3`
+
+Wiederverwendete Primitives liegen in `components/ui/`:
+`icon.tsx`, `button.tsx`, `section.tsx`, `kicker.tsx`, `card.tsx`,
+`trust-bar.tsx`, `closing-band.tsx`, `before-after.tsx`.
+
+Alle Bilder unter `public/images/` sind ueber nano-banana generiert,
+die Prompts dazu liegen in `content/image-prompts.md`.
+
+Das Logo wird ueber `scripts/process-logo.py` (Pillow) aus dem
+Original-JPG in transparente Varianten ueberfuehrt.
 
 ## Lokaler Start
 
