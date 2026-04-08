@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-import { company, maintenanceFieldLabels, maintenancePackages } from "@/lib/site-data";
+import {
+  company,
+  maintenanceFieldLabels,
+  maintenancePackages,
+} from "@/lib/site-data";
 
 type FormMode = "project" | "maintenance";
 
@@ -23,13 +27,37 @@ const projectTopics = [
   "Allgemeine Anfrage",
 ];
 
+// Geteilte Styles für Eingabe-Elemente — Editorial-Input mit Unterstrich-Akzent
+const fieldWrap = "flex flex-col gap-2";
+const fieldLabel =
+  "text-xs font-bold uppercase tracking-[0.15em] text-on-surface-variant";
+const fieldControl =
+  "w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 " +
+  "rounded-lg border border-outline-variant/40 border-b-2 border-b-outline-variant/60 " +
+  "px-4 py-3 text-base transition-all " +
+  "focus:outline-none focus:border-b-accent focus:ring-2 focus:ring-accent/20";
+const tabBase =
+  "flex-1 px-4 py-3 rounded-lg font-bold text-sm transition-all border-2";
+const tabActive = "bg-primary text-on-primary border-primary";
+const tabIdle =
+  "bg-surface-container-low text-on-surface-variant border-transparent hover:border-outline-variant/40";
+const submitBtn =
+  "inline-flex items-center justify-center gap-2 bg-primary text-on-primary " +
+  "px-6 py-4 rounded-lg font-bold text-base transition-all " +
+  "hover:bg-primary-container active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed";
+
 export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
   const [mode, setMode] = useState<FormMode>(initialMode);
-  const [projectState, setProjectState] = useState<SubmissionState>({ status: "idle" });
-  const [maintenanceState, setMaintenanceState] = useState<SubmissionState>({ status: "idle" });
+  const [projectState, setProjectState] = useState<SubmissionState>({
+    status: "idle",
+  });
+  const [maintenanceState, setMaintenanceState] = useState<SubmissionState>({
+    status: "idle",
+  });
 
   async function handleSubmit(form: HTMLFormElement, target: FormMode) {
-    const setter = target === "project" ? setProjectState : setMaintenanceState;
+    const setter =
+      target === "project" ? setProjectState : setMaintenanceState;
     setter({ status: "submitting", message: "Anfrage wird gesendet ..." });
 
     const body = new FormData(form);
@@ -44,27 +72,46 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
       const payload = (await response.json()) as { message?: string };
 
       if (!response.ok) {
-        throw new Error(payload.message || "Die Anfrage konnte nicht gesendet werden.");
+        throw new Error(
+          payload.message || "Die Anfrage konnte nicht gesendet werden.",
+        );
       }
 
       form.reset();
       setter({
         status: "success",
-        message: payload.message || "Die Anfrage wurde erfolgreich gesendet.",
+        message:
+          payload.message || "Die Anfrage wurde erfolgreich gesendet.",
       });
     } catch (error) {
       setter({
         status: "error",
-        message: error instanceof Error ? error.message : "Beim Senden ist ein Fehler aufgetreten.",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Beim Senden ist ein Fehler aufgetreten.",
       });
     }
   }
 
+  const feedbackClasses = (status: SubmissionState["status"]) => {
+    if (status === "success")
+      return "bg-accent/10 border-accent/40 text-on-surface";
+    if (status === "error")
+      return "bg-error/10 border-error/40 text-error";
+    return "bg-surface-container-low border-outline-variant/30 text-on-surface-variant";
+  };
+
   return (
-    <div className="forms-shell">
-      <div className="tab-row" role="tablist" aria-label="Anfragearten">
+    <div className="space-y-8">
+      {/* Tab-Zeile */}
+      <div
+        className="grid grid-cols-2 gap-2 bg-surface-container rounded-xl p-1.5"
+        role="tablist"
+        aria-label="Anfragearten"
+      >
         <button
-          className={mode === "project" ? "tab-button is-active" : "tab-button"}
+          className={`${tabBase} ${mode === "project" ? tabActive : tabIdle}`}
           onClick={() => setMode("project")}
           role="tab"
           aria-selected={mode === "project"}
@@ -73,7 +120,7 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
           Projektanfrage
         </button>
         <button
-          className={mode === "maintenance" ? "tab-button is-active" : "tab-button"}
+          className={`${tabBase} ${mode === "maintenance" ? tabActive : tabIdle}`}
           onClick={() => setMode("maintenance")}
           role="tab"
           aria-selected={mode === "maintenance"}
@@ -85,28 +132,50 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
 
       {mode === "project" ? (
         <form
-          className="request-form"
+          className="space-y-6"
           onSubmit={(event) => {
             event.preventDefault();
             handleSubmit(event.currentTarget, "project");
           }}
         >
-          <div className="field-grid">
-            <label>
-              Name
-              <input name="name" type="text" required />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>Name</span>
+              <input
+                name="name"
+                type="text"
+                required
+                className={fieldControl}
+                autoComplete="name"
+              />
             </label>
-            <label>
-              Telefon
-              <input name="phone" type="tel" required />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>Telefon</span>
+              <input
+                name="phone"
+                type="tel"
+                required
+                className={fieldControl}
+                autoComplete="tel"
+              />
             </label>
-            <label>
-              E-Mail
-              <input name="email" type="email" />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>E-Mail</span>
+              <input
+                name="email"
+                type="email"
+                className={fieldControl}
+                autoComplete="email"
+              />
             </label>
-            <label>
-              Thema
-              <select name="topic" defaultValue={projectTopics[0]} required>
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>Thema</span>
+              <select
+                name="topic"
+                defaultValue={projectTopics[0]}
+                required
+                className={fieldControl}
+              >
                 {projectTopics.map((topic) => (
                   <option key={topic} value={topic}>
                     {topic}
@@ -116,123 +185,267 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             </label>
           </div>
 
-          <label>
-            Was planen Sie?
+          <label className={fieldWrap}>
+            <span className={fieldLabel}>Was planen Sie?</span>
             <textarea
               name="message"
-              rows={6}
+              rows={5}
               placeholder="Kurz beschreiben, worum es geht und was bereits vorhanden ist."
               required
+              className={`${fieldControl} resize-y min-h-[140px]`}
             />
           </label>
 
-          <div className="form-note">
-            Für den Notdienst bitte direkt anrufen: <a href={company.phones.mobileHref}>{company.phones.mobile}</a>
+          <p className="text-sm text-on-surface-variant">
+            Für den Notdienst bitte direkt anrufen:{" "}
+            <a
+              href={company.phones.mobileHref}
+              className="font-bold text-primary hover:text-accent"
+            >
+              {company.phones.mobile}
+            </a>
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <button
+              className={submitBtn}
+              type="submit"
+              disabled={projectState.status === "submitting"}
+            >
+              {projectState.status === "submitting"
+                ? "Wird gesendet..."
+                : "Projektanfrage senden"}
+            </button>
           </div>
 
-          <button className="button button-primary" type="submit" disabled={projectState.status === "submitting"}>
-            Projektanfrage senden
-          </button>
           {projectState.message ? (
-            <p className={`form-feedback ${projectState.status}`}>{projectState.message}</p>
+            <p
+              className={`border rounded-lg px-4 py-3 text-sm ${feedbackClasses(projectState.status)}`}
+              role="status"
+            >
+              {projectState.message}
+            </p>
           ) : null}
         </form>
       ) : (
         <form
-          className="request-form"
+          className="space-y-8"
           onSubmit={(event) => {
             event.preventDefault();
             handleSubmit(event.currentTarget, "maintenance");
           }}
         >
-          <fieldset className="package-grid">
-            <legend>Wartungspaket wählen</legend>
-            {maintenancePackages.map((item) => (
-              <label key={item.slug} className={item.recommended ? "package-card is-recommended" : "package-card"}>
-                <input
-                  defaultChecked={Boolean(item.recommended)}
-                  name="package"
-                  type="radio"
-                  value={`${item.name} | ${item.priceLabel}`}
-                />
-                <span className="package-name">{item.name}</span>
-                <span className="package-price">{item.priceLabel}</span>
-                <small>{item.summary}</small>
-              </label>
-            ))}
+          {/* Paket-Auswahl */}
+          <fieldset className="space-y-4">
+            <legend className={`${fieldLabel} mb-3`}>
+              Wartungspaket wählen
+            </legend>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {maintenancePackages.map((item) => (
+                <label
+                  key={item.slug}
+                  className={`relative flex flex-col gap-2 rounded-xl border-2 p-5 cursor-pointer transition-all
+                    bg-surface-container-lowest
+                    has-[:checked]:border-accent has-[:checked]:shadow-[0_0_0_4px_rgba(234,122,30,0.12)]
+                    hover:border-accent/60
+                    ${item.recommended ? "border-accent/40" : "border-outline-variant/30"}`}
+                >
+                  <input
+                    defaultChecked={Boolean(item.recommended)}
+                    name="package"
+                    type="radio"
+                    value={`${item.name} | ${item.priceLabel}`}
+                    className="sr-only"
+                  />
+                  {item.recommended && (
+                    <span className="absolute -top-2 right-4 bg-accent text-on-accent text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded">
+                      Empfohlen
+                    </span>
+                  )}
+                  <span className="text-base font-bold text-primary">
+                    {item.name}
+                  </span>
+                  <span className="text-sm font-bold text-accent">
+                    {item.priceLabel}
+                  </span>
+                  <small className="text-xs text-on-surface-variant leading-relaxed">
+                    {item.summary}
+                  </small>
+                </label>
+              ))}
+            </div>
           </fieldset>
 
-          <div className="field-grid">
-            <label>
-              {maintenanceFieldLabels.name}
-              <input name="name" type="text" required />
+          {/* Kontakt + Anlagen-Daten */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.name}
+              </span>
+              <input
+                name="name"
+                type="text"
+                required
+                className={fieldControl}
+                autoComplete="name"
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.telefon}
-              <input name="telefon" type="tel" required />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.telefon}
+              </span>
+              <input
+                name="telefon"
+                type="tel"
+                required
+                className={fieldControl}
+                autoComplete="tel"
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.email}
-              <input name="email" type="email" />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.email}
+              </span>
+              <input
+                name="email"
+                type="email"
+                className={fieldControl}
+                autoComplete="email"
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.anlagenadresse}
-              <input name="anlagenadresse" type="text" required />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.anlagenadresse}
+              </span>
+              <input
+                name="anlagenadresse"
+                type="text"
+                required
+                className={fieldControl}
+                autoComplete="street-address"
+              />
             </label>
-            <label className="field-wide">
-              {maintenanceFieldLabels.rechnungsanschrift}
-              <input name="rechnungsanschrift" type="text" placeholder="Falls abweichend" />
+            <label className={`${fieldWrap} sm:col-span-2`}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.rechnungsanschrift}
+              </span>
+              <input
+                name="rechnungsanschrift"
+                type="text"
+                placeholder="Falls abweichend"
+                className={fieldControl}
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.geraetetyp}
-              <input name="geraetetyp" type="text" required />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.geraetetyp}
+              </span>
+              <input
+                name="geraetetyp"
+                type="text"
+                required
+                className={fieldControl}
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.geraetebezeichnung}
-              <input name="geraetebezeichnung" type="text" required />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.geraetebezeichnung}
+              </span>
+              <input
+                name="geraetebezeichnung"
+                type="text"
+                required
+                className={fieldControl}
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.seriennummer}
-              <input name="seriennummer" type="text" />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.seriennummer}
+              </span>
+              <input
+                name="seriennummer"
+                type="text"
+                className={fieldControl}
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.hersteller_optional}
-              <input name="hersteller_optional" type="text" />
+            <label className={fieldWrap}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.hersteller_optional}
+              </span>
+              <input
+                name="hersteller_optional"
+                type="text"
+                className={fieldControl}
+              />
             </label>
-            <label>
-              {maintenanceFieldLabels.letzte_wartung_optional}
-              <input name="letzte_wartung_optional" type="text" placeholder="z. B. 09/2025" />
+            <label className={`${fieldWrap} sm:col-span-2`}>
+              <span className={fieldLabel}>
+                {maintenanceFieldLabels.letzte_wartung_optional}
+              </span>
+              <input
+                name="letzte_wartung_optional"
+                type="text"
+                placeholder="z. B. 09/2025"
+                className={fieldControl}
+              />
             </label>
           </div>
 
-          <label>
-            {maintenanceFieldLabels.foto_typenschild_optional}
+          {/* Datei-Upload */}
+          <label className={fieldWrap}>
+            <span className={fieldLabel}>
+              {maintenanceFieldLabels.foto_typenschild_optional}
+            </span>
             <input
               name="attachments"
               type="file"
               accept=".jpg,.jpeg,.png,.pdf,.webp"
               multiple
+              className="block w-full text-sm text-on-surface-variant
+                file:mr-4 file:px-5 file:py-2.5 file:rounded-lg
+                file:border-0 file:bg-primary file:text-on-primary
+                file:font-bold file:text-sm file:cursor-pointer
+                hover:file:bg-primary-container transition-colors"
             />
           </label>
 
-          <label>
-            {maintenanceFieldLabels.hinweise_optional}
+          {/* Hinweise */}
+          <label className={fieldWrap}>
+            <span className={fieldLabel}>
+              {maintenanceFieldLabels.hinweise_optional}
+            </span>
             <textarea
               name="hinweise_optional"
-              rows={5}
+              rows={4}
               placeholder="Auffälligkeiten, bekannte Störungen oder weitere Hinweise"
+              className={`${fieldControl} resize-y min-h-[120px]`}
             />
           </label>
 
-          <p className="form-note">
-            Typenschild- oder Anlagenfotos helfen uns, die Wartung schneller und sauberer vorzubereiten.
+          <p className="text-sm text-on-surface-variant italic">
+            Typenschild- oder Anlagenfotos helfen uns, die Wartung schneller und
+            sauberer vorzubereiten.
           </p>
 
-          <button className="button button-primary" type="submit" disabled={maintenanceState.status === "submitting"}>
-            Wartung anfragen
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <button
+              className={submitBtn}
+              type="submit"
+              disabled={maintenanceState.status === "submitting"}
+            >
+              {maintenanceState.status === "submitting"
+                ? "Wird gesendet..."
+                : "Wartung anfragen"}
+            </button>
+          </div>
+
           {maintenanceState.message ? (
-            <p className={`form-feedback ${maintenanceState.status}`}>{maintenanceState.message}</p>
+            <p
+              className={`border rounded-lg px-4 py-3 text-sm ${feedbackClasses(maintenanceState.status)}`}
+              role="status"
+            >
+              {maintenanceState.message}
+            </p>
           ) : null}
         </form>
       )}
