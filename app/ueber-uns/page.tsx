@@ -62,11 +62,11 @@ export default function UeberUnsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-8 items-end">
+      <section className="pt-24 sm:pt-32 pb-14 sm:pb-20 bg-surface">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-end">
           <div className="col-span-12 lg:col-span-6">
             <Kicker className="mb-6">Über uns</Kicker>
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
               Familienbetrieb.<br />Seit 1990.
             </h1>
           </div>
@@ -96,7 +96,7 @@ export default function UeberUnsPage() {
               />
             </div>
             {/* Signet Badge */}
-            <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-primary flex items-center justify-center shadow-xl border-4 border-surface-container-low">
+            <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-primary hidden sm:flex items-center justify-center shadow-xl border-4 border-surface-container-low">
               <Image
                 src="/brand/logo/bertig-signet-only.png"
                 alt="Bertig Signet"
