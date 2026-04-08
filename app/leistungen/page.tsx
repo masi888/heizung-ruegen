@@ -63,11 +63,11 @@ const services = [
 export default function LeistungenPage() {
   return (
     <>
-      <section className="pt-32 pb-16 bg-surface">
+      <section className="pt-24 pb-12 sm:pt-32 sm:pb-16 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 items-end">
           <div className="col-span-12 lg:col-span-7">
             <Kicker className="mb-6">Leistungen</Kicker>
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
               Haustechnik mit klarer Handschrift.
             </h1>
           </div>
