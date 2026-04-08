@@ -6,6 +6,7 @@ import { ClosingBand } from "@/components/ui/closing-band";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import {
+  buildPageMetadata,
   company,
   findKnowledgeRoute,
   knowledgeSlugs,
@@ -29,9 +30,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const entry = findKnowledgeRoute(slug);
   if (!entry) return {};
+  const imgSrc = articleImages[slug] ?? "/images/ratgeber/waermepumpe.jpg";
+
   return {
-    title: `${entry.title} — Bertig Ratgeber`,
-    description: entry.intro,
+    ...buildPageMetadata({
+      title: `${entry.title} — Bertig Ratgeber`,
+      description: entry.intro,
+      path: `/ratgeber/${slug}`,
+      imagePath: imgSrc,
+      type: "article",
+    }),
   };
 }
 

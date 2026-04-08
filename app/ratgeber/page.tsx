@@ -1,17 +1,18 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 import { ClosingBand } from "@/components/ui/closing-band";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company, knowledgeEntries } from "@/lib/site-data";
+import { buildPageMetadata, company, knowledgeEntries } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Ratgeber — Bertig Sanitär- und Heizungstechnik",
   description:
     "Wissenswertes zu Wärmepumpe, Heizungswartung und Badsanierung auf Rügen — verständlich erklärt vom Fachbetrieb.",
-};
+  path: "/ratgeber",
+  imagePath: "/images/ratgeber/waermepumpe.jpg",
+});
 
 const ratgeberImages: Record<string, string> = {
   "/ratgeber/waermepumpe-im-bestand-ruegen": "/images/ratgeber/waermepumpe.jpg",

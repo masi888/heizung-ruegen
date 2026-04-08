@@ -1,16 +1,19 @@
-import type { Metadata } from "next";
-
 import { JsonLd } from "@/components/json-ld";
 import { RequestForms } from "@/components/request-forms";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { buildLocalBusinessJsonLd, company } from "@/lib/site-data";
+import {
+  buildLocalBusinessJsonLd,
+  buildPageMetadata,
+  company,
+} from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Kontakt — Bertig Sanitär- und Heizungstechnik",
   description:
     "Projektanfrage, Wartung oder allgemeine Fragen — wir sind direkt erreichbar. Telefon, E-Mail und Anfrageformular.",
-};
+  path: "/kontakt",
+});
 
 const openingHourLabels: Record<string, string> = {
   Monday: "Montag",

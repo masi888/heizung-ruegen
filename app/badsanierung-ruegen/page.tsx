@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,16 +7,18 @@ import { ClosingBand } from "@/components/ui/closing-band";
 import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company, findPageRoute } from "@/lib/site-data";
+import { buildPageMetadata, company, findPageRoute } from "@/lib/site-data";
 
 const route = findPageRoute("badsanierung-ruegen");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: route?.title ?? "Badsanierung auf Rügen | Bertig",
   description:
     route?.description ??
     "Badsanierung und Badmodernisierung auf Rügen – persönlich geplant, sauber koordiniert.",
-};
+  path: "/badsanierung-ruegen",
+  imagePath: "/images/services/badsanierung-modern.jpg",
+});
 
 const arbeitsweise = [
   {

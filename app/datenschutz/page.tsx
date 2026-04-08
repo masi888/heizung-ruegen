@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
-
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company } from "@/lib/site-data";
+import { buildPageMetadata, company } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Datenschutz — Bertig Sanitär- und Heizungstechnik",
   description: "Datenschutzerklärung gemäß DSGVO.",
-};
+  path: "/datenschutz",
+});
 
 export default function DatenschutzPage() {
   return (

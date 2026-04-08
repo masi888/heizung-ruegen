@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import {
-  buildCanonical,
+  buildPageMetadata,
   buildLocalBusinessJsonLd,
-  company,
   metadataDefaults,
-  siteUrl,
 } from "@/lib/site-data";
 
 import "./globals.css";
@@ -21,25 +18,11 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: metadataDefaults.title,
-    template: `%s | ${company.name}`,
-  },
+export const metadata = buildPageMetadata({
+  title: metadataDefaults.title,
   description: metadataDefaults.description,
-  alternates: {
-    canonical: buildCanonical("/"),
-  },
-  openGraph: {
-    title: metadataDefaults.title,
-    description: metadataDefaults.description,
-    url: siteUrl,
-    siteName: company.name,
-    locale: "de_DE",
-    type: "website",
-  },
-};
+  path: "/",
+});
 
 export default function RootLayout({
   children,

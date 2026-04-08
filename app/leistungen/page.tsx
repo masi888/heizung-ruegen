@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,13 +6,15 @@ import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company } from "@/lib/site-data";
+import { buildPageMetadata, company } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Unsere Leistungen",
   description:
     "Heizung, Wärmepumpen, Wartung, Bad, Klima und Notdienst — alle Leistungen von Bertig auf einen Blick.",
-};
+  path: "/leistungen",
+  imagePath: "/images/services/leistungen-hero.jpg",
+});
 
 const services = [
   {

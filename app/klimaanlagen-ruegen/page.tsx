@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,16 +6,18 @@ import { ClosingBand } from "@/components/ui/closing-band";
 import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company, findPageRoute } from "@/lib/site-data";
+import { buildPageMetadata, company, findPageRoute } from "@/lib/site-data";
 
 const route = findPageRoute("klimaanlagen-ruegen");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: route?.title ?? "Klimaanlagen auf Rügen | Bertig",
   description:
     route?.description ??
     "Klimaanlagen für Wohnhäuser, Ferienimmobilien und kleine Gewerbeobjekte auf Rügen – sauber geplant und fachgerecht umgesetzt.",
-};
+  path: "/klimaanlagen-ruegen",
+  imagePath: "/images/services/klimaanlage-innen.jpg",
+});
 
 const arbeitsweise = [
   {

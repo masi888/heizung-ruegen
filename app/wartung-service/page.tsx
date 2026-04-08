@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,16 +8,23 @@ import { ClosingBand } from "@/components/ui/closing-band";
 import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company, findPageRoute, maintenancePackages } from "@/lib/site-data";
+import {
+  buildPageMetadata,
+  company,
+  findPageRoute,
+  maintenancePackages,
+} from "@/lib/site-data";
 
 const route = findPageRoute("wartung-service");
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: route?.title ?? "Wartung & Service auf Rügen | Bertig",
   description:
     route?.description ??
     "Heizungswartung mit drei klaren Paketen, persönlicher Rückmeldung und strukturierter Datenerfassung auf Rügen.",
-};
+  path: "/wartung-service",
+  imagePath: "/images/services/wartung-inspektion.jpg",
+});
 
 export default function WartungServicePage() {
   const headline = route?.headline ?? "Wartung und Service mit klarem Ablauf statt endlosem Hin und Her";

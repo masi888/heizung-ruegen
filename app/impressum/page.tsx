@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
-
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company, legalNotice } from "@/lib/site-data";
+import { buildPageMetadata, company, legalNotice } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Impressum — Bertig Sanitär- und Heizungstechnik",
   description: "Gesetzliche Anbieterkennzeichnung gemäß § 5 TMG.",
-};
+  path: "/impressum",
+});
 
 export default function ImpressumPage() {
   return (

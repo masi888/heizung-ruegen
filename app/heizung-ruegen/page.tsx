@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 
 import { ClosingBand } from "@/components/ui/closing-band";
@@ -6,14 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company, findPageRoute } from "@/lib/site-data";
+import { buildPageMetadata, company, findPageRoute } from "@/lib/site-data";
 
 const route = findPageRoute("heizung-ruegen")!;
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: route.title,
   description: route.description,
-};
+  path: "/heizung-ruegen",
+  imagePath: "/images/services/heizung-modernisierung.jpg",
+});
 
 const steps = [
   {

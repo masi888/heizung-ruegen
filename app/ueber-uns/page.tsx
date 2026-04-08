@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 
 import { ClosingBand } from "@/components/ui/closing-band";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { company } from "@/lib/site-data";
+import { buildPageMetadata, company } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Über uns — Bertig Sanitär- und Heizungstechnik",
   description:
     "Familienbetrieb seit 1990 in Breege auf Rügen. Eckhard Bertig und sein Sohn stehen für persönliche Handwerksqualität auf der Insel.",
-};
+  path: "/ueber-uns",
+  imagePath: "/images/hero/vater-sohn-werkstatt.jpg",
+});
 
 const timeline = [
   {

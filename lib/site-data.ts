@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import maintenancePackagesSource from "@/content/maintenance-packages.json";
 import siteContentSource from "@/content/site-content-structured.json";
 
@@ -130,6 +132,63 @@ export const metadataDefaults = {
 
 export function buildCanonical(path: string) {
   return new URL(path, siteUrl).toString();
+}
+
+const defaultSocialImagePath = "/images/hero/vater-sohn-werkstatt.jpg";
+
+function withBrand(title: string) {
+  if (/bertig|sanitär- und heizungstechnik/i.test(title)) {
+    return title;
+  }
+
+  return `${title} | ${company.name}`;
+}
+
+type PageMetadataOptions = {
+  title: string;
+  description: string;
+  path: string;
+  imagePath?: string;
+  type?: "website" | "article";
+};
+
+export function buildPageMetadata({
+  title,
+  description,
+  path,
+  imagePath = defaultSocialImagePath,
+  type = "website",
+}: PageMetadataOptions): Metadata {
+  const normalizedTitle = withBrand(title);
+  const canonical = buildCanonical(path);
+  const imageUrl = buildCanonical(imagePath);
+
+  return {
+    title: normalizedTitle,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: normalizedTitle,
+      description,
+      url: canonical,
+      siteName: company.name,
+      locale: "de_DE",
+      type,
+      images: [
+        {
+          url: imageUrl,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: normalizedTitle,
+      description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export function buildLocalBusinessJsonLd() {

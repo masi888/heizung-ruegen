@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
-
 import { JsonLd } from "@/components/json-ld";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { buildFaqJsonLd, faqEntries } from "@/lib/site-data";
+import { buildFaqJsonLd, buildPageMetadata, faqEntries } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Häufige Fragen — Bertig Sanitär- und Heizungstechnik",
   description:
     "Antworten auf häufige Fragen zu Heizung, Wärmepumpe, Wartung und Badsanierung auf Rügen.",
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (
