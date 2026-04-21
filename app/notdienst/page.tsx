@@ -35,13 +35,13 @@ export default function NotdienstPage() {
     <>
       {/* Hero — roter Akzent */}
       <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-error/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <div className="inline-flex items-center gap-2 bg-error/10 text-error px-4 py-2 rounded-full mb-6">
               <Icon name="emergency" className="text-error text-base" fill />
               <span className="text-xs font-bold uppercase tracking-[0.2em]">24h-Notdienst</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary leading-tight mb-8">
+            <h1 className="text-[2rem] leading-[1.1] md:text-5xl lg:text-6xl lg:leading-tight font-extrabold tracking-tight text-primary mb-8 break-words hyphens-auto">
               {headline}
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
@@ -52,14 +52,14 @@ export default function NotdienstPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={company.phones.mobileHref}
-                className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-error text-white rounded-xl font-extrabold text-xl shadow-lg hover:brightness-95 active:scale-[0.98] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 sm:py-5 bg-error text-white rounded-xl font-extrabold text-lg sm:text-xl shadow-lg hover:brightness-95 active:scale-[0.98] transition-all"
               >
                 <Icon name="call" className="text-white text-2xl" />
                 {company.phones.mobile}
               </Link>
               <Link
                 href={company.phones.landlineHref}
-                className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-surface-container-high text-primary rounded-xl font-bold text-lg hover:bg-surface-container transition-all"
+                className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 sm:py-5 bg-surface-container-high text-primary rounded-xl font-bold text-base sm:text-lg hover:bg-surface-container transition-all"
               >
                 <Icon name="phone" className="text-primary" />
                 {company.phones.landline}
@@ -82,7 +82,7 @@ export default function NotdienstPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-error/30 to-transparent" />
             </div>
             {/* Notdienst-Badge */}
-            <div className="hidden sm:block absolute -bottom-6 -left-6 bg-error text-white p-5 rounded-xl shadow-xl">
+            <div className="hidden md:block absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-error text-white p-5 rounded-xl shadow-xl">
               <div className="text-3xl font-black">24/7</div>
               <div className="text-xs font-bold uppercase tracking-wider opacity-80">Erreichbar</div>
             </div>
