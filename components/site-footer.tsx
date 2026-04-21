@@ -19,7 +19,7 @@ const resourceLinks = [
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-on-primary">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-5">
         <div className="md:col-span-2 space-y-6">
           <Image
             src="/brand/logo/bertig-logo-light.png"

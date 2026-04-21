@@ -22,7 +22,7 @@ export function Section({ tone = "surface", id, className, children }: Props) {
       id={id}
       className={`py-20 lg:py-28 ${toneClasses[tone]} ${className ?? ""}`.trim()}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">{children}</div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">{children}</div>
     </section>
   );
 }

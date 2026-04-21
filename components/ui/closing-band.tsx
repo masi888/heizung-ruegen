@@ -19,7 +19,7 @@ export function ClosingBand({ kicker, title, copy, actions }: Props) {
             "radial-gradient(circle at 20% 20%, rgba(234,122,30,0.35), transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,51,102,0.8), transparent 60%)",
         }}
       />
-      <div className="max-w-4xl mx-auto px-6 lg:px-10 py-16 sm:py-24 lg:py-32 text-center relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24 lg:py-32 text-center relative">
         <p className="text-xs uppercase tracking-[0.3em] text-accent font-bold mb-6">
           {kicker}
         </p>
