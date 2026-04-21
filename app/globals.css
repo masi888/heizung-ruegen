@@ -39,12 +39,17 @@
 }
 
 @layer base {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
   body {
+    min-width: 0;
     background-color: var(--color-surface);
     color: var(--color-on-surface);
     font-family: var(--font-body);

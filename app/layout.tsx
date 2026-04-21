@@ -1,3 +1,4 @@
+import type { Viewport } from "next";
 import { Manrope } from "next/font/google";
 
 import { JsonLd } from "@/components/json-ld";
@@ -23,6 +24,12 @@ export const metadata = buildPageMetadata({
   description: metadataDefaults.description,
   path: "/",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export default function RootLayout({
   children,
