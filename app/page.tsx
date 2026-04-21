@@ -61,10 +61,10 @@ export default function HomePage() {
     <>
       {/* Task 4.1 — Hero */}
       <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 editorial-grid items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 editorial-grid items-center">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <Kicker className="mb-6">{homeHero.eyebrow}</Kicker>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold tracking-[-0.02em] text-primary leading-[1.05] mb-8">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[5.5rem] lg:leading-[1.05] font-extrabold tracking-[-0.02em] text-primary mb-8 break-words hyphens-auto">
               Wärme für Generationen.
               <br />
               <span className="text-accent">Vater &amp; Sohn.</span>
@@ -72,13 +72,13 @@ export default function HomePage() {
             <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
               {homeHero.lead}
             </p>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-4">
               <Button tone="primary" size="lg" href="/leistungen">
                 Unsere Leistungen <Icon name="arrow_forward" />
               </Button>
               <Link
                 href={company.phones.mobileHref}
-                className="flex items-center gap-4 px-6 py-4 bg-surface-container-high rounded-lg"
+                className="flex items-center gap-4 px-6 py-4 bg-surface-container-high rounded-lg w-full sm:w-auto min-w-0"
               >
                 <div className="flex -space-x-3">
                   <span className="w-10 h-10 rounded-full border-2 border-surface bg-primary flex items-center justify-center text-on-primary text-xs font-bold">
@@ -172,7 +172,7 @@ export default function HomePage() {
                 height={1200}
                 className="w-full rounded-2xl shadow-2xl"
               />
-              <div className="hidden sm:flex absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full items-center justify-center text-center border-8 border-surface transform rotate-[8deg]">
+              <div className="hidden md:flex absolute -top-10 -right-6 lg:-right-10 w-36 lg:w-40 h-36 lg:h-40 bg-accent rounded-full items-center justify-center text-center border-8 border-surface transform rotate-[8deg]">
                 <span className="text-primary font-black text-lg leading-tight">
                   Seit 1990 auf Rügen
                 </span>
@@ -195,7 +195,7 @@ export default function HomePage() {
                 Praxiswissen trifft moderne Technik und neue Ausbildung.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 mt-12">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 mt-10 sm:mt-12">
               <div>
                 <div className="text-4xl font-black text-primary mb-1">
                   100%
