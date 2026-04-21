@@ -172,7 +172,7 @@ export default function HomePage() {
                 height={1200}
                 className="w-full rounded-2xl shadow-2xl"
               />
-              <div className="hidden md:flex absolute -top-10 -right-6 lg:-right-10 w-36 lg:w-40 h-36 lg:h-40 bg-accent rounded-full items-center justify-center text-center border-8 border-surface transform rotate-[8deg]">
+              <div className="hidden md:flex absolute -top-8 right-2 lg:-top-10 lg:-right-10 w-32 lg:w-40 h-32 lg:h-40 bg-accent rounded-full items-center justify-center text-center border-8 border-surface transform rotate-[8deg]">
                 <span className="text-primary font-black text-lg leading-tight">
                   Seit 1990 auf Rügen
                 </span>
