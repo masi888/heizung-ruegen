@@ -44,10 +44,10 @@ export default function FaqPage() {
 
       {/* Hero */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-end">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-end">
           <div className="col-span-12 lg:col-span-6">
             <Kicker className="mb-6">Häufige Fragen</Kicker>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05]">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl lg:text-7xl lg:leading-[1.05] font-extrabold text-primary tracking-[-0.02em] break-words hyphens-auto">
               Was Kunden uns fragen.
             </h1>
           </div>

@@ -86,7 +86,7 @@ export default async function RatgeberArticlePage({ params }: Props) {
 
       {/* Hero */}
       <section className="pt-24 sm:pt-32 pb-0 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="max-w-3xl mb-10">
             <nav
               aria-label="Breadcrumb"
@@ -108,12 +108,12 @@ export default async function RatgeberArticlePage({ params }: Props) {
                 Stand: {formatDate(entry.updatedAt)}
               </p>
             ) : null}
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-primary tracking-[-0.02em] leading-[1.1]">
+            <h1 className="text-[1.75rem] leading-[1.15] sm:text-4xl lg:text-6xl lg:leading-[1.1] font-extrabold text-primary tracking-[-0.02em] break-words hyphens-auto">
               {entry.title}
             </h1>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="aspect-[16/7] rounded-2xl overflow-hidden">
             <Image
               src={imgSrc}

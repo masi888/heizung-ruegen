@@ -65,10 +65,10 @@ export default function KlimaanlagenRuegenPage() {
     <>
       {/* Hero */}
       <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-12 items-center gap-8">
           <div className="col-span-12 lg:col-span-7 lg:pr-12">
             <Kicker className="mb-6">Klimaanlagen auf Rügen</Kicker>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary leading-tight mb-8">
+            <h1 className="text-[2rem] leading-[1.1] md:text-5xl lg:text-6xl lg:leading-tight font-extrabold tracking-tight text-primary mb-8 break-words hyphens-auto">
               {headline}
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">

@@ -57,10 +57,10 @@ export default function HeizungPage() {
   return (
     <>
       <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-12 gap-6 items-center">
           <div className="col-span-12 lg:col-span-7">
             <Kicker className="mb-6">Heizung · Rügen</Kicker>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary tracking-[-0.02em] leading-[1.05] mb-8">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl lg:text-7xl lg:leading-[1.05] font-extrabold text-primary tracking-[-0.02em] mb-8 break-words hyphens-auto">
               {route.headline}
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed mb-10">
@@ -90,7 +90,7 @@ export default function HeizungPage() {
       </section>
 
       <div className="bg-surface-container-low border-b border-outline-variant/15">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-wrap items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-5 flex flex-wrap items-center justify-between gap-6">
           <p className="text-sm font-semibold text-on-surface-variant">Zertifizierter Fachbetrieb</p>
           <Image
             src="/brand/bosch-premium-partner.jpg"
