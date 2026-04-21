@@ -64,7 +64,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-center">
           <div className="col-span-12 lg:col-span-7 lg:pr-12 lg:row-start-1 lg:col-start-1">
             <Kicker className="mb-4 lg:mb-6 sm:hidden">
-              Breege · Rügen · Seit 1990
+              Bertig · Breege auf Rügen
             </Kicker>
             <Kicker className="mb-4 lg:mb-6 hidden sm:block">
               {homeHero.eyebrow}
