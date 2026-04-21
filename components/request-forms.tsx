@@ -140,7 +140,7 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             handleSubmit(event.currentTarget, "project");
           }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
             <label className={fieldWrap}>
               <span className={fieldLabel}>Name</span>
               <input
@@ -252,7 +252,7 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             <legend className={`${fieldLabel} mb-3`}>
               Wartungspaket wählen
             </legend>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
               {maintenancePackages.map((item) => (
                 <label
                   key={item.slug}
@@ -289,7 +289,7 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
           </fieldset>
 
           {/* Kontakt + Anlagen-Daten */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
             <label className={fieldWrap}>
               <span className={fieldLabel}>
                 {maintenanceFieldLabels.name}
