@@ -60,25 +60,62 @@ export default function HomePage() {
   return (
     <>
       {/* Task 4.1 — Hero */}
-      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 editorial-grid items-center">
-          <div className="col-span-12 lg:col-span-7 lg:pr-12">
-            <Kicker className="mb-6">{homeHero.eyebrow}</Kicker>
-            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[5.5rem] lg:leading-[1.05] font-extrabold tracking-[-0.02em] text-primary mb-8 break-words hyphens-auto">
+      <section className="pt-20 pb-12 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-center">
+          <div className="col-span-12 lg:col-span-7 lg:pr-12 lg:row-start-1 lg:col-start-1">
+            <Kicker className="mb-4 lg:mb-6 sm:hidden">
+              Breege · Rügen · Seit 1990
+            </Kicker>
+            <Kicker className="mb-4 lg:mb-6 hidden sm:block">
+              {homeHero.eyebrow}
+            </Kicker>
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[5.5rem] lg:leading-[1.05] font-extrabold tracking-[-0.02em] text-primary break-words hyphens-auto">
               Wärme für Generationen.
               <br />
               <span className="text-accent">Vater &amp; Sohn.</span>
             </h1>
-            <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+          </div>
+          <div className="col-span-12 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 relative">
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
+              <Image
+                src="/images/hero/vater-sohn-werkstatt.jpg"
+                alt="Präzise Handwerksarbeit an einer modernen Heizungsanlage"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+            <div className="hidden sm:block absolute -bottom-6 -left-6 bg-surface-container-lowest p-5 lg:p-6 rounded-xl shadow-xl max-w-[260px]">
+              <div className="flex items-center gap-2 mb-2">
+                <Icon name="verified" className="text-accent" fill />
+                <span className="font-bold text-primary">Insel-Expertise</span>
+              </div>
+              <p className="text-xs text-on-surface-variant">
+                {homeContent.sections?.[1]?.items?.[1] ??
+                  "Wir kennen die Anforderungen von Wohnhäusern und Ferienimmobilien auf Rügen."}
+              </p>
+            </div>
+          </div>
+          <div className="col-span-12 lg:col-span-7 lg:col-start-1 lg:row-start-2 lg:pr-12">
+            <p className="text-base sm:text-lg text-on-surface-variant max-w-xl mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
               {homeHero.lead}
             </p>
-            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-4">
-              <Button tone="primary" size="lg" href="/leistungen">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+              <Button tone="primary" size="lg" href="/leistungen" className="justify-center sm:justify-start">
                 Unsere Leistungen <Icon name="arrow_forward" />
               </Button>
               <Link
                 href={company.phones.mobileHref}
-                className="flex items-center gap-4 px-6 py-4 bg-surface-container-high rounded-lg w-full sm:w-auto min-w-0"
+                className="sm:hidden flex items-center justify-center gap-3 px-6 py-4 bg-surface-container-high rounded-lg font-bold text-primary"
+              >
+                <Icon name="call" className="text-accent" />
+                <span>{company.phones.mobile}</span>
+              </Link>
+              <Link
+                href={company.phones.mobileHref}
+                className="hidden sm:flex items-center gap-4 px-6 py-4 bg-surface-container-high rounded-lg"
               >
                 <div className="flex -space-x-3">
                   <span className="w-10 h-10 rounded-full border-2 border-surface bg-primary flex items-center justify-center text-on-primary text-xs font-bold">
@@ -92,29 +129,6 @@ export default function HomePage() {
                   Direkt vom Inhaber
                 </span>
               </Link>
-            </div>
-          </div>
-          <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
-              <Image
-                src="/images/hero/vater-sohn-werkstatt.jpg"
-                alt="Präzise Handwerksarbeit an einer modernen Heizungsanlage"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
-            </div>
-            <div className="hidden sm:block absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-[260px]">
-              <div className="flex items-center gap-2 mb-2">
-                <Icon name="verified" className="text-accent" fill />
-                <span className="font-bold text-primary">Insel-Expertise</span>
-              </div>
-              <p className="text-xs text-on-surface-variant">
-                {homeContent.sections?.[1]?.items?.[1] ??
-                  "Wir kennen die Anforderungen von Wohnhäusern und Ferienimmobilien auf Rügen."}
-              </p>
             </div>
           </div>
         </div>
