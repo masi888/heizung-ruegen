@@ -22,16 +22,6 @@ export default function DatenschutzPage() {
 
       <Section tone="surface-low">
         <div className="max-w-2xl space-y-10 text-sm text-on-surface-variant leading-relaxed break-words">
-          {/* Hinweis für juristische Review */}
-          <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 text-on-surface">
-            <p className="font-bold text-primary mb-1">Hinweis (intern)</p>
-            <p>
-              Diese Datenschutzerklärung enthält Platzhalter. Vor dem Livegang
-              bitte durch einen Datenschutzbeauftragten oder Rechtsanwalt
-              prüfen und ergänzen lassen.
-            </p>
-          </div>
-
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-primary">1. Verantwortlicher</h2>
             <p>
@@ -50,54 +40,65 @@ export default function DatenschutzPage() {
           </div>
 
           <div className="space-y-3">
-            <h2 className="text-xl font-bold text-primary">
-              2. Erhebung und Verarbeitung personenbezogener Daten
-            </h2>
+            <h2 className="text-xl font-bold text-primary">2. Zugriffsdaten und Server-Logs</h2>
             <p>
-              Wir erheben personenbezogene Daten, wenn Sie uns über das
-              Kontaktformular, per E-Mail oder telefonisch kontaktieren. Dies
-              umfasst Name, Telefonnummer, E-Mail-Adresse sowie Angaben zur
-              Anfrage. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1
-              lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO.
+              Beim Aufruf dieser Website werden technisch notwendige
+              Verbindungsdaten verarbeitet. Dazu zählen insbesondere
+              Browsertyp, Betriebssystem, Referrer-URL, Hostname, Uhrzeit der
+              Serveranfrage und IP-Adresse. Die Verarbeitung erfolgt zur
+              sicheren Bereitstellung der Website auf Grundlage von Art. 6
+              Abs. 1 lit. f DSGVO.
             </p>
           </div>
 
           <div className="space-y-3">
-            <h2 className="text-xl font-bold text-primary">3. Kontaktformular</h2>
+            <h2 className="text-xl font-bold text-primary">3. Kontaktaufnahme und Formulare</h2>
             <p>
-              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden
-              Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort
-              angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für
-              den Fall von Anschlussfragen bei uns gespeichert. Diese Daten
-              geben wir nicht ohne Ihre Einwilligung weiter.
+              Wenn Sie uns per Formular, E-Mail oder Telefon kontaktieren,
+              verarbeiten wir die von Ihnen mitgeteilten Angaben zur Bearbeitung
+              Ihrer Anfrage. Dazu gehören insbesondere Name, Telefonnummer,
+              E-Mail-Adresse sowie die in der Anfrage enthaltenen Projekt- oder
+              Anlagendaten. Die Verarbeitung erfolgt auf Grundlage von Art. 6
+              Abs. 1 lit. b DSGVO und ergänzend Art. 6 Abs. 1 lit. f DSGVO.
             </p>
           </div>
 
           <div className="space-y-3">
-            <h2 className="text-xl font-bold text-primary">4. Server-Log-Dateien</h2>
+            <h2 className="text-xl font-bold text-primary">4. Versand von Formularanfragen per E-Mail</h2>
             <p>
-              Der Provider der Seiten erhebt und speichert automatisch
-              Informationen in so genannten Server-Log-Dateien, die Ihr Browser
-              automatisch übermittelt. Dies sind: Browsertyp, Betriebssystem,
-              Referrer-URL, Hostname, Uhrzeit der Serveranfrage, IP-Adresse.
+              Formularanfragen werden serverseitig verarbeitet und zur
+              Zustellung an unseren geschäftlichen Posteingang über den für
+              diese Website konfigurierten SMTP-Mailserver übertragen. Dabei
+              werden ausschließlich die Daten verarbeitet, die für die
+              Übermittlung und Bearbeitung Ihrer Anfrage erforderlich sind.
             </p>
           </div>
 
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-primary">5. Cookies</h2>
-            <div className="bg-surface-container rounded-lg p-4 border border-outline-variant/20">
-              <p className="font-semibold text-primary mb-1">
-                [PLATZHALTER — juristische Review erforderlich]
-              </p>
-              <p>
-                Dieser Abschnitt muss entsprechend der tatsächlich eingesetzten
-                Cookies und Tracking-Technologien ergänzt werden.
-              </p>
-            </div>
+            <p>
+              Diese Website verwendet derzeit keine eigenen Analyse- oder
+              Marketing-Cookies. Technisch notwendige Funktionen des
+              eingesetzten Frameworks oder der Hosting-Umgebung können
+              vorübergehende, rein funktionale Speichermechanismen einsetzen,
+              soweit dies für die Bereitstellung der Website erforderlich ist.
+            </p>
           </div>
 
           <div className="space-y-3">
-            <h2 className="text-xl font-bold text-primary">6. Ihre Rechte</h2>
+            <h2 className="text-xl font-bold text-primary">6. Externe Ressourcen</h2>
+            <p>
+              Zur Darstellung der auf der Website verwendeten Material-Symbole
+              wird aktuell ein Stylesheet von Google Fonts geladen. Dabei kann
+              es zu einer Verbindung mit Servern von Google kommen. Die
+              Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
+              DSGVO, da wir ein einheitliches, funktionsfähiges Erscheinungsbild
+              der Website sicherstellen möchten.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="text-xl font-bold text-primary">7. Ihre Rechte</h2>
             <p>
               Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung
               (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der
@@ -105,22 +106,6 @@ export default function DatenschutzPage() {
               DSGVO). Außerdem haben Sie das Recht, sich bei einer
               Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO).
             </p>
-          </div>
-
-          <div className="space-y-3">
-            <h2 className="text-xl font-bold text-primary">
-              7. Drittanbieter-Dienste
-            </h2>
-            <div className="bg-surface-container rounded-lg p-4 border border-outline-variant/20">
-              <p className="font-semibold text-primary mb-1">
-                [PLATZHALTER — juristische Review erforderlich]
-              </p>
-              <p>
-                Falls externe Dienste (z.B. Google Fonts, Analytics, Maps)
-                eingesetzt werden, ist hier deren datenschutzrechtliche
-                Einbindung zu dokumentieren.
-              </p>
-            </div>
           </div>
 
           <div className="space-y-3">

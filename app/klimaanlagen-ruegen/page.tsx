@@ -80,7 +80,7 @@ export default function KlimaanlagenRuegenPage() {
               </Button>
               <Link
                 href={company.phones.mobileHref}
-                className="flex items-center gap-3 px-6 py-4 bg-surface-container-high rounded-lg font-bold text-primary"
+                className="flex items-center justify-center gap-3 px-6 py-4 bg-surface-container-high rounded-lg font-bold text-primary w-full sm:w-auto"
               >
                 <Icon name="call" className="text-accent" />
                 {company.phones.mobile}

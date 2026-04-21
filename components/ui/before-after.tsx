@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { Icon } from "@/components/ui/icon";
+
 type Props = {
   beforeSrc: string;
   afterSrc: string;
@@ -98,7 +100,6 @@ export function BeforeAfter({ beforeSrc, afterSrc, alt, caption }: Props) {
           fill
           sizes="(min-width: 1024px) 60vw, 100vw"
           className="object-cover pointer-events-none"
-          priority
           draggable={false}
         />
         <div
@@ -119,9 +120,7 @@ export function BeforeAfter({ beforeSrc, afterSrc, alt, caption }: Props) {
           style={{ left: `${position}%` }}
         >
           <span className="absolute top-1/2 -translate-y-1/2 -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-accent text-on-accent font-black shadow-lg">
-            <span className="material-symbols-outlined text-lg">
-              swap_horiz
-            </span>
+            <Icon name="swap_horiz" className="text-lg" />
           </span>
         </div>
         <span className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-primary text-on-primary px-2.5 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-widest pointer-events-none">

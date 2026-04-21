@@ -4,7 +4,7 @@ import { buildPageMetadata, company, legalNotice } from "@/lib/site-data";
 
 export const metadata = buildPageMetadata({
   title: "Impressum — Bertig Sanitär- und Heizungstechnik",
-  description: "Gesetzliche Anbieterkennzeichnung gemäß § 5 TMG.",
+  description: "Gesetzliche Anbieterkennzeichnung gemäß § 5 DDG.",
   path: "/impressum",
 });
 
@@ -24,7 +24,7 @@ export default function ImpressumPage() {
         <div className="max-w-2xl space-y-10 break-words">
           <div className="space-y-2">
             <h2 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
-              Angaben gemäß § 5 TMG
+              Angaben gemäß § 5 DDG
             </h2>
             <p className="text-on-surface leading-relaxed">
               {company.legalName}
@@ -79,23 +79,14 @@ export default function ImpressumPage() {
 
           <div className="space-y-2">
             <h2 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
-              Steuer
-            </h2>
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              {legalNotice.taxNotice}
-            </p>
-          </div>
-
-          <div className="space-y-2">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
               Haftung für Inhalte
             </h2>
             <p className="text-on-surface-variant text-sm leading-relaxed">
               Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt.
               Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
               können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter
-              sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
-              Seiten nach den allgemeinen Gesetzen verantwortlich.
+              sind wir für eigene Inhalte dieser Website nach den allgemeinen
+              Gesetzen verantwortlich.
             </p>
           </div>
 

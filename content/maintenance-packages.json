@@ -1,12 +1,12 @@
 {
-  "status": "draft-for-implementation",
-  "note": "Paketnamen und Copy freigegeben für Implementierung. Öffentliche ab-Preise vor Livegang kaufmännisch bestätigen.",
+  "status": "active",
+  "note": "Preisstaffel am 8. April 2026 anhand aktueller Marktquellen für Deutschland neu kalibriert (co2online / Heizspiegel, thermondo, enter). Regionale Abweichungen je nach Anlage, Zustand und Anfahrt bleiben möglich.",
   "packages": [
     {
       "slug": "basis-wartung",
       "name": "Basis-Wartung",
-      "priceLabel": "ab Preis nach Bestätigung",
-      "approvalRequired": true,
+      "priceLabel": "ab 149 € / Jahr",
+      "approvalRequired": false,
       "audience": "für klassische Einzelgeräte und planbare Standardwartungen",
       "summary": "Der klare Einstieg für Anlagen, die regelmäßig fachgerecht gewartet werden sollen.",
       "includes": [
@@ -20,8 +20,8 @@
     {
       "slug": "komfort-wartung",
       "name": "Komfort-Wartung",
-      "priceLabel": "ab Preis nach Bestätigung",
-      "approvalRequired": true,
+      "priceLabel": "ab 219 € / Jahr",
+      "approvalRequired": false,
       "audience": "für Betreiber, die mehr Transparenz und eine regelmäßige Betreuung wollen",
       "summary": "Mehr Einordnung, mehr Rückmeldung und sinnvoll für Anlagen, die dauerhaft zuverlässig laufen sollen.",
       "includes": [
@@ -36,8 +36,8 @@
     {
       "slug": "system-wartung",
       "name": "System-Wartung",
-      "priceLabel": "ab Preis nach Bestätigung",
-      "approvalRequired": true,
+      "priceLabel": "ab 329 € / Jahr",
+      "approvalRequired": false,
       "audience": "für komplexere Anlagen, Kombinationen oder höhere technische Anforderungen",
       "summary": "Die passende Option, wenn mehrere Komponenten zusammenspielen oder die Anlage mehr Aufmerksamkeit braucht.",
       "includes": [

@@ -1,4 +1,4 @@
-import { randomUUID } from "node:crypto";
+import nodemailer from "nodemailer";
 
 import { company } from "@/lib/site-data";
 
@@ -9,18 +9,33 @@ const maxAttachmentBytes = 8 * 1024 * 1024;
 type Attachment = {
   filename: string;
   content: string;
+  encoding: "base64";
 };
 
-function getRequiredEnv() {
-  const apiKey = process.env.RESEND_API_KEY;
+function getMailConfig() {
+  const host = process.env.SMTP_HOST;
+  const port = Number(process.env.SMTP_PORT || 587);
+  const secure =
+    process.env.SMTP_SECURE != null
+      ? process.env.SMTP_SECURE === "true"
+      : port === 465;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
   const to = process.env.INQUIRY_TO_EMAIL || company.email;
   const from = process.env.INQUIRY_FROM_EMAIL;
 
-  if (!apiKey || !from) {
+  if (
+    !host ||
+    !from ||
+    !user ||
+    !pass ||
+    !Number.isFinite(port) ||
+    port <= 0
+  ) {
     return null;
   }
 
-  return { apiKey, to, from };
+  return { host, port, secure, user, pass, to, from };
 }
 
 function textValue(formData: FormData, key: string) {
@@ -44,10 +59,24 @@ async function normalizeAttachments(files: File[]) {
     attachments.push({
       filename: file.name,
       content: buffer.toString("base64"),
+      encoding: "base64",
     });
   }
 
   return attachments;
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function textToHtml(value: string) {
+  return escapeHtml(value).replaceAll("\n", "<br>");
 }
 
 function buildProjectPayload(formData: FormData) {
@@ -78,11 +107,11 @@ function buildProjectPayload(formData: FormData) {
     ].join("\n"),
     html: `
       <h2>Neue Projektanfrage</h2>
-      <p><strong>Name:</strong> ${fields.name}</p>
-      <p><strong>Telefon:</strong> ${fields.phone}</p>
-      <p><strong>E-Mail:</strong> ${fields.email || "nicht angegeben"}</p>
-      <p><strong>Thema:</strong> ${fields.topic}</p>
-      <p><strong>Nachricht:</strong><br>${fields.message.replaceAll("\n", "<br>")}</p>
+      <p><strong>Name:</strong> ${escapeHtml(fields.name)}</p>
+      <p><strong>Telefon:</strong> ${escapeHtml(fields.phone)}</p>
+      <p><strong>E-Mail:</strong> ${escapeHtml(fields.email || "nicht angegeben")}</p>
+      <p><strong>Thema:</strong> ${escapeHtml(fields.topic)}</p>
+      <p><strong>Nachricht:</strong><br>${textToHtml(fields.message)}</p>
     `,
     replyTo: fields.email || undefined,
   };
@@ -130,18 +159,18 @@ function buildMaintenancePayload(formData: FormData) {
     ].join("\n"),
     html: `
       <h2>Neue Wartungsanfrage</h2>
-      <p><strong>Paket:</strong> ${fields.package}</p>
-      <p><strong>Name:</strong> ${fields.name}</p>
-      <p><strong>Telefon:</strong> ${fields.telefon}</p>
-      <p><strong>E-Mail:</strong> ${fields.email || "nicht angegeben"}</p>
-      <p><strong>Adresse der Anlage:</strong> ${fields.anlagenadresse}</p>
-      <p><strong>Rechnungsanschrift:</strong> ${fields.rechnungsanschrift || "wie Anlagenadresse"}</p>
-      <p><strong>Gerätetyp:</strong> ${fields.geraetetyp}</p>
-      <p><strong>Gerätebezeichnung:</strong> ${fields.geraetebezeichnung}</p>
-      <p><strong>Seriennummer:</strong> ${fields.seriennummer || "nicht angegeben"}</p>
-      <p><strong>Hersteller:</strong> ${fields.hersteller || "nicht angegeben"}</p>
-      <p><strong>Letzte Wartung:</strong> ${fields.letzteWartung || "nicht angegeben"}</p>
-      <p><strong>Hinweise:</strong><br>${(fields.hinweise || "keine").replaceAll("\n", "<br>")}</p>
+      <p><strong>Paket:</strong> ${escapeHtml(fields.package)}</p>
+      <p><strong>Name:</strong> ${escapeHtml(fields.name)}</p>
+      <p><strong>Telefon:</strong> ${escapeHtml(fields.telefon)}</p>
+      <p><strong>E-Mail:</strong> ${escapeHtml(fields.email || "nicht angegeben")}</p>
+      <p><strong>Adresse der Anlage:</strong> ${escapeHtml(fields.anlagenadresse)}</p>
+      <p><strong>Rechnungsanschrift:</strong> ${escapeHtml(fields.rechnungsanschrift || "wie Anlagenadresse")}</p>
+      <p><strong>Gerätetyp:</strong> ${escapeHtml(fields.geraetetyp)}</p>
+      <p><strong>Gerätebezeichnung:</strong> ${escapeHtml(fields.geraetebezeichnung)}</p>
+      <p><strong>Seriennummer:</strong> ${escapeHtml(fields.seriennummer || "nicht angegeben")}</p>
+      <p><strong>Hersteller:</strong> ${escapeHtml(fields.hersteller || "nicht angegeben")}</p>
+      <p><strong>Letzte Wartung:</strong> ${escapeHtml(fields.letzteWartung || "nicht angegeben")}</p>
+      <p><strong>Hinweise:</strong><br>${textToHtml(fields.hinweise || "keine")}</p>
     `,
     replyTo: fields.email || undefined,
   };
@@ -149,13 +178,13 @@ function buildMaintenancePayload(formData: FormData) {
 
 export async function POST(request: Request) {
   try {
-    const env = getRequiredEnv();
+    const env = getMailConfig();
 
     if (!env) {
       return Response.json(
         {
           message:
-            "Der Versand ist noch nicht vollständig eingerichtet. Bitte RESEND_API_KEY und INQUIRY_FROM_EMAIL setzen.",
+            "Der Versand ist noch nicht vollständig eingerichtet. Bitte SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS und INQUIRY_FROM_EMAIL setzen.",
         },
         { status: 503 },
       );
@@ -169,28 +198,25 @@ export async function POST(request: Request) {
       formType === "maintenance" ? buildMaintenancePayload(formData) : buildProjectPayload(formData);
     const attachments = await normalizeAttachments(files);
 
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.apiKey}`,
-        "Content-Type": "application/json",
-        "Idempotency-Key": randomUUID(),
+    const transporter = nodemailer.createTransport({
+      host: env.host,
+      port: env.port,
+      secure: env.secure,
+      auth: {
+        user: env.user,
+        pass: env.pass,
       },
-      body: JSON.stringify({
-        from: env.from,
-        to: [env.to],
-        subject: payload.subject,
-        html: payload.html,
-        text: payload.text,
-        reply_to: payload.replyTo,
-        attachments,
-      }),
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Versanddienst meldet Fehler: ${errorText}`);
-    }
+    await transporter.sendMail({
+      from: env.from,
+      to: env.to,
+      subject: payload.subject,
+      html: payload.html,
+      text: payload.text,
+      replyTo: payload.replyTo,
+      attachments,
+    });
 
     return Response.json({
       message: "Danke. Die Anfrage ist eingegangen und wird persönlich bearbeitet.",

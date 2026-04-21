@@ -45,6 +45,8 @@ const submitBtn =
   "inline-flex items-center justify-center gap-2 bg-primary text-on-primary " +
   "px-6 py-4 rounded-lg font-bold text-base transition-all " +
   "hover:bg-primary-container active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed";
+const projectPanelId = "request-form-project-panel";
+const maintenancePanelId = "request-form-maintenance-panel";
 
 export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
   const [mode, setMode] = useState<FormMode>(initialMode);
@@ -107,14 +109,13 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
       {/* Tab-Zeile */}
       <div
         className="grid grid-cols-2 gap-2 bg-surface-container rounded-xl p-1.5"
-        role="tablist"
-        aria-label="Anfragearten"
+        aria-label="Anfrageart auswählen"
       >
         <button
           className={`${tabBase} ${mode === "project" ? tabActive : tabIdle}`}
           onClick={() => setMode("project")}
-          role="tab"
-          aria-selected={mode === "project"}
+          aria-controls={projectPanelId}
+          aria-pressed={mode === "project"}
           type="button"
         >
           Projektanfrage
@@ -122,8 +123,8 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
         <button
           className={`${tabBase} ${mode === "maintenance" ? tabActive : tabIdle}`}
           onClick={() => setMode("maintenance")}
-          role="tab"
-          aria-selected={mode === "maintenance"}
+          aria-controls={maintenancePanelId}
+          aria-pressed={mode === "maintenance"}
           type="button"
         >
           Wartung anfragen
@@ -132,6 +133,7 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
 
       {mode === "project" ? (
         <form
+          id={projectPanelId}
           className="space-y-6"
           onSubmit={(event) => {
             event.preventDefault();
@@ -218,6 +220,15 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             </button>
           </div>
 
+          <p className="text-sm text-on-surface-variant leading-relaxed">
+            Mit dem Absenden stimmen Sie zu, dass wir Ihre Angaben zur Bearbeitung Ihrer Anfrage verwenden.
+            Details finden Sie in unserer{" "}
+            <a href="/datenschutz" className="font-semibold text-primary hover:text-accent">
+              Datenschutzerklärung
+            </a>
+            .
+          </p>
+
           {projectState.message ? (
             <p
               className={`border rounded-lg px-4 py-3 text-sm ${feedbackClasses(projectState.status)}`}
@@ -229,6 +240,7 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
         </form>
       ) : (
         <form
+          id={maintenancePanelId}
           className="space-y-8"
           onSubmit={(event) => {
             event.preventDefault();
@@ -438,6 +450,15 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
                 : "Wartung anfragen"}
             </button>
           </div>
+
+          <p className="text-sm text-on-surface-variant leading-relaxed">
+            Mit dem Absenden stimmen Sie zu, dass wir Ihre Angaben zur Bearbeitung Ihrer Anfrage verwenden.
+            Details finden Sie in unserer{" "}
+            <a href="/datenschutz" className="font-semibold text-primary hover:text-accent">
+              Datenschutzerklärung
+            </a>
+            .
+          </p>
 
           {maintenanceState.message ? (
             <p

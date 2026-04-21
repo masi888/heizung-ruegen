@@ -81,9 +81,8 @@ export const trustItems = [
   "Kurze Wege auf Rügen",
 ];
 
-export const maintenancePackages = maintenancePackagesSource.packages.map((pkg, index) => ({
+export const maintenancePackages = maintenancePackagesSource.packages.map((pkg) => ({
   ...pkg,
-  priceLabel: ["ab 179 €", "ab 249 €", "ab 349 €"][index] ?? pkg.priceLabel,
 }));
 
 export const maintenanceFieldLabels: Record<string, string> = {
@@ -103,7 +102,6 @@ export const maintenanceFieldLabels: Record<string, string> = {
 
 export const legalNotice = {
   chamber: "Handwerkskammer Ostmecklenburg-Vorpommern",
-  taxNotice: "Steuernummer liegt vor und wird vor Livegang im finalen Impressum ergänzt, sofern sie dort veröffentlicht werden soll.",
 };
 
 export function findServiceRoute(slug: string): RouteEntry | undefined {
@@ -125,9 +123,8 @@ export const routeSlugs = serviceRoutes.map((route) => route.slug.slice(1));
 export const knowledgeSlugs = knowledgeEntries.map((entry) => entry.slug.replace("/ratgeber/", ""));
 
 export const metadataDefaults = {
-  title: "Bertig Sanitär- und Heizungstechnik auf Rügen",
-  description:
-    "Moderner Familienbetrieb für Heizung, Wärmepumpen, Wartung, Badsanierung und 24h-Notdienst auf Rügen.",
+  title: homeContent.title,
+  description: homeContent.description,
 };
 
 export function buildCanonical(path: string) {

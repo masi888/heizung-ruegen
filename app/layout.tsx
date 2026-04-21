@@ -28,7 +28,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={manrope.variable}>
+    <html lang="de" className={manrope.variable} data-scroll-behavior="smooth">
       <head>
         <link
           rel="stylesheet"

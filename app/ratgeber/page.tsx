@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ClosingBand } from "@/components/ui/closing-band";
+import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import { buildPageMetadata, company, knowledgeEntries } from "@/lib/site-data";
@@ -42,7 +43,7 @@ const topicHubs = [
   {
     href: "/faq",
     title: "Häufige Fragen",
-    copy: "Für kurze Antworten und weitere interne Einstiegspunkte.",
+    copy: "Für kurze Antworten und einen schnellen Einstieg in häufige Themen.",
   },
 ];
 
@@ -98,7 +99,7 @@ export default function RatgeberPage() {
                   </p>
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent group-hover:gap-3 transition-all">
                     Artikel lesen
-                    <span className="material-symbols-outlined text-base">east</span>
+                    <Icon name="east" className="text-base" />
                   </span>
                 </div>
               </Link>

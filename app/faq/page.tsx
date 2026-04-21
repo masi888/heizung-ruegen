@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { JsonLd } from "@/components/json-ld";
 import { Card } from "@/components/ui/card";
+import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import { buildFaqJsonLd, buildPageMetadata, faqEntries } from "@/lib/site-data";
@@ -69,9 +70,10 @@ export default function FaqPage() {
             >
               <summary className="flex items-center justify-between gap-4 cursor-pointer p-5 sm:p-6 font-bold text-primary list-none">
                 <span>{entry.question}</span>
-                <span className="material-symbols-outlined text-accent flex-shrink-0 transition-transform group-open:rotate-180">
-                  expand_more
-                </span>
+                <Icon
+                  name="expand_more"
+                  className="text-accent flex-shrink-0 transition-transform group-open:rotate-180"
+                />
               </summary>
               <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-on-surface-variant leading-relaxed">
                 {entry.answer}
@@ -117,12 +119,12 @@ export default function FaqPage() {
             Rufen Sie uns an oder schreiben Sie uns direkt. Wir antworten
             persönlich und ohne Skript.
           </p>
-          <a
+          <Link
             href="/kontakt"
             className="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold hover:bg-primary-container transition-colors"
           >
             Frage stellen
-          </a>
+          </Link>
         </div>
       </Section>
     </>

@@ -92,12 +92,18 @@ Die Website hat einen echten serverseitigen Endpoint:
 
 - `app/api/inquiry/route.ts`
 
-Der Versand ist aktuell fuer eine Resend-kompatible HTTP-Anbindung vorbereitet.
+Der Versand erfolgt serverseitig ueber SMTP-Zugangsdaten der eigenen Domain
+beziehungsweise des verwendeten Mailhosters. Die Zugangsdaten bleiben dabei
+auf dem Server; sie werden nicht im Browser verwendet.
 
 Noetige Env-Variablen:
 
 ```bash
-RESEND_API_KEY=
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=
+SMTP_PASS=
 INQUIRY_FROM_EMAIL=
 INQUIRY_TO_EMAIL=bertig.shk@web.de
 ```
@@ -110,8 +116,7 @@ Ohne diese Variablen antwortet die API bewusst mit einem Konfigurationsfehler st
 
 ## Vor Livegang noch offen
 
-- echte Versanddaten setzen (`RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`)
-- Wartungs-`ab`-Preise kaufmaennisch final bestaetigen
+- echte SMTP-Versanddaten setzen (`SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`, `INQUIRY_FROM_EMAIL`)
 - echte Portraits fuer Vater und Sohn einbauen
 - nach Moeglichkeit bessere Logo-Datei (PNG oder SVG) besorgen
 - Impressum / Datenschutz final gegen reale Unternehmens- und Hostingdaten pruefen

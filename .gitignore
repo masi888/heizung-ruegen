@@ -42,6 +42,7 @@ yarn-error.log*
 .agents/
 .claude/
 .factory/
+.bridgespace/
 skills-lock.json
 
 # typescript

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/json-ld";
 import { ClosingBand } from "@/components/ui/closing-band";
+import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import {
@@ -154,9 +155,11 @@ export default async function RatgeberArticlePage({ params }: Props) {
                   key={point}
                   className="flex items-start gap-4 bg-surface-container-low rounded-xl p-5"
                 >
-                  <span className="material-symbols-outlined text-accent mt-0.5 text-xl flex-shrink-0">
-                    check_circle
-                  </span>
+                  <Icon
+                    name="check_circle"
+                    className="text-accent mt-0.5 text-xl flex-shrink-0"
+                    fill
+                  />
                   <span className="text-on-surface leading-relaxed">{point}</span>
                 </li>
               ))}
@@ -183,9 +186,11 @@ export default async function RatgeberArticlePage({ params }: Props) {
                       key={bullet}
                       className="flex items-start gap-3 text-on-surface leading-relaxed"
                     >
-                      <span className="material-symbols-outlined text-accent text-lg mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className="text-accent text-lg mt-0.5"
+                        fill
+                      />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -207,9 +212,10 @@ export default async function RatgeberArticlePage({ params }: Props) {
                   >
                     <summary className="flex items-center justify-between gap-4 cursor-pointer p-5 sm:p-6 font-bold text-primary list-none">
                       <span>{item.question}</span>
-                      <span className="material-symbols-outlined text-accent flex-shrink-0 transition-transform group-open:rotate-180">
-                        expand_more
-                      </span>
+                      <Icon
+                        name="expand_more"
+                        className="text-accent flex-shrink-0 transition-transform group-open:rotate-180"
+                      />
                     </summary>
                     <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-on-surface-variant leading-relaxed">
                       {item.answer}
@@ -278,12 +284,12 @@ export default async function RatgeberArticlePage({ params }: Props) {
               ohne Standardformular und ohne Verkaufsdruck.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <a
+              <Link
                 href="/kontakt"
                 className="bg-accent text-on-accent px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold hover:brightness-95 transition-all active:scale-[0.98]"
               >
                 Anfrage stellen
-              </a>
+              </Link>
               <a
                 href={company.phones.mobileHref}
                 className="border-2 border-on-primary/30 text-on-primary px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold hover:bg-on-primary/10 transition-all"

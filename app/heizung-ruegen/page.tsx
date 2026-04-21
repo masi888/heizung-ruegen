@@ -89,6 +89,19 @@ export default function HeizungPage() {
         </div>
       </section>
 
+      <div className="bg-surface-container-low border-b border-outline-variant/15">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-wrap items-center justify-between gap-6">
+          <p className="text-sm font-semibold text-on-surface-variant">Zertifizierter Fachbetrieb</p>
+          <Image
+            src="/brand/bosch-premium-partner.jpg"
+            alt="Bosch Premium Partner – Heizung, Klima, Warmwasser"
+            width={280}
+            height={56}
+            className="h-14 w-auto object-contain"
+          />
+        </div>
+      </div>
+
       <Section tone="surface-low">
         <div className="grid grid-cols-12 gap-8 lg:gap-12">
           <div className="col-span-12 lg:col-span-5">

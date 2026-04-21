@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { Icon } from "@/components/ui/icon";
+
 export default function NotFound() {
   return (
     <section className="min-h-screen bg-primary text-on-primary flex items-center justify-center px-6">
@@ -23,7 +25,7 @@ export default function NotFound() {
           href="/"
           className="inline-flex items-center gap-3 bg-accent text-on-accent px-10 py-5 rounded-lg font-bold text-lg hover:brightness-95 active:scale-[0.98] transition-all"
         >
-          <span className="material-symbols-outlined">home</span>
+          <Icon name="home" />
           Zurück zur Startseite
         </Link>
       </div>

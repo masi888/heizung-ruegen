@@ -1,9 +1,8 @@
-import { JsonLd } from "@/components/json-ld";
 import { RequestForms } from "@/components/request-forms";
+import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import {
-  buildLocalBusinessJsonLd,
   buildPageMetadata,
   company,
 } from "@/lib/site-data";
@@ -28,8 +27,6 @@ const openingHourLabels: Record<string, string> = {
 export default function KontaktPage() {
   return (
     <>
-      <JsonLd data={buildLocalBusinessJsonLd()} />
-
       {/* Hero */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-12 gap-6 lg:gap-8 items-end">
@@ -59,7 +56,7 @@ export default function KontaktPage() {
               </h2>
               <div className="space-y-3 text-sm text-on-surface-variant">
                 <p className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-accent text-lg mt-0.5">place</span>
+                  <Icon name="place" className="text-accent text-lg mt-0.5" />
                   <span>
                     {company.address.street}
                     <br />
@@ -70,21 +67,21 @@ export default function KontaktPage() {
                   href={company.phones.landlineHref}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
-                  <span className="material-symbols-outlined text-accent text-lg">call</span>
+                  <Icon name="call" className="text-accent text-lg" />
                   {company.phones.landline}
                 </a>
                 <a
                   href={company.phones.mobileHref}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
-                  <span className="material-symbols-outlined text-accent text-lg">smartphone</span>
+                  <Icon name="smartphone" className="text-accent text-lg" />
                   {company.phones.mobile}
                 </a>
                 <a
                   href={`mailto:${company.email}`}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
-                  <span className="material-symbols-outlined text-accent text-lg">mail</span>
+                  <Icon name="mail" className="text-accent text-lg" />
                   {company.email}
                 </a>
               </div>

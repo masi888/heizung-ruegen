@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { ClosingBand } from "@/components/ui/closing-band";
+import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
 import { buildPageMetadata, company } from "@/lib/site-data";
@@ -84,7 +85,7 @@ export default function UeberUnsPage() {
 
       {/* Portrait Vater & Sohn */}
       <Section tone="surface-low">
-        <div className="grid grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="col-span-12 lg:col-span-5 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
@@ -124,21 +125,21 @@ export default function UeberUnsPage() {
               zeitgemäßer Technik verbindet — und dabei immer direkt
               ansprechbar bleibt.
             </p>
-            <div className="flex items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-4 pt-4">
               <div className="text-center">
                 <p className="text-4xl font-extrabold text-primary">35+</p>
                 <p className="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">
                   Jahre Erfahrung
                 </p>
               </div>
-              <div className="w-px h-12 bg-outline-variant/30" />
+              <div className="hidden sm:block w-px h-12 bg-outline-variant/30" />
               <div className="text-center">
                 <p className="text-4xl font-extrabold text-primary">Rügen</p>
                 <p className="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">
                   Unser Zuhause
                 </p>
               </div>
-              <div className="w-px h-12 bg-outline-variant/30" />
+              <div className="hidden sm:block w-px h-12 bg-outline-variant/30" />
               <div className="text-center">
                 <p className="text-4xl font-extrabold text-primary">24h</p>
                 <p className="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">
@@ -201,9 +202,7 @@ export default function UeberUnsPage() {
               key={v.title}
               className="bg-surface-container-lowest rounded-xl p-8 space-y-4"
             >
-              <span className="material-symbols-outlined text-4xl text-accent">
-                {v.icon}
-              </span>
+              <Icon name={v.icon} className="text-4xl text-accent" />
               <h3 className="text-xl font-bold text-primary">{v.title}</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">
                 {v.copy}
