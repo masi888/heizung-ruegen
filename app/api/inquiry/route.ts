@@ -196,6 +196,11 @@ export async function POST(request: Request) {
     }
 
     const formData = await request.formData();
+
+    if (textValue(formData, "website")) {
+      return Response.json({ message: "Danke. Die Anfrage ist eingegangen und wird persönlich bearbeitet." });
+    }
+
     const formType = textValue(formData, "formType");
     const files = formData.getAll("attachments").filter((entry): entry is File => entry instanceof File);
 

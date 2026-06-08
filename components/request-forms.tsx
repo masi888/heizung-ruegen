@@ -141,6 +141,15 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             handleSubmit(event.currentTarget, "project");
           }}
         >
+          {/* Honeypot — für Bots unsichtbar, muss leer bleiben */}
+          <input
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute -left-[9999px] opacity-0 pointer-events-none"
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
             <label className={fieldWrap}>
               <span className={fieldLabel}>Name</span>
@@ -248,6 +257,15 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             handleSubmit(event.currentTarget, "maintenance");
           }}
         >
+          {/* Honeypot — für Bots unsichtbar, muss leer bleiben */}
+          <input
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute -left-[9999px] opacity-0 pointer-events-none"
+          />
           {/* Paket-Auswahl: Heizung */}
           <fieldset className="space-y-4">
             <legend className={`${fieldLabel} mb-3`}>
