@@ -9,7 +9,7 @@ import { buildPageMetadata, company } from "@/lib/site-data";
 export const metadata = buildPageMetadata({
   title: "Über uns — Bertig Sanitär- und Heizungstechnik",
   description:
-    "Familienbetrieb seit 1990 in Breege auf Rügen. Eckhard Bertig und sein Sohn stehen für persönliche Handwerksqualität auf der Insel.",
+    "Familienbetrieb seit 1990 in Breege auf Rügen. Paul Bertig steht für persönliche Handwerksqualität auf der Insel.",
   path: "/ueber-uns",
   imagePath: "/images/hero/vater-sohn-werkstatt.webp",
 });
@@ -32,7 +32,7 @@ const timeline = [
   },
   {
     year: "Heute",
-    title: "Vater und Sohn",
+    title: "Paul Bertig übernimmt",
     copy: "Der Betrieb arbeitet mit kurzen Wegen, direktem Kontakt und dem Anspruch, Technik verständlich zu erklären — statt sie zu verkaufen.",
   },
 ];
@@ -76,7 +76,7 @@ export default function UeberUnsPage() {
             <p className="text-lg text-on-surface-variant leading-relaxed">
               Bertig Sanitär- und Heizungstechnik steht für über drei Jahrzehnte
               handwerkliche Kompetenz auf Rügen. Gegründet von Eckhard Bertig,
-              heute gemeinsam weitergeführt — persönlich, direkt und ohne
+              heute von Paul Bertig weitergeführt — persönlich, direkt und ohne
               Umwege.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function UeberUnsPage() {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/hero/vater-sohn-werkstatt.webp"
-                alt="Eckhard Bertig und Sohn in der Werkstatt"
+                alt="Paul Bertig in der Werkstatt"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -114,11 +114,11 @@ export default function UeberUnsPage() {
               Erfahrung trifft frische Perspektive.
             </h2>
             <p className="text-on-surface-variant leading-relaxed">
-              Eckhard Bertig baut seit 1990 auf verlässliche Technik und
-              ehrliche Beratung. Was er über drei Jahrzehnte auf der Insel
-              gelernt hat, gibt er heute an den Betrieb weiter — gemeinsam mit
-              seinem Sohn, der moderne Systemtechnik und digitale Planung
-              einbringt.
+              Eckhard Bertig gründete den Betrieb 1990 und hat über drei
+              Jahrzehnte aufgebaut, was heute Bertig Sanitär- und
+              Heizungstechnik ausmacht. Heute führt sein Sohn Paul Bertig das
+              Unternehmen weiter — mit moderner Systemtechnik und digitalem
+              Know-how, aber denselben Werten.
             </p>
             <p className="text-on-surface-variant leading-relaxed">
               Das Ergebnis: ein Betrieb, der handwerkliche Sorgfalt mit

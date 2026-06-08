@@ -43,11 +43,6 @@ export default function ImpressumPage() {
             </h2>
             <p className="text-on-surface leading-relaxed">
               Telefon:{" "}
-              <a href={company.phones.landlineHref} className="text-primary hover:text-accent">
-                {company.phones.landline}
-              </a>
-              <br />
-              Mobil:{" "}
               <a href={company.phones.mobileHref} className="text-primary hover:text-accent">
                 {company.phones.mobile}
               </a>

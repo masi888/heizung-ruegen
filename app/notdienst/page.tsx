@@ -57,16 +57,9 @@ export default function NotdienstPage() {
                 <Icon name="call" className="text-white text-2xl" />
                 {company.phones.mobile}
               </Link>
-              <Link
-                href={company.phones.landlineHref}
-                className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 sm:py-5 bg-surface-container-high text-primary rounded-xl font-bold text-base sm:text-lg hover:bg-surface-container transition-all"
-              >
-                <Icon name="phone" className="text-primary" />
-                {company.phones.landline}
-              </Link>
             </div>
             <p className="mt-4 text-sm text-on-surface-variant">
-              Mobil bevorzugen — direkte Leitung zum Inhaber, auch außerhalb der Bürozeiten.
+              Direkte Leitung zum Inhaber, auch außerhalb der Bürozeiten.
             </p>
           </div>
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
@@ -144,22 +137,6 @@ export default function NotdienstPage() {
                   </div>
                   <div className="text-xl font-extrabold text-primary group-hover:text-error transition-colors">
                     {company.phones.mobile}
-                  </div>
-                </div>
-              </Link>
-              <Link
-                href={company.phones.landlineHref}
-                className="flex items-center gap-4 p-5 bg-surface-container-lowest border border-outline-variant/10 rounded-xl hover:bg-surface-container transition-all"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
-                  <Icon name="phone" className="text-primary text-xl" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1">
-                    Festnetz
-                  </div>
-                  <div className="text-xl font-extrabold text-primary">
-                    {company.phones.landline}
                   </div>
                 </div>
               </Link>

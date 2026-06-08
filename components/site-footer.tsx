@@ -33,8 +33,8 @@ export function SiteFooter() {
             Persönlich erreichbar für Heizung, Sanitär, Wartung und Bad.
           </p>
           <div className="flex flex-col gap-2 text-sm text-on-primary/80">
-            <a href={company.phones.landlineHref} className="flex items-center gap-2 hover:text-accent">
-              <Icon name="call" /> {company.phones.landline}
+            <a href={company.phones.mobileHref} className="flex items-center gap-2 hover:text-accent">
+              <Icon name="call" /> {company.phones.mobile}
             </a>
             <a href={`mailto:${company.email}`} className="flex items-center gap-2 hover:text-accent">
               <Icon name="mail" /> {company.email}

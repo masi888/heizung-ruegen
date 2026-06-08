@@ -64,13 +64,6 @@ export default function KontaktPage() {
                   </span>
                 </p>
                 <a
-                  href={company.phones.landlineHref}
-                  className="flex items-center gap-3 hover:text-primary transition-colors"
-                >
-                  <Icon name="call" className="text-accent text-lg" />
-                  {company.phones.landline}
-                </a>
-                <a
                   href={company.phones.mobileHref}
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >

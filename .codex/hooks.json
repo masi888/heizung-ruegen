@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .bridgespace/bin/bs-claude-hook.cjs user-prompt-submit"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .bridgespace/bin/bs-claude-hook.cjs stop idle \"Finished working\""
+          }
+        ]
+      }
+    ]
+  }
+}

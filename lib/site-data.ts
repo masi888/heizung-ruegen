@@ -7,8 +7,8 @@ export const siteUrl = "https://www.heizung-ruegen.de";
 
 export const company = {
   name: "Bertig Sanitär- und Heizungstechnik",
-  legalName: "Bertig Sanitär- und Heizungstechnik, Inhaber Eckhard Bertig",
-  owner: "Eckhard Bertig",
+  legalName: "Bertig Sanitär- und Heizungstechnik, Inhaber Paul Bertig",
+  owner: "Paul Bertig",
   address: {
     street: "Dorfstraße 56",
     postalCode: "18556",
@@ -20,12 +20,10 @@ export const company = {
     lng: 13.366,
   },
   phones: {
-    landline: "038391 341",
-    landlineHref: "tel:+4938391341",
     mobile: "0171 6831051",
     mobileHref: "tel:+491716831051",
   },
-  email: "bertig.shk@web.de",
+  email: "info@heizung-rügen.de",
   serviceArea: ["Rügen", "Wittow", "Jasmund", "Mönchgut", "Breege", "Binz", "Sellin", "Baabe", "Göhren", "bis Stralsund"],
   openingHours: [
     { day: "Monday", opens: "07:30", closes: "17:00" },
@@ -196,7 +194,7 @@ export function buildLocalBusinessJsonLd() {
     name: company.name,
     legalName: company.legalName,
     image: `${siteUrl}/brand/bertig-logo.webp`,
-    telephone: company.phones.landline,
+    telephone: company.phones.mobile,
     email: company.email,
     foundingDate: String(company.foundingYear),
     areaServed: company.serviceArea,
