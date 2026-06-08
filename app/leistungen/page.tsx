@@ -21,7 +21,7 @@ const services = [
     href: "/heizung-ruegen",
     icon: "local_fire_department",
     title: "Heizung",
-    lead: "Öl, Gas, modern oder hybrid — wir planen passend zum Haus.",
+    lead: "Heizung erneuern auf Rügen: Öl, Gas, Brennwert oder Hybridlösung – sauber geplant, fachgerecht umgesetzt.",
     bullets: ["Austausch & Modernisierung", "Brennwerttechnik", "Hybridlösungen"],
   },
   {
@@ -35,7 +35,7 @@ const services = [
     href: "/wartung-service",
     icon: "build",
     title: "Wartung & Service",
-    lead: "Drei klare Pakete, planbare Kosten, persönliche Rückmeldung.",
+    lead: "Heizungswartung auf Rügen: drei klare Jahrespakete, planbare Kosten, persönliche Rückmeldung.",
     bullets: ["Jahreswartung", "Ferndiagnose", "Prüfprotokoll"],
   },
   {
@@ -81,9 +81,9 @@ export default function LeistungenPage() {
           </div>
           <div className="col-span-12 lg:col-span-5">
             <p className="text-lg text-on-surface-variant leading-relaxed">
-              Sie suchen keinen Bauchladen, sondern einen Betrieb, der moderne
-              Technik verständlich plant und sauber ausführt. Genau darauf ist
-              Bertig ausgerichtet.
+              Heizung, Sanitär, Wärmepumpe und Bad – Bertig ist der
+              Haustechnik-Fachbetrieb aus Breege auf Rügen für alle Gewerke
+              aus einer Hand.
             </p>
           </div>
         </div>

@@ -268,13 +268,13 @@ export default function HomePage() {
       {/* Task 4.5 — Wartungs-Teaser */}
       <Section tone="surface" id="wartung">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <Kicker className="mb-4">Wartung &amp; Service</Kicker>
+          <Kicker className="mb-4">Heizungswartung Rügen</Kicker>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6">
-            Drei klare Pakete. Ein strukturierter Weg.
+            Wartungsverträge für Heizungsanlagen auf Rügen.
           </h2>
           <p className="text-on-surface-variant leading-relaxed">
-            Klare Leistungen, Typenschild-Upload und persönliche Rückmeldung
-            statt Wartungs-Blackbox.
+            Bertig wartet Heizungsanlagen auf Rügen – klarer Leistungsumfang,
+            digitaler Servicebericht, persönliche Rückmeldung.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -283,31 +283,37 @@ export default function HomePage() {
               key={pkg.slug}
               className={pkg.recommended ? "ring-2 ring-accent" : ""}
             >
-              {pkg.recommended && (
-                <span className="inline-block bg-accent text-on-accent text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-md mb-4">
-                  Empfohlen
-                </span>
-              )}
-              <h3 className="text-2xl font-bold text-primary mb-2">
-                {pkg.name}
-              </h3>
-              <p className="text-sm text-on-surface-variant mb-4">
-                {pkg.audience}
-              </p>
-              <p className="text-lg font-bold text-primary mb-6">
-                {pkg.priceLabel}
-              </p>
-              <ul className="space-y-3 text-sm text-on-surface-variant mb-8">
-                {pkg.includes.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <Icon name="check_circle" className="text-accent text-base" fill />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Button tone="secondary" href="/wartung-service">
-                {pkg.cta}
-              </Button>
+              <div className="flex flex-col h-full">
+                <div className="min-h-[2rem] mb-4">
+                  {pkg.recommended && (
+                    <span className="inline-block bg-accent text-on-accent text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-md">
+                      Preis-Leistung TOP
+                    </span>
+                  )}
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">
+                  {pkg.name}
+                </h3>
+                <p className="text-sm text-on-surface-variant mb-4">
+                  {pkg.audience}
+                </p>
+                <ul className="space-y-3 text-sm text-on-surface-variant mb-8">
+                  {pkg.includes.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <Icon name="check_circle" className="text-accent text-base" fill />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto">
+                  <p className="text-lg font-bold text-primary mb-6">
+                    {pkg.priceLabel}
+                  </p>
+                  <Button tone="secondary" href="/wartung-service">
+                    {pkg.cta}
+                  </Button>
+                </div>
+              </div>
             </Card>
           ))}
         </div>

@@ -122,12 +122,12 @@ export default function WartungServicePage() {
       {/* Pakete */}
       <Section tone="surface" id="pakete">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <Kicker className="mb-4">Unsere Pakete</Kicker>
+          <Kicker className="mb-4">Wartungsverträge Rügen</Kicker>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6">
-            Drei klare Wartungspakete.
+            Ihr Wartungsvertrag für Heizungsanlagen auf Rügen.
           </h2>
           <p className="text-on-surface-variant leading-relaxed">
-            Wählen Sie das Paket, das zu Ihrer Anlage passt. Bei Fragen melden Sie sich einfach direkt.
+            Bertig bietet drei klare Jahrespakete für Heizungsanlagen auf Rügen – von der Basiswartung bis zum Vollschutz.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -136,28 +136,34 @@ export default function WartungServicePage() {
               key={pkg.slug}
               className={pkg.recommended ? "ring-2 ring-accent" : ""}
             >
-              {pkg.recommended && (
-                <span className="inline-block bg-accent text-on-accent text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-md mb-4">
-                  Preis-Leistung TOP
-                </span>
-              )}
-              {pkg.kicker && (
-                <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-1">{pkg.kicker}</p>
-              )}
-              <h3 className="text-2xl font-bold text-primary mb-3">{pkg.name}</h3>
-              <p className="text-sm text-on-surface-variant mb-6">{pkg.audience}</p>
-              <ul className="space-y-3 text-sm text-on-surface-variant mb-6">
-                {pkg.includes.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <Icon name="check_circle" className="text-accent text-base shrink-0 mt-0.5" fill />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-lg font-bold text-primary mb-6">{pkg.priceLabel}</p>
-              <Button tone="secondary" href="#anfrage">
-                {pkg.cta}
-              </Button>
+              <div className="flex flex-col h-full">
+                <div className="min-h-[2rem] mb-4">
+                  {pkg.recommended && (
+                    <span className="inline-block bg-accent text-on-accent text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-md">
+                      Preis-Leistung TOP
+                    </span>
+                  )}
+                </div>
+                {pkg.kicker && (
+                  <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-1">{pkg.kicker}</p>
+                )}
+                <h3 className="text-2xl font-bold text-primary mb-3">{pkg.name}</h3>
+                <p className="text-sm text-on-surface-variant mb-6">{pkg.audience}</p>
+                <ul className="space-y-3 text-sm text-on-surface-variant mb-6">
+                  {pkg.includes.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <Icon name="check_circle" className="text-accent text-base shrink-0 mt-0.5" fill />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto">
+                  <p className="text-lg font-bold text-primary mb-6">{pkg.priceLabel}</p>
+                  <Button tone="secondary" href="#anfrage">
+                    {pkg.cta}
+                  </Button>
+                </div>
+              </div>
             </Card>
           ))}
         </div>
