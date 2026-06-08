@@ -78,7 +78,7 @@ export default function HomePage() {
           <div className="col-span-12 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image
-                src="/images/hero/vater-sohn-werkstatt.jpg"
+                src="/images/hero/vater-sohn-werkstatt.webp"
                 alt="Präzise Handwerksarbeit an einer modernen Heizungsanlage"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -180,7 +180,7 @@ export default function HomePage() {
           <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
             <div className="relative">
               <Image
-                src="/images/atmosphere/werkstatt-detail.jpg"
+                src="/images/atmosphere/werkstatt-detail.webp"
                 alt="Traditionelles Werkzeug trifft moderne Technik"
                 width={1600}
                 height={1200}
@@ -250,14 +250,14 @@ export default function HomePage() {
           </div>
           <div className="col-span-12 lg:col-span-7 space-y-8">
             <BeforeAfter
-              beforeSrc="/images/before-after/bad-vorher.jpg"
-              afterSrc="/images/before-after/bad-nachher.jpg"
+              beforeSrc="/images/before-after/bad-vorher.webp"
+              afterSrc="/images/before-after/bad-nachher.webp"
               alt="Badsanierung"
               caption="Badmodernisierung — dieselbe Raumgeometrie, neue Funktion."
             />
             <BeforeAfter
-              beforeSrc="/images/before-after/heizung-vorher.jpg"
-              afterSrc="/images/before-after/heizung-nachher.jpg"
+              beforeSrc="/images/before-after/heizung-vorher.webp"
+              afterSrc="/images/before-after/heizung-nachher.webp"
               alt="Heizungsmodernisierung"
               caption="Kesseltausch — alter Ölkessel zu modernem Brennwertgerät."
             />

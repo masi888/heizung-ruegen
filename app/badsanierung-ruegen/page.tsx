@@ -17,7 +17,7 @@ export const metadata = buildPageMetadata({
     route?.description ??
     "Badsanierung und Badmodernisierung auf Rügen – persönlich geplant, sauber koordiniert.",
   path: "/badsanierung-ruegen",
-  imagePath: "/images/services/badsanierung-modern.jpg",
+  imagePath: "/images/services/badsanierung-modern.webp",
 });
 
 const arbeitsweise = [
@@ -103,7 +103,7 @@ export default function BadsanierungRuegenPage() {
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image
-                src="/images/services/badsanierung-modern.jpg"
+                src="/images/services/badsanierung-modern.webp"
                 alt="Modernes Bad nach Sanierung durch Bertig auf Rügen"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -152,8 +152,8 @@ export default function BadsanierungRuegenPage() {
           </div>
           <div className="col-span-12 lg:col-span-7">
             <BeforeAfter
-              beforeSrc="/images/before-after/bad-vorher.jpg"
-              afterSrc="/images/before-after/bad-nachher.jpg"
+              beforeSrc="/images/before-after/bad-vorher.webp"
+              afterSrc="/images/before-after/bad-nachher.webp"
               alt="Badsanierung auf Rügen"
               caption="Badmodernisierung — dieselbe Raumgeometrie, neue Funktion."
             />

@@ -22,12 +22,12 @@ type Props = {
 };
 
 const articleImages: Record<string, string> = {
-  "waermepumpe-im-bestand-ruegen": "/images/ratgeber/waermepumpe.jpg",
-  "heizungswartung-was-wirklich-gemacht-wird": "/images/ratgeber/wartung.jpg",
-  "bad-modernisieren-ohne-komplettumbau": "/images/ratgeber/bad.jpg",
-  "heizungsfoerderung-2026-ruegen": "/images/ratgeber/wartung.jpg",
-  "heizungsgesetz-waermeplanung-ruegen-2026": "/images/ratgeber/waermepumpe.jpg",
-  "barrierearmes-bad-foerderung-ruegen-2026": "/images/ratgeber/bad.jpg",
+  "waermepumpe-im-bestand-ruegen": "/images/ratgeber/waermepumpe.webp",
+  "heizungswartung-was-wirklich-gemacht-wird": "/images/ratgeber/wartung.webp",
+  "bad-modernisieren-ohne-komplettumbau": "/images/ratgeber/bad.webp",
+  "heizungsfoerderung-2026-ruegen": "/images/ratgeber/wartung.webp",
+  "heizungsgesetz-waermeplanung-ruegen-2026": "/images/ratgeber/waermepumpe.webp",
+  "barrierearmes-bad-foerderung-ruegen-2026": "/images/ratgeber/bad.webp",
 };
 
 export function generateStaticParams() {
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const entry = findKnowledgeRoute(slug);
   if (!entry) return {};
-  const imgSrc = articleImages[slug] ?? "/images/ratgeber/waermepumpe.jpg";
+  const imgSrc = articleImages[slug] ?? "/images/ratgeber/waermepumpe.webp";
 
   return {
     ...buildPageMetadata({
@@ -64,7 +64,7 @@ export default async function RatgeberArticlePage({ params }: Props) {
   const entry = findKnowledgeRoute(slug);
   if (!entry) notFound();
 
-  const imgSrc = articleImages[slug] ?? "/images/ratgeber/waermepumpe.jpg";
+  const imgSrc = articleImages[slug] ?? "/images/ratgeber/waermepumpe.webp";
   const articlePath = `/ratgeber/${slug}`;
   const articleJsonLd = buildArticleJsonLd({
     title: entry.title,

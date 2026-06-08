@@ -24,7 +24,7 @@ export const metadata = buildPageMetadata({
     route?.description ??
     "Heizungs- und Enthärtungsanlagen-Wartung mit klaren Paketen, persönlicher Rückmeldung und strukturierter Datenerfassung auf Rügen.",
   path: "/wartung-service",
-  imagePath: "/images/services/wartung-inspektion.jpg",
+  imagePath: "/images/services/wartung-inspektion.webp",
 });
 
 const relatedLinks = [
@@ -85,7 +85,7 @@ export default function WartungServicePage() {
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image
-                src="/images/services/wartung-inspektion.jpg"
+                src="/images/services/wartung-inspektion.webp"
                 alt="Heizungswartung durch Bertig auf Rügen"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"

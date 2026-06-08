@@ -16,7 +16,7 @@ export const metadata = buildPageMetadata({
     route?.description ??
     "Schnelle Hilfe bei Störungen und Heizungsausfall auf Rügen. 24h-Notdienst von Bertig Sanitär- und Heizungstechnik.",
   path: "/notdienst",
-  imagePath: "/images/services/notdienst-einsatz.jpg",
+  imagePath: "/images/services/notdienst-einsatz.webp",
 });
 
 export default function NotdienstPage() {
@@ -72,7 +72,7 @@ export default function NotdienstPage() {
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image
-                src="/images/services/notdienst-einsatz.jpg"
+                src="/images/services/notdienst-einsatz.webp"
                 alt="Bertig-Techniker im Notdiensteinsatz auf Rügen"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"

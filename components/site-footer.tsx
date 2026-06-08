@@ -22,7 +22,7 @@ export function SiteFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-5">
         <div className="md:col-span-2 space-y-6">
           <Image
-            src="/brand/logo/bertig-logo-light.png"
+            src="/brand/logo/bertig-logo-light.webp"
             alt={company.name}
             width={320}
             height={120}

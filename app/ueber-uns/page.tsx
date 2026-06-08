@@ -11,7 +11,7 @@ export const metadata = buildPageMetadata({
   description:
     "Familienbetrieb seit 1990 in Breege auf Rügen. Eckhard Bertig und sein Sohn stehen für persönliche Handwerksqualität auf der Insel.",
   path: "/ueber-uns",
-  imagePath: "/images/hero/vater-sohn-werkstatt.jpg",
+  imagePath: "/images/hero/vater-sohn-werkstatt.webp",
 });
 
 const timeline = [
@@ -89,7 +89,7 @@ export default function UeberUnsPage() {
           <div className="col-span-12 lg:col-span-5 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero/vater-sohn-werkstatt.jpg"
+                src="/images/hero/vater-sohn-werkstatt.webp"
                 alt="Eckhard Bertig und Sohn in der Werkstatt"
                 width={800}
                 height={1000}
@@ -100,7 +100,7 @@ export default function UeberUnsPage() {
             {/* Signet Badge */}
             <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-primary hidden sm:flex items-center justify-center shadow-xl border-4 border-surface-container-low">
               <Image
-                src="/brand/logo/bertig-signet-only.png"
+                src="/brand/logo/bertig-signet-only.webp"
                 alt="Bertig Signet"
                 width={64}
                 height={64}

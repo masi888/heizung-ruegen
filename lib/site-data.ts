@@ -131,7 +131,7 @@ export function buildCanonical(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
-const defaultSocialImagePath = "/images/hero/vater-sohn-werkstatt.jpg";
+const defaultSocialImagePath = "/images/hero/vater-sohn-werkstatt.webp";
 
 function withBrand(title: string) {
   if (/bertig|sanitär- und heizungstechnik/i.test(title)) {
@@ -195,7 +195,7 @@ export function buildLocalBusinessJsonLd() {
     "@id": `${siteUrl}/#organization`,
     name: company.name,
     legalName: company.legalName,
-    image: `${siteUrl}/brand/bertig-logo.jpg`,
+    image: `${siteUrl}/brand/bertig-logo.webp`,
     telephone: company.phones.landline,
     email: company.email,
     foundingDate: String(company.foundingYear),
@@ -277,7 +277,7 @@ export function buildArticleJsonLd({
       name: company.name,
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/brand/bertig-logo.jpg`,
+        url: `${siteUrl}/brand/bertig-logo.webp`,
       },
     },
   };

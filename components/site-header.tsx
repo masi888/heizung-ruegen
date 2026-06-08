@@ -36,7 +36,7 @@ export function SiteHeader() {
         >
           <span className="bg-primary rounded-lg px-3 py-2 inline-flex items-center">
             <Image
-              src="/brand/logo/bertig-logo-light.png"
+              src="/brand/logo/bertig-logo-light.webp"
               alt={company.name}
               width={930}
               height={348}

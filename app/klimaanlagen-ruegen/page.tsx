@@ -16,7 +16,7 @@ export const metadata = buildPageMetadata({
     route?.description ??
     "Klimaanlagen für Wohnhäuser, Ferienimmobilien und kleine Gewerbeobjekte auf Rügen – sauber geplant und fachgerecht umgesetzt.",
   path: "/klimaanlagen-ruegen",
-  imagePath: "/images/services/klimaanlage-innen.jpg",
+  imagePath: "/images/services/klimaanlage-innen.webp",
 });
 
 const arbeitsweise = [
@@ -90,7 +90,7 @@ export default function KlimaanlagenRuegenPage() {
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image
-                src="/images/services/klimaanlage-innen.jpg"
+                src="/images/services/klimaanlage-innen.webp"
                 alt="Klimaanlage in einem Wohnraum auf Rügen"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"

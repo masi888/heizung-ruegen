@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata({
   title: route.title,
   description: route.description,
   path: "/waermepumpen-ruegen",
-  imagePath: "/images/services/waermepumpe-aussen.jpg",
+  imagePath: "/images/services/waermepumpe-aussen.webp",
 });
 
 const steps = [
@@ -78,7 +78,7 @@ export default function WaermepumpenPage() {
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/services/waermepumpe-aussen.jpg"
+                src="/images/services/waermepumpe-aussen.webp"
                 alt="Wärmepumpe Außeneinheit"
                 width={1200}
                 height={1500}

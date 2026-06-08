@@ -12,16 +12,16 @@ export const metadata = buildPageMetadata({
   description:
     "Wissenswertes zu Wärmepumpe, Heizungsförderung, Wärmeplanung, Wartung und Badsanierung auf Rügen — verständlich erklärt vom Fachbetrieb.",
   path: "/ratgeber",
-  imagePath: "/images/ratgeber/waermepumpe.jpg",
+  imagePath: "/images/ratgeber/waermepumpe.webp",
 });
 
 const ratgeberImages: Record<string, string> = {
-  "/ratgeber/waermepumpe-im-bestand-ruegen": "/images/ratgeber/waermepumpe.jpg",
-  "/ratgeber/heizungswartung-was-wirklich-gemacht-wird": "/images/ratgeber/wartung.jpg",
-  "/ratgeber/bad-modernisieren-ohne-komplettumbau": "/images/ratgeber/bad.jpg",
-  "/ratgeber/heizungsfoerderung-2026-ruegen": "/images/ratgeber/wartung.jpg",
-  "/ratgeber/heizungsgesetz-waermeplanung-ruegen-2026": "/images/ratgeber/waermepumpe.jpg",
-  "/ratgeber/barrierearmes-bad-foerderung-ruegen-2026": "/images/ratgeber/bad.jpg",
+  "/ratgeber/waermepumpe-im-bestand-ruegen": "/images/ratgeber/waermepumpe.webp",
+  "/ratgeber/heizungswartung-was-wirklich-gemacht-wird": "/images/ratgeber/wartung.webp",
+  "/ratgeber/bad-modernisieren-ohne-komplettumbau": "/images/ratgeber/bad.webp",
+  "/ratgeber/heizungsfoerderung-2026-ruegen": "/images/ratgeber/wartung.webp",
+  "/ratgeber/heizungsgesetz-waermeplanung-ruegen-2026": "/images/ratgeber/waermepumpe.webp",
+  "/ratgeber/barrierearmes-bad-foerderung-ruegen-2026": "/images/ratgeber/bad.webp",
 };
 
 const topicHubs = [
@@ -73,7 +73,7 @@ export default function RatgeberPage() {
       <Section tone="surface-low">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {knowledgeEntries.map((entry) => {
-            const imgSrc = ratgeberImages[entry.slug] ?? "/images/ratgeber/waermepumpe.jpg";
+            const imgSrc = ratgeberImages[entry.slug] ?? "/images/ratgeber/waermepumpe.webp";
             const slug = entry.slug.replace("/ratgeber/", "");
             return (
               <Link

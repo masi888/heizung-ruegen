@@ -13,7 +13,7 @@ export const metadata = buildPageMetadata({
   description:
     "Heizung, Wärmepumpen, Wartung, Bad, Klima und Notdienst — alle Leistungen von Bertig auf einen Blick.",
   path: "/leistungen",
-  imagePath: "/images/services/leistungen-hero.jpg",
+  imagePath: "/images/services/leistungen-hero.webp",
 });
 
 const services = [
@@ -92,7 +92,7 @@ export default function LeistungenPage() {
       <section className="pb-24 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <Image
-            src="/images/services/leistungen-hero.jpg"
+            src="/images/services/leistungen-hero.webp"
             alt="Bertig Werkstatt"
             width={1600}
             height={900}

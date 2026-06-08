@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
     localPatterns: [
       {
         pathname: "/brand/**",

@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata({
   title: route.title,
   description: route.description,
   path: "/heizung-ruegen",
-  imagePath: "/images/services/heizung-modernisierung.jpg",
+  imagePath: "/images/services/heizung-modernisierung.webp",
 });
 
 const steps = [
@@ -78,7 +78,7 @@ export default function HeizungPage() {
           <div className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/services/heizung-modernisierung.jpg"
+                src="/images/services/heizung-modernisierung.webp"
                 alt="Moderne Heizungsinstallation"
                 width={1200}
                 height={1500}
@@ -93,7 +93,7 @@ export default function HeizungPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-5 flex flex-wrap items-center justify-between gap-6">
           <p className="text-sm font-semibold text-on-surface-variant">Zertifizierter Fachbetrieb</p>
           <Image
-            src="/brand/bosch-premium-partner.jpg"
+            src="/brand/bosch-premium-partner.webp"
             alt="Bosch Premium Partner – Heizung, Klima, Warmwasser"
             width={280}
             height={56}

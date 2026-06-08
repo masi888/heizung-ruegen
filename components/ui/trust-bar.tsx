@@ -19,7 +19,7 @@ export function TrustBar() {
           </div>
         ))}
         <Image
-          src="/brand/bosch-premium-partner.jpg"
+          src="/brand/bosch-premium-partner.webp"
           alt="Bosch Premium Partner"
           width={140}
           height={28}
