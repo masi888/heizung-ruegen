@@ -129,7 +129,8 @@ export function buildCanonical(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
-const defaultSocialImagePath = "/images/hero/vater-sohn-werkstatt.webp";
+const defaultSocialImagePath = "/brand/bertig-logo.webp";
+const defaultSocialImageAlt = "Bertig Sanitär- und Heizungstechnik — Logo";
 
 function withBrand(title: string) {
   if (/bertig|sanitär- und heizungstechnik/i.test(title)) {
@@ -144,6 +145,9 @@ type PageMetadataOptions = {
   description: string;
   path: string;
   imagePath?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: "website" | "article";
 };
 
@@ -152,6 +156,9 @@ export function buildPageMetadata({
   description,
   path,
   imagePath = defaultSocialImagePath,
+  imageAlt = defaultSocialImageAlt,
+  imageWidth = 1457,
+  imageHeight = 811,
   type = "website",
 }: PageMetadataOptions): Metadata {
   const normalizedTitle = withBrand(title);
@@ -174,6 +181,9 @@ export function buildPageMetadata({
       images: [
         {
           url: imageUrl,
+          width: imageWidth,
+          height: imageHeight,
+          alt: imageAlt,
         },
       ],
     },

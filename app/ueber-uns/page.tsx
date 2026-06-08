@@ -4,14 +4,20 @@ import { ClosingBand } from "@/components/ui/closing-band";
 import { Icon } from "@/components/ui/icon";
 import { Kicker } from "@/components/ui/kicker";
 import { Section } from "@/components/ui/section";
-import { buildPageMetadata, company } from "@/lib/site-data";
+import { buildPageMetadata, company, findPageRoute } from "@/lib/site-data";
+
+const route = findPageRoute("ueber-uns");
 
 export const metadata = buildPageMetadata({
-  title: "Über uns — Bertig Sanitär- und Heizungstechnik",
+  title: route?.title ?? "Über uns — Bertig Sanitär- und Heizungstechnik",
   description:
+    route?.description ??
     "Familienbetrieb seit 1990 in Breege auf Rügen. Paul Bertig steht für persönliche Handwerksqualität auf der Insel.",
   path: "/ueber-uns",
   imagePath: "/images/hero/vater-sohn-werkstatt.webp",
+  imageWidth: 1920,
+  imageHeight: 2384,
+  imageAlt: "Vater und Sohn Bertig in ihrer Werkstatt auf Rügen",
 });
 
 const timeline = [

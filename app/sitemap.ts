@@ -15,8 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...knowledgeEntries.map((entry) => entry.slug),
   ];
 
+  const now = new Date();
+
   return baseEntries.map((path) => ({
     url: buildCanonical(path),
+    lastModified: now,
     changeFrequency: path.startsWith("/ratgeber") ? "monthly" : "weekly",
     priority: path === "/" ? 1 : 0.7,
   }));

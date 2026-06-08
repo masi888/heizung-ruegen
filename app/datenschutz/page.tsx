@@ -4,7 +4,7 @@ import { buildPageMetadata, company } from "@/lib/site-data";
 
 export const metadata = buildPageMetadata({
   title: "Datenschutz — Bertig Sanitär- und Heizungstechnik",
-  description: "Datenschutzerklärung gemäß DSGVO.",
+  description: "Datenschutzerklärung von Bertig Sanitär- und Heizungstechnik — Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
   path: "/datenschutz",
 });
 
