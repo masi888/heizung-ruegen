@@ -311,6 +311,15 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
+        <p className="text-center text-on-surface-variant mt-10">
+          Auch Enthärtungsanlagen warten wir — mit eigenem Paket ab 129 € jährlich.{" "}
+          <Link
+            href="/wartung-service#enthaertung"
+            className="font-bold text-primary hover:text-accent"
+          >
+            Mehr erfahren
+          </Link>
+        </p>
       </Section>
 
       {/* Task 4.5 — FAQ Teaser */}

@@ -102,19 +102,15 @@ export function BeforeAfter({ beforeSrc, afterSrc, alt, caption }: Props) {
           className="object-cover pointer-events-none"
           draggable={false}
         />
-        <div
-          className="absolute inset-y-0 left-0 overflow-hidden pointer-events-none"
-          style={{ width: `${position}%` }}
-        >
-          <Image
-            src={beforeSrc}
-            alt={`${alt} vorher`}
-            fill
-            sizes="(min-width: 1024px) 60vw, 100vw"
-            className="object-cover"
-            draggable={false}
-          />
-        </div>
+        <Image
+          src={beforeSrc}
+          alt={`${alt} vorher`}
+          fill
+          sizes="(min-width: 1024px) 60vw, 100vw"
+          className="object-cover pointer-events-none"
+          draggable={false}
+          style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        />
         <div
           className="absolute inset-y-0 w-0.5 bg-accent shadow-[0_0_0_3px_rgba(255,255,255,0.6)] pointer-events-none"
           style={{ left: `${position}%` }}

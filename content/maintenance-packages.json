@@ -1,52 +1,78 @@
 {
   "status": "active",
-  "note": "Preisstaffel am 8. April 2026 anhand aktueller Marktquellen für Deutschland neu kalibriert (co2online / Heizspiegel, thermondo, enter). Regionale Abweichungen je nach Anlage, Zustand und Anfahrt bleiben möglich.",
+  "note": "Pakete BASIC / SMART / PREMIUM – Stand Juni 2026.",
   "packages": [
     {
-      "slug": "basis-wartung",
-      "name": "Basis-Wartung",
-      "priceLabel": "ab 149 € / Jahr",
+      "slug": "basic",
+      "category": "heizung",
+      "name": "BASIC",
+      "kicker": "Wartungspaket",
+      "priceLabel": "ab 139,00 € jährlich inkl. gesetzl. MwSt.",
       "approvalRequired": false,
-      "audience": "für klassische Einzelgeräte und planbare Standardwartungen",
-      "summary": "Der klare Einstieg für Anlagen, die regelmäßig fachgerecht gewartet werden sollen.",
+      "audience": "Unser Einstiegspaket: Basic-Inspektion inkl. Abgasmessung und Anlagenoptimierung zum Vorteilspreis",
+      "summary": "Unser Einstiegspaket: Basic-Inspektion inkl. Abgasmessung und Anlagenoptimierung zum Vorteilspreis",
       "includes": [
-        "Sicht- und Funktionsprüfung der Anlage",
-        "Reinigung und Kontrolle im üblichen Wartungsumfang",
-        "Prüfung sicherheitsrelevanter Grundfunktionen",
-        "Kurze Wartungsrückmeldung mit Hinweisen"
+        "Wartung gemäß Checkliste",
+        "Anlagenreinigung & -optimierung",
+        "Abgasmessung inkl. Protokoll",
+        "Digitaler Servicebericht",
+        "24/7-Notdienst",
+        "Servicecard / Sticker / Anlagenbuch"
       ],
-      "cta": "Basis-Wartung anfragen"
+      "cta": "Angebot anfragen"
     },
     {
-      "slug": "komfort-wartung",
-      "name": "Komfort-Wartung",
-      "priceLabel": "ab 219 € / Jahr",
+      "slug": "smart",
+      "category": "heizung",
+      "name": "SMART",
+      "kicker": "Wartungspaket",
+      "priceLabel": "ab 229,00 € jährlich inkl. gesetzl. MwSt.",
       "approvalRequired": false,
-      "audience": "für Betreiber, die mehr Transparenz und eine regelmäßige Betreuung wollen",
-      "summary": "Mehr Einordnung, mehr Rückmeldung und sinnvoll für Anlagen, die dauerhaft zuverlässig laufen sollen.",
+      "audience": "Die schlaue Entscheidung: inkl. Klein- und Dichtmaterial, dem vom Hersteller empfohlenen Wartungsset und bevorzugtem Notdiensteinsatz",
+      "summary": "Die schlaue Entscheidung: inkl. Klein- und Dichtmaterial, dem vom Hersteller empfohlenen Wartungsset und bevorzugtem Notdiensteinsatz",
       "includes": [
-        "Alle Leistungen der Basis-Wartung",
-        "ausführlichere Prüfung relevanter Anlagenkomponenten",
-        "Hinweise auf erkennbare Verschleiss- oder Optimierungspunkte",
-        "bessere Vorqualifizierung für Folgeeinsätze"
+        "Alle Leistungen aus BASIC",
+        "+ priorisierter 24/7-Notdienst",
+        "+ Klein- und Dichtmaterial inklusive",
+        "+ Wartungsmaterial und Werkzeugeinsatz inklusive"
       ],
-      "cta": "Komfort-Wartung anfragen",
+      "cta": "Angebot anfragen",
       "recommended": true
     },
     {
-      "slug": "system-wartung",
-      "name": "System-Wartung",
-      "priceLabel": "ab 329 € / Jahr",
+      "slug": "premium",
+      "category": "heizung",
+      "name": "PREMIUM",
+      "kicker": "Wartungspaket",
+      "priceLabel": "ab 309,00 € jährlich inkl. gesetzl. MwSt.",
       "approvalRequired": false,
-      "audience": "für komplexere Anlagen, Kombinationen oder höhere technische Anforderungen",
-      "summary": "Die passende Option, wenn mehrere Komponenten zusammenspielen oder die Anlage mehr Aufmerksamkeit braucht.",
+      "audience": "Rundum sorglos: mit höchster Notdienst-Priorität, attraktiven Rabatten und automatischer Störungserkennung",
+      "summary": "Rundum sorglos: mit höchster Notdienst-Priorität, attraktiven Rabatten und automatischer Störungserkennung",
       "includes": [
-        "Alle Leistungen der Komfort-Wartung",
-        "geeignet für komplexere Systemkonstellationen",
-        "mehr Kontext für vorbereitete Serviceeinsätze",
-        "saubere Grundlage für weiterführende Empfehlungen"
+        "Alle Leistungen aus SMART",
+        "+ VIP 24/7-Notdienst",
+        "+ 50 € Rabatt je Notdiensteinsatz",
+        "+ 10 % Rabatt auf Reparaturmaterial",
+        "+ Aktive Fernüberwachung (sofern vorhanden)"
       ],
-      "cta": "System-Wartung anfragen"
+      "cta": "Angebot anfragen"
+    },
+    {
+      "slug": "enthaertung",
+      "category": "enthaertung",
+      "name": "Enthärtungsanlage",
+      "kicker": "Wartungspaket",
+      "priceLabel": "ab 129,00 € jährlich inkl. gesetzl. MwSt.",
+      "approvalRequired": false,
+      "audience": "Regelmäßige Wartung Ihrer Enthärtungsanlage — für gleichbleibende Wasserqualität, weniger Kalk und eine lange Lebensdauer.",
+      "summary": "Regelmäßige Wartung Ihrer Enthärtungsanlage — für gleichbleibende Wasserqualität, weniger Kalk und eine lange Lebensdauer.",
+      "includes": [
+        "Wartung gemäß Checkliste",
+        "Anlagenreinigung & -optimierung",
+        "24/7-Notdienst",
+        "Servicecard / Sticker / Anlagenbuch"
+      ],
+      "cta": "Angebot anfragen"
     }
   ],
   "requiredFormFields": [

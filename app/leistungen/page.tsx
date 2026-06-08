@@ -59,6 +59,13 @@ const services = [
     lead: "Heizungsausfall oder Wasserrohrbruch — wir kommen auf Rügen.",
     bullets: ["Tag & Nacht erreichbar", "Schnelle Reaktion", "Rügen-weit"],
   },
+  {
+    href: "/wartung-service#enthaertung",
+    icon: "water_drop",
+    title: "Enthärtungsanlagen",
+    lead: "Wartung für Ihre Wasserenthärtung — weniger Kalk, gleichbleibende Wasserqualität.",
+    bullets: ["Jahreswartung", "Anlagenreinigung & -optimierung", "24/7-Notdienst"],
+  },
 ];
 
 export default function LeistungenPage() {

@@ -81,9 +81,9 @@ export const trustItems = [
   "Kurze Wege auf Rügen",
 ];
 
-export const maintenancePackages = maintenancePackagesSource.packages.map((pkg) => ({
-  ...pkg,
-}));
+const allPackages = maintenancePackagesSource.packages.map((pkg) => ({ ...pkg }));
+export const maintenancePackages = allPackages.filter((pkg) => pkg.category !== "enthaertung");
+export const softenerPackages = allPackages.filter((pkg) => pkg.category === "enthaertung");
 
 export const maintenanceFieldLabels: Record<string, string> = {
   name: "Name",

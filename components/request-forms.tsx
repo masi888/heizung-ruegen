@@ -6,6 +6,7 @@ import {
   company,
   maintenanceFieldLabels,
   maintenancePackages,
+  softenerPackages,
 } from "@/lib/site-data";
 
 type FormMode = "project" | "maintenance";
@@ -247,10 +248,10 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             handleSubmit(event.currentTarget, "maintenance");
           }}
         >
-          {/* Paket-Auswahl */}
+          {/* Paket-Auswahl: Heizung */}
           <fieldset className="space-y-4">
             <legend className={`${fieldLabel} mb-3`}>
-              Wartungspaket wählen
+              Heizungs-Wartungspaket
             </legend>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
               {maintenancePackages.map((item) => (
@@ -274,6 +275,59 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
                       Empfohlen
                     </span>
                   )}
+                  <span className="text-base font-bold text-primary">
+                    {item.name}
+                  </span>
+                  <span className="text-sm font-bold text-accent">
+                    {item.priceLabel}
+                  </span>
+                  <small className="text-xs text-on-surface-variant leading-relaxed">
+                    {item.summary}
+                  </small>
+                </label>
+              ))}
+              <label
+                className="relative flex flex-col gap-2 rounded-xl border-2 border-outline-variant/30 p-5 cursor-pointer transition-all
+                  bg-surface-container-lowest
+                  has-[:checked]:border-accent has-[:checked]:shadow-[0_0_0_4px_rgba(234,122,30,0.12)]
+                  hover:border-accent/60"
+              >
+                <input
+                  name="package"
+                  type="radio"
+                  value=""
+                  className="sr-only"
+                />
+                <span className="text-base font-bold text-primary">
+                  Kein Heizungspaket
+                </span>
+                <small className="text-xs text-on-surface-variant leading-relaxed">
+                  Ich möchte ausschließlich ein Enthärtungspaket anfragen.
+                </small>
+              </label>
+            </div>
+          </fieldset>
+
+          {/* Paket-Auswahl: Enthärtungsanlage */}
+          <fieldset className="space-y-4">
+            <legend className={`${fieldLabel} mb-3`}>
+              Wartungspaket Enthärtungsanlage
+            </legend>
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              {softenerPackages.map((item) => (
+                <label
+                  key={item.slug}
+                  className="relative flex flex-col gap-2 rounded-xl border-2 border-outline-variant/30 p-5 cursor-pointer transition-all
+                    bg-surface-container-lowest
+                    has-[:checked]:border-accent has-[:checked]:shadow-[0_0_0_4px_rgba(234,122,30,0.12)]
+                    hover:border-accent/60"
+                >
+                  <input
+                    name="package_enthaertung"
+                    type="checkbox"
+                    value={`${item.name} | ${item.priceLabel}`}
+                    className="sr-only"
+                  />
                   <span className="text-base font-bold text-primary">
                     {item.name}
                   </span>

@@ -120,6 +120,7 @@ function buildProjectPayload(formData: FormData) {
 function buildMaintenancePayload(formData: FormData) {
   const fields = {
     package: textValue(formData, "package"),
+    softenerPackage: textValue(formData, "package_enthaertung"),
     name: textValue(formData, "name"),
     telefon: textValue(formData, "telefon"),
     email: textValue(formData, "email"),
@@ -133,16 +134,19 @@ function buildMaintenancePayload(formData: FormData) {
     hinweise: textValue(formData, "hinweise_optional"),
   };
 
-  if (!fields.package || !fields.name || !fields.telefon || !fields.anlagenadresse || !fields.geraetetyp || !fields.geraetebezeichnung) {
-    throw new Error("Bitte alle Pflichtfelder der Wartungsanfrage ausfüllen.");
+  const selectedPackages = [fields.package, fields.softenerPackage].filter(Boolean);
+
+  if (selectedPackages.length === 0 || !fields.name || !fields.telefon || !fields.anlagenadresse || !fields.geraetetyp || !fields.geraetebezeichnung) {
+    throw new Error("Bitte mindestens ein Wartungspaket und alle Pflichtfelder ausfüllen.");
   }
 
   return {
-    subject: `Wartungsanfrage: ${fields.package}`,
+    subject: `Wartungsanfrage: ${selectedPackages.join(" + ")}`,
     text: [
       "Neue Wartungsanfrage über heizung-ruegen.de",
       "",
-      `Paket: ${fields.package}`,
+      `Heizungspaket: ${fields.package || "nicht gewählt"}`,
+      `Enthärtungspaket: ${fields.softenerPackage || "nicht gewählt"}`,
       `Name: ${fields.name}`,
       `Telefon: ${fields.telefon}`,
       `E-Mail: ${fields.email || "nicht angegeben"}`,
@@ -159,7 +163,8 @@ function buildMaintenancePayload(formData: FormData) {
     ].join("\n"),
     html: `
       <h2>Neue Wartungsanfrage</h2>
-      <p><strong>Paket:</strong> ${escapeHtml(fields.package)}</p>
+      <p><strong>Heizungspaket:</strong> ${escapeHtml(fields.package || "nicht gewählt")}</p>
+      <p><strong>Enthärtungspaket:</strong> ${escapeHtml(fields.softenerPackage || "nicht gewählt")}</p>
       <p><strong>Name:</strong> ${escapeHtml(fields.name)}</p>
       <p><strong>Telefon:</strong> ${escapeHtml(fields.telefon)}</p>
       <p><strong>E-Mail:</strong> ${escapeHtml(fields.email || "nicht angegeben")}</p>

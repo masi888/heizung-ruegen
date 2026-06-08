@@ -68,6 +68,13 @@ export default function ImpressumPage() {
 
           <div className="space-y-2">
             <h2 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
+              Steuernummer
+            </h2>
+            <p className="text-on-surface">082/205/09835</p>
+          </div>
+
+          <div className="space-y-2">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
               Berufsbezeichnung &amp; zuständige Kammer
             </h2>
             <p className="text-on-surface leading-relaxed">

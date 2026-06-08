@@ -13,6 +13,7 @@ import {
   company,
   findPageRoute,
   maintenancePackages,
+  softenerPackages,
 } from "@/lib/site-data";
 
 const route = findPageRoute("wartung-service");
@@ -21,7 +22,7 @@ export const metadata = buildPageMetadata({
   title: route?.title ?? "Wartung & Service auf Rügen | Bertig",
   description:
     route?.description ??
-    "Heizungswartung mit drei klaren Paketen, persönlicher Rückmeldung und strukturierter Datenerfassung auf Rügen.",
+    "Heizungs- und Enthärtungsanlagen-Wartung mit klaren Paketen, persönlicher Rückmeldung und strukturierter Datenerfassung auf Rügen.",
   path: "/wartung-service",
   imagePath: "/images/services/wartung-inspektion.jpg",
 });
@@ -137,13 +138,15 @@ export default function WartungServicePage() {
             >
               {pkg.recommended && (
                 <span className="inline-block bg-accent text-on-accent text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-md mb-4">
-                  Empfohlen
+                  Preis-Leistung TOP
                 </span>
               )}
-              <h3 className="text-2xl font-bold text-primary mb-2">{pkg.name}</h3>
-              <p className="text-sm text-on-surface-variant mb-4">{pkg.audience}</p>
-              <p className="text-lg font-bold text-primary mb-6">{pkg.priceLabel}</p>
-              <ul className="space-y-3 text-sm text-on-surface-variant mb-8">
+              {pkg.kicker && (
+                <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-1">{pkg.kicker}</p>
+              )}
+              <h3 className="text-2xl font-bold text-primary mb-3">{pkg.name}</h3>
+              <p className="text-sm text-on-surface-variant mb-6">{pkg.audience}</p>
+              <ul className="space-y-3 text-sm text-on-surface-variant mb-6">
                 {pkg.includes.map((item) => (
                   <li key={item} className="flex gap-2">
                     <Icon name="check_circle" className="text-accent text-base shrink-0 mt-0.5" fill />
@@ -151,6 +154,44 @@ export default function WartungServicePage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-lg font-bold text-primary mb-6">{pkg.priceLabel}</p>
+              <Button tone="secondary" href="#anfrage">
+                {pkg.cta}
+              </Button>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* Enthärtungsanlagen */}
+      <Section tone="surface-low" id="enthaertung">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <Kicker className="mb-4">Wasseraufbereitung</Kicker>
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-primary leading-tight mb-6">
+            Wartung für Enthärtungsanlagen.
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            Auch Ihre Wasserenthärtung warten wir regelmäßig — für gleichbleibende
+            Wasserqualität, weniger Kalk und eine lange Lebensdauer der Anlage.
+          </p>
+        </div>
+        <div className="max-w-md mx-auto">
+          {softenerPackages.map((pkg) => (
+            <Card key={pkg.slug}>
+              {pkg.kicker && (
+                <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-1">{pkg.kicker}</p>
+              )}
+              <h3 className="text-2xl font-bold text-primary mb-3">{pkg.name}</h3>
+              <p className="text-sm text-on-surface-variant mb-6">{pkg.audience}</p>
+              <ul className="space-y-3 text-sm text-on-surface-variant mb-6">
+                {pkg.includes.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <Icon name="check_circle" className="text-accent text-base shrink-0 mt-0.5" fill />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-lg font-bold text-primary mb-6">{pkg.priceLabel}</p>
               <Button tone="secondary" href="#anfrage">
                 {pkg.cta}
               </Button>
