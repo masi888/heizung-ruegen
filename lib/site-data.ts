@@ -157,8 +157,8 @@ export function buildPageMetadata({
   path,
   imagePath = defaultSocialImagePath,
   imageAlt = defaultSocialImageAlt,
-  imageWidth = 1457,
-  imageHeight = 811,
+  imageWidth = 860,
+  imageHeight = 900,
   type = "website",
 }: PageMetadataOptions): Metadata {
   const normalizedTitle = withBrand(title);

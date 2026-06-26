@@ -21,13 +21,16 @@ export function SiteFooter() {
     <footer className="bg-primary text-on-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-20 grid gap-12 md:grid-cols-5">
         <div className="md:col-span-2 space-y-6">
-          <Image
-            src="/brand/logo/bertig-logo-light.webp"
-            alt={company.name}
-            width={320}
-            height={120}
-            className="h-14 w-auto"
-          />
+          <span className="inline-flex rounded-lg bg-white p-3">
+            <Image
+              src="/brand/bertig-logo.webp"
+              alt={company.name}
+              width={860}
+              height={900}
+              unoptimized
+              className="h-28 w-auto"
+            />
+          </span>
           <p className="text-on-primary/75 max-w-md leading-relaxed">
             Familienbetrieb seit {company.foundingYear} in Breege auf Rügen.
             Persönlich erreichbar für Heizung, Sanitär, Wartung und Bad.

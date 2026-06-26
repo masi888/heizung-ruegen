@@ -104,13 +104,14 @@ export default function UeberUnsPage() {
               />
             </div>
             {/* Signet Badge */}
-            <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-primary hidden sm:flex items-center justify-center shadow-xl border-4 border-surface-container-low">
+            <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-white hidden sm:flex items-center justify-center shadow-xl border-4 border-surface-container-low">
               <Image
                 src="/brand/logo/bertig-signet-only.webp"
                 alt="Bertig Signet"
-                width={64}
-                height={64}
-                className="w-14 h-14 object-contain"
+                width={512}
+                height={512}
+                unoptimized
+                className="w-16 h-16 object-contain"
               />
             </div>
           </div>

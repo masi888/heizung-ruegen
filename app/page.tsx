@@ -69,8 +69,10 @@ export default function HomePage() {
             <Kicker className="mb-4 lg:mb-6 hidden sm:block">
               {homeHero.eyebrow}
             </Kicker>
-            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[5.5rem] lg:leading-[1.05] font-extrabold tracking-[-0.02em] text-primary break-words hyphens-auto">
-              Wärme für Generationen.
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[5.5rem] lg:leading-[1.05] font-extrabold tracking-[-0.02em] text-primary break-words hyphens-none">
+              Wärme für
+              <br />
+              Generationen.
               <br />
               <span className="text-accent">Vater &amp; Sohn.</span>
             </h1>

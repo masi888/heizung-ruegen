@@ -34,16 +34,15 @@ export function SiteHeader() {
           aria-label={company.name}
           onClick={() => setMobileOpen(false)}
         >
-          <span className="bg-primary rounded-lg px-3 py-2 inline-flex items-center">
-            <Image
-              src="/brand/logo/bertig-logo-light.webp"
-              alt={company.name}
-              width={930}
-              height={348}
-              priority
-              className="h-7 sm:h-8 w-auto"
-            />
-          </span>
+          <Image
+            src="/brand/bertig-logo.webp"
+            alt={company.name}
+            width={860}
+            height={900}
+            priority
+            unoptimized
+            className="h-14 sm:h-16 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold">
