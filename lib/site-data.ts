@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import maintenancePackagesSource from "@/content/maintenance-packages.json";
 import siteContentSource from "@/content/site-content-structured.json";
 
-export const siteUrl = "https://www.heizung-ruegen.de";
+export const siteUrl = "https://www.heizung-rügen.de";
 
 export const company = {
   name: "Bertig Sanitär- und Heizungstechnik",
@@ -20,8 +20,8 @@ export const company = {
     lng: 13.366,
   },
   phones: {
-    mobile: "0171 6831051",
-    mobileHref: "tel:+491716831051",
+    mobile: "0160 97041131",
+    mobileHref: "tel:+4916097041131",
   },
   email: "info@heizung-rügen.de",
   serviceArea: ["Rügen", "Wittow", "Jasmund", "Mönchgut", "Breege", "Binz", "Sellin", "Baabe", "Göhren", "bis Stralsund"],

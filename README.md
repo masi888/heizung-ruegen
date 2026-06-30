@@ -1,4 +1,4 @@
-# heizung-ruegen.de
+# heizung-rügen.de
 
 Website-Projekt fuer Bertig Sanitär- und Heizungstechnik.
 

@@ -1,10 +1,10 @@
 import nodemailer from "nodemailer";
 
+import { validateInquiryFiles } from "@/lib/inquiry-limits.mjs";
+import { buildInquiryHtml } from "@/lib/inquiry-mail.mjs";
 import { company } from "@/lib/site-data";
 
 export const runtime = "nodejs";
-
-const maxAttachmentBytes = 8 * 1024 * 1024;
 
 type Attachment = {
   filename: string;
@@ -45,16 +45,11 @@ function textValue(formData: FormData, key: string) {
 
 async function normalizeAttachments(files: File[]) {
   const attachments: Attachment[] = [];
+  const selectedFiles = files.filter((file) => file.size > 0);
 
-  for (const file of files) {
-    if (!file.size) {
-      continue;
-    }
+  validateInquiryFiles(selectedFiles);
 
-    if (file.size > maxAttachmentBytes) {
-      throw new Error(`Die Datei ${file.name} ist größer als 8 MB.`);
-    }
-
+  for (const file of selectedFiles) {
     const buffer = Buffer.from(await file.arrayBuffer());
     attachments.push({
       filename: file.name,
@@ -64,19 +59,6 @@ async function normalizeAttachments(files: File[]) {
   }
 
   return attachments;
-}
-
-function escapeHtml(value: string) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function textToHtml(value: string) {
-  return escapeHtml(value).replaceAll("\n", "<br>");
 }
 
 function buildProjectPayload(formData: FormData) {
@@ -95,7 +77,7 @@ function buildProjectPayload(formData: FormData) {
   return {
     subject: `Projektanfrage: ${fields.topic}`,
     text: [
-      "Neue Projektanfrage über heizung-ruegen.de",
+      "Neue Projektanfrage über heizung-rügen.de",
       "",
       `Name: ${fields.name}`,
       `Telefon: ${fields.phone}`,
@@ -105,14 +87,29 @@ function buildProjectPayload(formData: FormData) {
       "Nachricht:",
       fields.message,
     ].join("\n"),
-    html: `
-      <h2>Neue Projektanfrage</h2>
-      <p><strong>Name:</strong> ${escapeHtml(fields.name)}</p>
-      <p><strong>Telefon:</strong> ${escapeHtml(fields.phone)}</p>
-      <p><strong>E-Mail:</strong> ${escapeHtml(fields.email || "nicht angegeben")}</p>
-      <p><strong>Thema:</strong> ${escapeHtml(fields.topic)}</p>
-      <p><strong>Nachricht:</strong><br>${textToHtml(fields.message)}</p>
-    `,
+    html: buildInquiryHtml({
+      title: "Neue Projektanfrage",
+      eyebrow: "Projektanfrage über heizung-rügen.de",
+      summary:
+        "Eine neue Anfrage ist eingegangen. Direkt auf diese E-Mail antworten, um den Kunden zu kontaktieren.",
+      sections: [
+        {
+          title: "Kontakt",
+          rows: [
+            ["Name", fields.name],
+            ["Telefon", fields.phone],
+            ["E-Mail", fields.email || "nicht angegeben"],
+          ],
+        },
+        {
+          title: "Anfrage",
+          rows: [
+            ["Thema", fields.topic],
+            ["Nachricht", fields.message],
+          ],
+        },
+      ],
+    }),
     replyTo: fields.email || undefined,
   };
 }
@@ -143,7 +140,7 @@ function buildMaintenancePayload(formData: FormData) {
   return {
     subject: `Wartungsanfrage: ${selectedPackages.join(" + ")}`,
     text: [
-      "Neue Wartungsanfrage über heizung-ruegen.de",
+      "Neue Wartungsanfrage über heizung-rügen.de",
       "",
       `Heizungspaket: ${fields.package || "nicht gewählt"}`,
       `Enthärtungspaket: ${fields.softenerPackage || "nicht gewählt"}`,
@@ -161,22 +158,48 @@ function buildMaintenancePayload(formData: FormData) {
       "Hinweise:",
       fields.hinweise || "keine",
     ].join("\n"),
-    html: `
-      <h2>Neue Wartungsanfrage</h2>
-      <p><strong>Heizungspaket:</strong> ${escapeHtml(fields.package || "nicht gewählt")}</p>
-      <p><strong>Enthärtungspaket:</strong> ${escapeHtml(fields.softenerPackage || "nicht gewählt")}</p>
-      <p><strong>Name:</strong> ${escapeHtml(fields.name)}</p>
-      <p><strong>Telefon:</strong> ${escapeHtml(fields.telefon)}</p>
-      <p><strong>E-Mail:</strong> ${escapeHtml(fields.email || "nicht angegeben")}</p>
-      <p><strong>Adresse der Anlage:</strong> ${escapeHtml(fields.anlagenadresse)}</p>
-      <p><strong>Rechnungsanschrift:</strong> ${escapeHtml(fields.rechnungsanschrift || "wie Anlagenadresse")}</p>
-      <p><strong>Gerätetyp:</strong> ${escapeHtml(fields.geraetetyp)}</p>
-      <p><strong>Gerätebezeichnung:</strong> ${escapeHtml(fields.geraetebezeichnung)}</p>
-      <p><strong>Seriennummer:</strong> ${escapeHtml(fields.seriennummer || "nicht angegeben")}</p>
-      <p><strong>Hersteller:</strong> ${escapeHtml(fields.hersteller || "nicht angegeben")}</p>
-      <p><strong>Letzte Wartung:</strong> ${escapeHtml(fields.letzteWartung || "nicht angegeben")}</p>
-      <p><strong>Hinweise:</strong><br>${textToHtml(fields.hinweise || "keine")}</p>
-    `,
+    html: buildInquiryHtml({
+      title: "Neue Wartungsanfrage",
+      eyebrow: "Wartungsanfrage über heizung-rügen.de",
+      summary:
+        "Alle Angaben zur Vorbereitung der Wartung sind unten gegliedert. Anhänge wie Typenschildfotos liegen dieser E-Mail bei.",
+      sections: [
+        {
+          title: "Pakete",
+          rows: [
+            ["Heizungspaket", fields.package || "nicht gewählt"],
+            ["Enthärtungspaket", fields.softenerPackage || "nicht gewählt"],
+          ],
+        },
+        {
+          title: "Kontakt",
+          rows: [
+            ["Name", fields.name],
+            ["Telefon", fields.telefon],
+            ["E-Mail", fields.email || "nicht angegeben"],
+          ],
+        },
+        {
+          title: "Anlage",
+          rows: [
+            ["Adresse der Anlage", fields.anlagenadresse],
+            [
+              "Rechnungsanschrift",
+              fields.rechnungsanschrift || "wie Anlagenadresse",
+            ],
+            ["Gerätetyp", fields.geraetetyp],
+            ["Gerätebezeichnung", fields.geraetebezeichnung],
+            ["Seriennummer", fields.seriennummer || "nicht angegeben"],
+            ["Hersteller", fields.hersteller || "nicht angegeben"],
+            ["Letzte Wartung", fields.letzteWartung || "nicht angegeben"],
+          ],
+        },
+        {
+          title: "Hinweise",
+          rows: [["Zusätzliche Hinweise", fields.hinweise || "keine"]],
+        },
+      ],
+    }),
     replyTo: fields.email || undefined,
   };
 }

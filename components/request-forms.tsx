@@ -3,6 +3,13 @@
 import { useState } from "react";
 
 import {
+  formatBytes,
+  getInquiryFileKind,
+  inquiryUploadLimits,
+  validateInquirySelection,
+  validateInquiryFiles,
+} from "@/lib/inquiry-limits.mjs";
+import {
   company,
   maintenanceFieldLabels,
   maintenancePackages,
@@ -48,6 +55,145 @@ const submitBtn =
   "hover:bg-primary-container active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed";
 const projectPanelId = "request-form-project-panel";
 const maintenancePanelId = "request-form-maintenance-panel";
+const maintenanceUploadHelpId = "maintenance-upload-help";
+const uploadHelpText =
+  `Maximal ${inquiryUploadLimits.maxFiles} Dateien. Fotos werden automatisch verkleinert, ` +
+  `bis ${formatBytes(inquiryUploadLimits.maxImageInputBytes)} pro Bild. ` +
+  `PDFs bis ${formatBytes(inquiryUploadLimits.maxFileBytes)}. ` +
+  `Versand insgesamt ${formatBytes(inquiryUploadLimits.maxTotalBytes)}.`;
+
+function canvasToBlob(canvas: HTMLCanvasElement, quality: number) {
+  return new Promise<Blob>((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error("Das Bild konnte nicht vorbereitet werden."));
+        }
+      },
+      "image/jpeg",
+      quality,
+    );
+  });
+}
+
+async function loadImageSource(file: File) {
+  if (typeof createImageBitmap === "function") {
+    const bitmap = await createImageBitmap(file);
+    return {
+      source: bitmap,
+      width: bitmap.width,
+      height: bitmap.height,
+      close: () => bitmap.close(),
+    };
+  }
+
+  const url = URL.createObjectURL(file);
+  const image = new Image();
+  image.src = url;
+  await image.decode();
+  URL.revokeObjectURL(url);
+
+  return {
+    source: image,
+    width: image.naturalWidth,
+    height: image.naturalHeight,
+    close: () => {},
+  };
+}
+
+async function renderImage(
+  source: CanvasImageSource,
+  sourceWidth: number,
+  sourceHeight: number,
+  quality: number,
+  maxDimension: number,
+) {
+  const scale = Math.min(1, maxDimension / Math.max(sourceWidth, sourceHeight));
+  const width = Math.max(1, Math.round(sourceWidth * scale));
+  const height = Math.max(1, Math.round(sourceHeight * scale));
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  if (!context) {
+    throw new Error("Das Bild konnte nicht vorbereitet werden.");
+  }
+
+  canvas.width = width;
+  canvas.height = height;
+  context.drawImage(source, 0, 0, width, height);
+
+  return canvasToBlob(canvas, quality);
+}
+
+async function optimizeImage(file: File) {
+  if (file.size <= inquiryUploadLimits.maxCompressedImageBytes) {
+    return file;
+  }
+
+  let image;
+
+  try {
+    image = await loadImageSource(file);
+    let maxDimension = inquiryUploadLimits.imageMaxDimension;
+    let quality = inquiryUploadLimits.imageQuality;
+    let blob = await renderImage(
+      image.source,
+      image.width,
+      image.height,
+      quality,
+      maxDimension,
+    );
+
+    while (blob.size > inquiryUploadLimits.maxCompressedImageBytes && quality > 0.62) {
+      quality -= 0.08;
+      blob = await renderImage(
+        image.source,
+        image.width,
+        image.height,
+        quality,
+        maxDimension,
+      );
+    }
+
+    if (blob.size > inquiryUploadLimits.maxCompressedImageBytes) {
+      maxDimension = 1200;
+      blob = await renderImage(image.source, image.width, image.height, 0.72, maxDimension);
+    }
+
+    const filename = file.name.replace(/\.[^.]+$/, "") || "foto";
+
+    return new File([blob], `${filename}.jpg`, {
+      type: "image/jpeg",
+      lastModified: file.lastModified,
+    });
+  } catch {
+    if (file.size <= inquiryUploadLimits.maxFileBytes) {
+      return file;
+    }
+
+    throw new Error(
+      `Das Bild ${file.name} konnte nicht automatisch verkleinert werden. Bitte als JPG, PNG oder WebP hochladen.`,
+    );
+  } finally {
+    image?.close();
+  }
+}
+
+async function prepareInquiryFiles(files: File[]) {
+  validateInquirySelection(files);
+
+  const preparedFiles = await Promise.all(
+    files.map((file) =>
+      getInquiryFileKind(file) === "image" ? optimizeImage(file) : file,
+    ),
+  );
+
+  validateInquiryFiles(preparedFiles);
+
+  return preparedFiles;
+}
 
 export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
   const [mode, setMode] = useState<FormMode>(initialMode);
@@ -63,10 +209,22 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
       target === "project" ? setProjectState : setMaintenanceState;
     setter({ status: "submitting", message: "Anfrage wird gesendet ..." });
 
-    const body = new FormData(form);
-    body.set("formType", target);
-
     try {
+      const fileInput =
+        form.querySelector<HTMLInputElement>('input[name="attachments"]');
+      const selectedFiles = Array.from(fileInput?.files ?? []).filter(
+        (file) => file.size > 0,
+      );
+      const preparedFiles = await prepareInquiryFiles(selectedFiles);
+
+      const body = new FormData(form);
+      body.set("formType", target);
+      body.delete("attachments");
+
+      for (const file of preparedFiles) {
+        body.append("attachments", file, file.name);
+      }
+
       const response = await fetch("/api/inquiry", {
         method: "POST",
         body,
@@ -483,14 +641,21 @@ export function RequestForms({ initialMode = "project" }: RequestFormsProps) {
             <input
               name="attachments"
               type="file"
-              accept=".jpg,.jpeg,.png,.pdf,.webp"
+              accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.heic,.heif"
               multiple
+              aria-describedby={maintenanceUploadHelpId}
               className="block w-full text-sm text-on-surface-variant
                 file:mr-4 file:px-5 file:py-2.5 file:rounded-lg
                 file:border-0 file:bg-primary file:text-on-primary
                 file:font-bold file:text-sm file:cursor-pointer
                 hover:file:bg-primary-container transition-colors"
             />
+            <span
+              id={maintenanceUploadHelpId}
+              className="text-xs text-on-surface-variant"
+            >
+              {uploadHelpText}
+            </span>
           </label>
 
           {/* Hinweise */}
