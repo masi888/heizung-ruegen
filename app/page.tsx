@@ -119,16 +119,10 @@ export default function HomePage() {
                 href={company.phones.mobileHref}
                 className="hidden sm:flex items-center gap-4 px-6 py-4 bg-surface-container-high rounded-lg"
               >
-                <div className="flex -space-x-3">
-                  <span className="w-10 h-10 rounded-full border-2 border-surface bg-primary flex items-center justify-center text-on-primary text-xs font-bold">
-                    EB
-                  </span>
-                  <span className="w-10 h-10 rounded-full border-2 border-surface bg-accent flex items-center justify-center text-on-accent text-xs font-bold">
-                    MB
-                  </span>
-                </div>
-                <span className="text-sm font-bold text-primary">
-                  Direkt vom Inhaber
+                <Icon name="call" className="text-accent" />
+                <span className="flex flex-col leading-tight">
+                  <span className="text-sm font-bold text-primary">Jetzt anrufen</span>
+                  <span className="text-xs text-on-surface-variant">{company.phones.mobile}</span>
                 </span>
               </Link>
             </div>
